@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', 'Admin\NewsController@add');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
