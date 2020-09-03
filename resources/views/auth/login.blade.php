@@ -71,6 +71,9 @@
         </div>
     </div>
 
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -140,4 +143,62 @@
         </div>
     </div>
 </div>
+
+<div class="container login__container my-5">
+        <div class="row login__row">
+            <div class="col-md-6 d-flex">
+                <img class="login__imagek align-self-center" src="https://www.freevector.com/uploads/vector/preview/20208/Free_Travel_Vector_3.jpg"
+                    width="90%" alt="旅行イメージ" />
+            </div>
+            <div class="col-md-5 d-flex">
+                <div class="align-self-center card login__card shadow-sm w-100">
+                    <div class="card-body">
+                        <form action="">
+                            <!-- <h2 class="text-muted text-center">Login Page - Bootstrap 4</h2> -->
+
+                            <div class="my-5">
+                                <h5 class="text-center">
+                                {{ __('messages.Login') }}
+                                </h5>
+                            </div>
+
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="">{{ __('messages.E-Mail Address') }}</label>
+                                    <input type="text" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">{{ __('messages.Password') }}</label>
+                                    <input type="password" class="form-control form-control-lg" />
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input custom-control"
+                                        id="customCheckDisabled1" />
+                                    <label class="custom-control-label" for="customCheckDisabled1">{{ __('messages.Remember Me') }}</label>
+                                </div>
+                                <div class="form-group">
+                                    <a href="#" class="btn btn-primary btn-lg btn-block my-3">
+                                        Login
+                                    </a>
+
+                                    <div class="d-flex justify-content-between">
+                                        <a href="#!">{{ __('messages.Password forgotten?') }}</a>
+                                        <span> <a href="#">{{ __('messages.Create account') }}</a></span>
+                                    </div>
+                                    <div class="dropdown-divider my-4"></div>
+                                    <div class="text-center w-100">
+                                        <!-- <small>Built by <a href="https://www.instagram.com/realjblaq/">@realjblaq</a> </small> -->
+                                    </dvi>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 @endsection
+
+
