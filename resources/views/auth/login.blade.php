@@ -55,8 +55,8 @@
                                     </button>
 
                                     <div class="d-flex justify-content-between">
-                                        <a href="#!">{{ __('messages.Password forgotten?') }}</a>
-                                        <span> <a href="#">{{ __('messages.Create account') }}</a></span>
+                                        <a href="{{ route('password.request') }}">{{ __('messages.Password forgotten?') }}</a>
+                                        <span> <a href="{{ route('register') }}">{{ __('messages.Create account') }}</a></span>
                                     </div>
                                     <div class="dropdown-divider my-4"></div>
                                     <div class="text-center w-100">
