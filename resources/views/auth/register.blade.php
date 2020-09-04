@@ -39,21 +39,22 @@
                                 <div class="form-group">
                                     <label for="password" class="">{{ __('messages.Password') }}</label>
 
-                                    <div class="">
-                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"/>
-                                   
+                                     <div class="">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                     </div>
+                               </div>
 
-
-
-
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
+                               <div class="form-group">
                                     <label for="password-confirm" class="">{{ __('messages.ConfirmPassword') }}</label>
+
                                     <div class="">
-                                      <input id="password-confirm" type="password" class="form-control"  name="password-confirm" required autocomplete="new-password"/>
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                     </div>
                                 </div>
 
