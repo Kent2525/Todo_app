@@ -11,48 +11,56 @@
             <div class="col-md-5 d-flex">
                 <div class="align-self-center card login__card shadow-sm w-100">
                     <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <!-- <h2 class="text-muted text-center">Login Page - Bootstrap 4</h2> -->
 
                             <div class="my-5">
                                 <h5 class="text-center">
-                                {{ __('messages.Login') }}
+                                {{ __('messages.Register') }}
                                 </h5>
                             </div>
 
                             <div class="">
                                 <div class="form-group">
+                                    <label for="name" class="">{{ __('messages.Name') }}</label>
+                                    <div class="">
+                                        <input id="name" type="text"  class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="email" class="">{{ __('messages.E-Mail Address') }}</label>
                                     <div class="">
-                                        <input id="email" type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus/>
+                                        <input id="email" type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"/>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="password" class="">{{ __('messages.Password') }}</label>
+
                                     <div class="">
-                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"/>
+                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"/>
+                                   
+
+
+
+
+
                                     </div>
                                 </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input custom-control"
-                                        id="customCheckDisabled1" />
-                                    <label class="custom-control-label" for="customCheckDisabled1">{{ __('messages.Remember Me') }}</label>
+
+                                <div class="form-group">
+                                    <label for="password-confirm" class="">{{ __('messages.ConfirmPassword') }}</label>
+                                    <div class="">
+                                      <input id="password-confirm" type="password" class="form-control"  name="password-confirm" required autocomplete="new-password"/>
+                                    </div>
                                 </div>
+
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-lg btn-block my-3">
-                                        Login
+                                    {{ __('messages.Register') }}
                                     </button>
-
-                                    <div class="d-flex justify-content-between">
-                                        <a href="{{ route('password.request') }}">{{ __('messages.Password forgotten?') }}</a>
-                                        <span> <a href="{{ route('register') }}">{{ __('messages.Create account') }}</a></span>
-                                    </div>
-                                    <div class="dropdown-divider my-4"></div>
-                                    <div class="text-center w-100">
-                                        <!-- <small>Built by <a href="https://www.instagram.com/realjblaq/">@realjblaq</a> </small> -->
-                                    </dvi>
                                 </div>
                             </div>
                         </form>
