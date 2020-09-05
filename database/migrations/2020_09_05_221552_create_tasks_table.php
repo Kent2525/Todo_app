@@ -18,10 +18,9 @@ class CreateTasksTable extends Migration
             $table->integer('title_id')->unsigned();
             $table->string('title', 100);
             $table->string('heading', 200);
-            $table->integer('status')->default(1);
             $table->date('due_date');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->integer('status')->default(1);
+            $table->timestamps();
         });
     }
 
