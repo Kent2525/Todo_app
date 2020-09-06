@@ -8,6 +8,6 @@ class TaskController extends Controller
 {
     public function add()
     {
-        return "Hello world";  
+        return view('admin.task');  
     }//
 }
