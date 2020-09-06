@@ -24,8 +24,11 @@
 
         <!-- Styles -->
         <!-- Laravel標準搭載のcss -->
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <!-- <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet"> -->
+        <!-- <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet"> -->
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/admin.css">
+        
     </head>
     <body>
       <div class="container">
@@ -34,7 +37,7 @@
             <p>左のスペース</p>
           </div>
           <div class="col-9 mx-auto">
-            <p>右のスペース</p>
+            <p class="sample">右のスペース</p>
           </div>
         </div>
       </div>
