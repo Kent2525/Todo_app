@@ -10,22 +10,33 @@
         <title>@yield('title')</title>
 
         <!-- Scripts -->
+        <!-- Laravel標準搭載のJavascript -->
         <script src="{{ secure_asset('js/app.js') }}" defer></script>
+        <!-- 下2行はbootstrapのJavascript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        <!-- bootstrapのcss -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
         <!-- Styles -->
+        <!-- Laravel標準搭載のcss -->
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
     </head>
     <body>
       <div class="container">
-        <div class="col-3 mx-auto bg-secondary"></div>
-        afea
-        <div class="col-11 mx-auto"></div>
-        fef
+        <div class="row">
+          <div class="col-3 mx-auto bg-secondary">
+            <p>左のスペース</p>
+          </div>
+          <div class="col-9 mx-auto">
+            <p>右のスペース</p>
+          </div>
+        </div>
       </div>
     </body>
 </html>
