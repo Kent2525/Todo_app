@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('/', 'Admin\NewsController@add');
+    Route::get('/', 'TaskController@add');
+    
 });
 Auth::routes();
 
