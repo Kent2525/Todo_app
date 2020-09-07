@@ -11,14 +11,13 @@
 |
 */
 
+use App\Http\Controllers\TaskController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('/', 'TaskController@add');
-    
-});
+Route::resource('admin', 'TaskController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
