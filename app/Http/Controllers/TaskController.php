@@ -11,4 +11,12 @@ class TaskController extends Controller
     {
         return view('admin.task');  
     }//
+
+    public function index()
+    {
+        $post = [
+            'task' =>'これはControllerを通したmsg',
+        ];
+        return view('admin.task', $post);
+    }
 }

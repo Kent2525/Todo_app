@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', 'TaskController@add');
-    
+    Route::get('/', 'TaskController@index');
 });
 Auth::routes();
 

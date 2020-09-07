@@ -49,7 +49,7 @@
           <div class="left-tttle-box my-4 mx-5">
             <p class="sample">左のスペース</p>
             <ul class="list-group">
-              <li class="list-group-item bg-light">PHPデータ1</li>
+              <li class="list-group-item bg-light">{{ $task }}</li>
               <li class="list-group-item bg-light">PHPデータ2</li>
               <li class="list-group-item bg-light">PHPデータ3</li>
               <li class="list-group-item bg-light">PHPデータ4</li>
