@@ -1,8 +1,16 @@
-.sample {
-  color: red;
-}
-
 body {
-  background-color: #000;
+  background-color;
 }
 
+body .test {
+  color:;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.task_index {
+  border-bottom: 2px solid rgb(185, 183, 183);
+  pointer-events: none;
+}
