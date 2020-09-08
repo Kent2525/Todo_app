@@ -15,7 +15,7 @@ class TaskController extends Controller
 
     public function index()
     {
-        $posts = Title::all();
+        $posts1 = Title::all();
         $posts = Content::all();
         return view('admin.task', ['posts' => $posts]);
     }

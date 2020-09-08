@@ -83,6 +83,9 @@
                         <label for="ccontent">メモ</label>
                         <textarea id="content" type="text" class="form-control" row="5"></textarea>
                       </div>
+                      <div class="text-center">
+                       <button type="submit" class="btn btn-primary">送信</button>
+                      </div>
                     </form>
                   </div>
                   <div class="modal-footer">
