@@ -28,6 +28,8 @@
     <!-- <link rel="stylesheet" href="/css/app.css"> -->
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
   </head>
+
+
   <body>
     <nav class="navbar navbar-default bg-primary">
       <div class="container-fluid">
@@ -43,13 +45,15 @@
         </div>
       </div>
     </nav>
+
+
     <div class="main">
       <div class="row" style="height: 100%;">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
             <p class="sample">左のスペース</p>
             <ul class="list-group">
-              @foreach($posts as $title)
+              @foreach($title_posts as $title)
                 <li class="list-group-item bg-light">{{ $title->title }}</li>
               @endforeach
             </ul>
@@ -59,10 +63,12 @@
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group">
-              @foreach($posts as $content)
+              @foreach($heading_posts as $content)
                <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $content->heading }}</a></li>
               @endforeach
             </ul>
+
+
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog">             
