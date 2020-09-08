@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Todo;
 
@@ -14,7 +15,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return view('admin.index', [ 'todos' => Todo::all() ]);
+        return view('admin.task.index', [ 'todos' => Todo::all() ]);
     }
 
     /**
@@ -24,7 +25,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+        return view('admin.task.create');
     }
 
     /**
