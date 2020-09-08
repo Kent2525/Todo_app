@@ -39,7 +39,7 @@ class TaskController extends Controller
         $todo = new Todo();
         $todo->todo = $request->input('todo');
         $todo->save();
-        return redirect('/admin');
+        return redirect('/admin/task');
     }
 
     /**
@@ -50,7 +50,6 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
@@ -61,7 +60,7 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.task.edit', ['todo' => Todo::find($id)]);
     }
 
     /**
@@ -73,7 +72,10 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->todo = $request->input('todo');
+        $todo->save();
+        return redirect('/admin/task');
     }
 
     /**
@@ -84,6 +86,7 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Todo::destroy($id);
+        return redirect('/admin/task');
     }
 }
