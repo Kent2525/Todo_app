@@ -39,7 +39,7 @@
           <a class="navbar-brand" href="#">Bootstrapサンプル</a>
         </div>
         <div class="collapse navbar-collapse" id="navigation">
-          <p class="navbar-text navbar-right">ozaki25 さんでログイン中</p>
+          <p class="navbar-text navbar-right">ログイン中</p>
         </div>
       </div>
     </nav>
@@ -49,8 +49,8 @@
           <div class="left-tttle-box my-4 mx-5">
             <p class="sample">左のスペース</p>
             <ul class="list-group">
-              @foreach($posts as $task)
-                <li class="list-group-item bg-light">{{ $task->title }}</li>
+              @foreach($posts as $title)
+                <li class="list-group-item bg-light">{{ $title->title }}</li>
               @endforeach
             </ul>
           </div>
@@ -59,8 +59,8 @@
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group">
-              @foreach($posts as $task)
-               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $task->heading }}</a></li>
+              @foreach($posts as $content)
+               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $content->heading }}</a></li>
               @endforeach
             </ul>
             <!-- Modal -->
@@ -74,8 +74,16 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <p>見出し</p>
-                    <p>内容</p>
+                    <form>
+                      <div class="form-group">
+                        <label for="heading">見出し</label>
+                        <input id="heading" type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="ccontent">メモ</label>
+                        <textarea id="content" type="text" class="form-control" row="5"></textarea>
+                      </div>
+                    </form>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Task;
+use App\Title;
+use App\Content;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -14,7 +15,8 @@ class TaskController extends Controller
 
     public function index()
     {
-        $posts = Task::all();
+        $posts = Title::all();
+        $posts = Content::all();
         return view('admin.task', ['posts' => $posts]);
     }
 }
