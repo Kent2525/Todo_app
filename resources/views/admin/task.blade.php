@@ -49,22 +49,41 @@
           <div class="left-tttle-box my-4 mx-5">
             <p class="sample">左のスペース</p>
             <ul class="list-group">
-              <li class="list-group-item bg-light">{{ $task }}</li>
-              <li class="list-group-item bg-light">PHPデータ2</li>
-              <li class="list-group-item bg-light">PHPデータ3</li>
-              <li class="list-group-item bg-light">PHPデータ4</li>
+              @foreach($posts as $task)
+                <li class="list-group-item bg-light">{{ $task->title }}</li>
+              @endforeach
             </ul>
           </div>
         </div>
         <div class="col-9 mx-auto bg-white">
-          <div class="right-tttle-box my-4 mx-5">
+          <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group">
-              <li class="list-group-item task_index">PHPデータ1</li>
-              <li class="list-group-item task_index">PHPデータ2</li>
-              <li class="list-group-item task_index">PHPデータ3</li>
-              <li class="list-group-item task_index">PHPデータ4</li>
+              @foreach($posts as $task)
+               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $task->heading }}</a></li>
+              @endforeach
             </ul>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">             
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="text-center">タイトル</h4>
+                    <p>見出し</p>
+                    <p>内容</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                  </div>
+                </div>             
+              </div>
+            </div>
+ 
           </div>
         </div>
       </div>

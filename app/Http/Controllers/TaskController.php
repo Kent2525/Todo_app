@@ -14,9 +14,7 @@ class TaskController extends Controller
 
     public function index()
     {
-        $post = [
-            'task' =>'これはControllerを通したmsg',
-        ];
-        return view('admin.task', $post);
+        $posts = Task::all();
+        return view('admin.task', ['posts' => $posts]);
     }
 }
