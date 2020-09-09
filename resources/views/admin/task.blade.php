@@ -79,7 +79,7 @@
             <p class="test">右のスペース</p>
             <ul class="list-group">
               @foreach($heading_posts as $content)
-               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" data-whatever="{{ $content->heading }}">{{ $content->heading }}</a></li>
+               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" data-heading="{{ $content->heading }}" data-content="{{ $content->body }}">{{ $content->heading }}</a></li>
               @endforeach
             </ul>
 
