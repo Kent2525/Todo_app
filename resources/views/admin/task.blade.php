@@ -13,9 +13,21 @@
     <!-- Laravel標準搭載のJavascript -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- 下2行はbootstrapのJavascript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+    <script>
+//       $('#myModal').on('show.bs.modal', function (event) {
+//     console.log("モーダルが開きました");
+//   var button = jQuery(event.relatedTarget) // Button that triggered the modal
+//   var recipient = button.data('whatever') // Extract info from data-* attributes
+//   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+//   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+//   var modal = jQuery(this)
+//   modal.find('.modal-title').text('New message to ' + recipient)
+//   modal.find('.modal-body input').val(recipient)
+// })
+      </script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -27,6 +39,7 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/css/app.css"> -->
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
+    
   </head>
 
 
@@ -66,7 +79,7 @@
             <p class="test">右のスペース</p>
             <ul class="list-group">
               @foreach($heading_posts as $content)
-               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $content->heading }}</a></li>
+               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">{{ $content->heading }}</a></li>
               @endforeach
             </ul>
 
