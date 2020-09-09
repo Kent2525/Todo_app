@@ -16,7 +16,8 @@ class TaskController extends Controller
     public function index()
     {
         $title_posts = Title::all();
-        $heading_posts = Content::all();
+        $heading_posts = Content::where('title_id', 1)->get();
+        // $heading_posts = Content::all();
         return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
     }
 }
