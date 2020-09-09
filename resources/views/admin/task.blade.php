@@ -65,9 +65,12 @@
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group">
-              @foreach($heading_posts as $content)
-               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $content->heading }}</a></li>
-              @endforeach
+                @if ($title->contents != NULL)
+                  @foreach($heading_posts as $content)
+               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $current_title_id === $content->title_id ? 'active' : '' }}
+               </a></li>
+                  @endforeach
+                @endif
             </ul>
 
 

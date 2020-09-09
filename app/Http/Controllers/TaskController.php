@@ -13,10 +13,10 @@ class TaskController extends Controller
         return view('admin.task');  
     }//
 
-    public function index()
+    public function index(int $id)
     {
         $title_posts = Title::all();
         $heading_posts = Content::all();
-        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
+        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts, 'current_title_id' => $id,]);
     }
 }
