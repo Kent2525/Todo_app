@@ -11,8 +11,10 @@ class TitleTableSeeder extends Seeder
      */
     public function run()
     {
+                DB::statement('SET FOREIGN_KEY_CHECKS=0;');
                 // (1)レコードデータをいちいち消さなくていい文
                 DB::table('titles')->truncate(); // 全レコードを削除、自動増分のIDを0にリセット
+                DB::statement('SET FOREIGN_KEY_CHECKS=1;');
                 DB::table('titles')->insert([  // テーブルにデータをInsert
                     [
                         'user_id' => '1',

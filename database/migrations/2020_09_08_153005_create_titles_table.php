@@ -13,6 +13,12 @@ class CreateTitlesTable extends Migration
      */
     public function up()
     {
+
+        if (Schema::hasTable('titles')) {
+            // テーブルが存在していればリターン
+            return;
+        }
+
         Schema::create('titles', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();

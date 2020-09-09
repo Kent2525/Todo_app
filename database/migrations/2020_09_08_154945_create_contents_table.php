@@ -11,8 +11,16 @@ class CreateContentsTable extends Migration
      *
      * @return void
      */
+
+
+    
     public function up()
     {
+        if (Schema::hasTable('contents')) {
+            // テーブルが存在していればリターン
+            return;
+        }
+
         Schema::create('contents', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('title_id')->unsigned();
@@ -21,6 +29,7 @@ class CreateContentsTable extends Migration
             $table->integer('status')->default(1);
             $table->date('due_date');
             $table->timestamps();
+            $table->foreign('title_id')->references('id')->on('titles');
         });
     }
 

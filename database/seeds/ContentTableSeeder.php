@@ -11,8 +11,10 @@ class ContentTableSeeder extends Seeder
      */
     public function run()
     {
+                DB::statement('SET FOREIGN_KEY_CHECKS=0;');
                 // (1)レコードデータをいちいち消さなくていい文
                 DB::table('contents')->truncate(); // 全レコードを削除、自動増分のIDを0にリセット
+                DB::statement('SET FOREIGN_KEY_CHECKS=1;');
                 DB::table('contents')->insert([  // テーブルにデータをInsert
                     [
                         'title_id' => '1',
@@ -24,7 +26,7 @@ class ContentTableSeeder extends Seeder
                         'updated_at' => date('Y-m-d H:i:s'),
                       ],
                       [
-                        'title_id' => '2',
+                        'title_id' => '1',
                         'heading' => 'サンプル日本語heading2',
                         'body' => 'body2',
                         'status' => '1',
@@ -33,7 +35,7 @@ class ContentTableSeeder extends Seeder
                         'updated_at' => date('Y-m-d H:i:s'),
                       ],
                       [
-                        'title_id' => '3',
+                        'title_id' => '1',
                         'heading' => 'サンプル日本語heading3',
                         'body' => 'body3',
                         'status' => '2',
