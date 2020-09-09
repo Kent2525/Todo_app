@@ -53,7 +53,7 @@
           <div class="left-tttle-box my-4 mx-5">
             <p class="sample">左のスペース</p>
             <ul class="list-group">
-              @foreach($title_posts as $title)
+              @foreach($titles as $title)
               <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item">
                 {{ $title->title }}
               </a>
@@ -61,16 +61,15 @@
             </ul>
           </div>
         </div>
+        
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group">
-                @if ($title->contents != NULL)
-                  @foreach($heading_posts as $content)
-               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{ $current_title_id === $content->title_id ? 'active' : '' }}
-               </a></li>
+                  @foreach($contents as $content)
+                     <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{$content->heading}}
+                     </a></li>
                   @endforeach
-                @endif
             </ul>
 
 
