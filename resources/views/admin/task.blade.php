@@ -54,7 +54,9 @@
             <p class="sample">左のスペース</p>
             <ul class="list-group">
               @foreach($title_posts as $title)
-                <li class="list-group-item bg-light">{{ $title->title }}</li>
+              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item">
+                {{ $title->title }}
+              </a>
               @endforeach
             </ul>
           </div>
