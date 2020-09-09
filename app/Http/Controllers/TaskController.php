@@ -26,6 +26,17 @@ class TaskController extends Controller
     {
         $title_posts = Title::all();
         $heading_posts = Content::where('title_id', $id)->get();
-        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
+        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts, 'id' => $id]);
+    }
+
+    // モーダルでの保存処理
+    public function store(Request $request, $id) 
+    {
+        $content = Content::find($id);
+        $content->heading = $request->input('heading');
+        $content->body = $request->input('content');
+        $content->title_id = $id;
+        $content->save();
+        return back();
     }
 }

@@ -95,14 +95,15 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form>
+                    <form action="/admin/title/{{$id}}" method="POST">
+                      @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>
-                        <input id="heading" type="text" class="form-control">
+                        <input id="heading" type="text" class="form-control" name="heading">
                       </div>
                       <div class="form-group">
                         <label for="ccontent">メモ</label>
-                        <textarea id="content" type="text" class="form-control" row="5"></textarea>
+                        <textarea id="content" type="text" class="form-control" row="5" name="content"></textarea>
                       </div>
                       <div class="text-center">
                        <button type="submit" class="btn btn-primary">送信</button>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Carbon\Carbon;
 
 class CreateContentsTable extends Migration
 {
@@ -19,7 +20,7 @@ class CreateContentsTable extends Migration
             $table->string('heading', 200);
             $table->string('body');
             $table->integer('status')->default(1);
-            $table->date('due_date');
+            $table->date('due_date')->default(Carbon::now());
             $table->timestamps();
         });
     }

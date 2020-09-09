@@ -22,4 +22,5 @@ Route::group(['prefix' => 'admin'], function() {
 Auth::routes();
 
 Route::get('/admin/title/{id}', 'TaskController@show')->name('admin.task');
+Route::post('/admin/title/{id}', 'TaskController@store');
 Route::get('/home', 'HomeController@index')->name('home');
