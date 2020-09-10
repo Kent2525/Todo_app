@@ -25,4 +25,10 @@ class TaskController extends Controller
             'contents' => $contents,
             ]);
     }
+
+    public function create(Request $request)
+    {
+        return redirect('/');  
+    }//
+
 }

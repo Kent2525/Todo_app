@@ -84,17 +84,18 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form>
+                    <form action="{{ action('TaskController@create') }}" method="post">
                       <div class="form-group">
                         <label for="heading">見出し</label>
-                        <input id="heading" type="text" class="form-control">
+                        <input id="heading" type="text" name="heading" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label for="ccontent">メモ</label>
-                        <textarea id="content" type="text" class="form-control" row="5"></textarea>
+                        <label for="content">メモ</label>
+                        <textarea id="content" type="text" name="body" class="form-control" row="5"></textarea>
                       </div>
+                      {{ csrf_field() }}
                       <div class="text-center">
-                       <button type="submit" class="btn btn-primary">送信</button>
+                        <button type="submit" class="btn btn-primary">送信</button>
                       </div>
                     </form>
                   </div>
