@@ -36,7 +36,7 @@ class TaskController extends Controller
         
         $current_title->contents()->save($content);
         
-        return redirect()->route('admin.title', [
+        return redirect()->route('admin.task', [
             'id' => $current_title ->id,
         ]);  
     }//
