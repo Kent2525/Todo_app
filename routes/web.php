@@ -22,6 +22,7 @@ Route::group(['prefix' => 'admin'], function() {
 
 Route::get('/admin/task/{id?}', 'TaskController@index')->name('admin.task');
 Route::post('/admin/task/{id?}', 'TaskController@create')->name('admin.task');
+Route::post('/admin/task/{id?}', 'TaskController@edit');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();

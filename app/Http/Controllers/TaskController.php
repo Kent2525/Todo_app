@@ -41,4 +41,8 @@ class TaskController extends Controller
         ]);  
     }//
 
+    public function edit(int $id, Request $request)
+    {   
+        return redirect()->route('admin.task');
+    }//
 }
