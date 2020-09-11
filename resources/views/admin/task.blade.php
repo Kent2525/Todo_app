@@ -51,7 +51,35 @@
       <div class="row" style="height: 100%;">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
-            <p class="sample">左のスペース</p>
+            <p><a class="" data-toggle="modal" data-target="#titleModal">タイトル追加</a></p>
+            <!-- Modal -->
+            <div id="titleModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">             
+                <!-- Modal content-->
+                <div class="modal-content">
+                   <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="text-center">タイトル追加</h4>
+                    <form action="{{ route('admin.task') }}" method="post">
+                      <div class="form-group">
+                        <input id="heading" type="text" name="heading" class="form-control">
+                      </div>
+                      {{ csrf_field() }}
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-primary">追加</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                  </div>
+                </div>             
+              </div>
+            </div>
+
             <ul class="list-group">
               @foreach($titles as $title)
               <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item">
