@@ -84,7 +84,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form action="{{ action('TaskController@create') }}" method="post">
+                    <form action="{{ route('admin.title', ['id' => $title->id]) }}" method="post">
                       <div class="form-group">
                         <label for="heading">見出し</label>
                         <input id="heading" type="text" name="heading" class="form-control">

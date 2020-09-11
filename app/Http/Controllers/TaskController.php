@@ -26,9 +26,19 @@ class TaskController extends Controller
             ]);
     }
 
-    public function create(Request $request)
-    {
-        return redirect('/');  
+    public function create(int $id, Request $request)
+    {   
+        $current_title = Title::find($id);
+        
+        $content = new Content;
+        $content->heading = $request->heading;
+        $content->body = $request->body;
+        
+        $current_title->contents()->save($content);
+        
+        return redirect()->route('admin.title', [
+            'id' => $current_title ->id,
+        ]);  
     }//
 
 }
