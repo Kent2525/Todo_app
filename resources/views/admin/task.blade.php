@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="{{ app()->getLocale() }}" style="height: 100%;">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +30,7 @@
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
   </head>
 
-  <body>
+  <body style="height: 100%;">
     <nav class="navbar navbar-default bg-primary">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -46,7 +46,7 @@
       </div>
     </nav>
 
-       <div class="main">
+    <div class="main" style="height: 100%;">
       <div class="row" style="height: 100%;">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
@@ -89,15 +89,14 @@
           </div>
         </div>
         
-
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group" >
-            @foreach($contents as $content)
-                     <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" id="title">{{$content->heading}}
-                     </a></li>
-                  @endforeach
+               @foreach($contents as $content)
+                  <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" id="title">{{$content->heading}}
+                  </a></li>
+               @endforeach
             </ul>
 
             <!-- Modal -->
@@ -132,7 +131,6 @@
                 </div>             
               </div>
             </div>
- 
           </div>
         </div>
       </div>
