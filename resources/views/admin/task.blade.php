@@ -63,7 +63,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル追加</h4>
-                    <form action="{{ action('TaskController@edit') }}" method="post">
+                    <form action="/" method="post">
                       <div class="form-group">
                         <input id="heading" type="text" name="heading" class="form-control">
                       </div>
@@ -90,6 +90,7 @@
           </div>
         </div>
         
+
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
@@ -99,7 +100,6 @@
                      </a></li>
                   @endforeach
             </ul>
-
 
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">

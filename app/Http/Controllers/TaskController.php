@@ -20,13 +20,12 @@ class TaskController extends Controller
         $contents = Content::where('title_id', $current_title->id)->get();
 
         return view('admin.task', [
-            'titles' => $titles,  
-            'current_title_id' => $id,
+            'titles' => $titles,
             'contents' => $contents,
             ]);
     }
 
-    public function create(int $id, Request $request)
+    public function update(int $id, Request $request)
     {   
         $current_title = Title::find($id);
         
@@ -41,8 +40,4 @@ class TaskController extends Controller
         ]);  
     }//
 
-    public function edit(int $id, Request $request)
-    {   
-        return redirect()->route('admin.task');
-    }//
 }
