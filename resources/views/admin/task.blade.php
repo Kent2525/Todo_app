@@ -94,15 +94,15 @@
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
-            <ul class="list-group">
+            <ul class="list-group" >
                   @foreach($contents as $content)
-                     <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal">{{$content->heading}}
+                     <li><a class="list-group-item task_index" data-toggle="modal" data-target="#contentModal" >{{$content->heading}}
                      </a></li>
                   @endforeach
             </ul>
 
             <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
+            <div id="contentModal" class="modal fade" role="dialog">
               <div class="modal-dialog">             
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -114,8 +114,8 @@
                     <h4 class="text-center">タイトル</h4>
                     <form action="{{ route('admin.task', ['id' => $title->id]) }}" method="post">
                       <div class="form-group">
-                        <label for="heading">見出し</label>
-                        <input id="heading" type="text" name="heading" class="form-control" value=" {{ $content->heading }}">
+                        <label for="inputHeading">見出し</label>
+                        <input id="inputHeading" type="text" name="heading" class="form-control">
                       </div>
                       <div class="form-group">
                         <label for="content">メモ</label>
@@ -138,5 +138,19 @@
         </div>
       </div>
     </div>
+    <script>
+      var Dataheading = $('#Dataheadning').html();
+
+      $('#inputheading').val(Dataheading);
+    });
+
+    $('#save').click(function() {
+      var inputHeading = $('#inputHeading').val();
+
+      $('#DataHeading').html(inputHeading);
+    });
+
+    </script>
+
   </body>
 </html>
