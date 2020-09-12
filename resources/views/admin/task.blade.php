@@ -1,5 +1,6 @@
-<html lang="{{ app()->getLocale() }}">
-  <head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +30,6 @@
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
   </head>
 
-
   <body>
     <nav class="navbar navbar-default bg-primary">
       <div class="container-fluid">
@@ -46,8 +46,7 @@
       </div>
     </nav>
 
-
-    <div class="main">
+       <div class="main">
       <div class="row" style="height: 100%;">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
@@ -95,14 +94,14 @@
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
             <ul class="list-group" >
-                  @foreach($contents as $content)
-                     <li><a class="list-group-item task_index" data-toggle="modal" data-target="#contentModal" >{{$content->heading}}
+            @foreach($contents as $content)
+                     <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" id="title">{{$content->heading}}
                      </a></li>
                   @endforeach
             </ul>
 
             <!-- Modal -->
-            <div id="contentModal" class="modal fade" role="dialog">
+            <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog">             
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -114,8 +113,8 @@
                     <h4 class="text-center">タイトル</h4>
                     <form action="{{ route('admin.task', ['id' => $title->id]) }}" method="post">
                       <div class="form-group">
-                        <label for="inputHeading">見出し</label>
-                        <input id="inputHeading" type="text" name="heading" class="form-control">
+                        <label for="inputTitle">見出し</label>
+                        <input id="inputTitle" type="text" name="heading" class="form-control">
                       </div>
                       <div class="form-group">
                         <label for="content">メモ</label>
@@ -138,19 +137,25 @@
         </div>
       </div>
     </div>
-    <script>
-      var Dataheading = $('#Dataheadning').html();
 
-      $('#inputheading').val(Dataheading);
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $('#myModal').on('show.bs.modal', function (e) {
+      var title = $('#title').html();
+      var content = $('#content').html();
+
+      $('#inputTitle').val(title);
+      $('#inputContent').val(content);
     });
 
     $('#save').click(function() {
-      var inputHeading = $('#inputHeading').val();
+      var inputTitle = $('#inputTitle').val();
+      var inputContent = $('#inputContent').val();
 
-      $('#DataHeading').html(inputHeading);
+      $('#title').html(inputTitle);
+      $('#content').html(inputContent);
     });
-
     </script>
-
   </body>
 </html>
