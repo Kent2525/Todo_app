@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}" style="height: 100%;">
+<html lang="{{ app()->getLocale() }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
   </head>
 
-  <body style="height: 100%;">
+  <body>
     <nav class="navbar navbar-default bg-primary">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -46,8 +46,8 @@
       </div>
     </nav>
 
-    <div class="main" style="height: 100%;">
-      <div class="row" style="height: 100%;">
+    <div class="main">
+      <div class="row">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
             <p><a class="" data-toggle="modal" data-target="#titleModal">タイトル追加</a></p>
