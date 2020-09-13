@@ -18,7 +18,7 @@ class ContentTableSeeder extends Seeder
                 DB::table('contents')->insert([  // テーブルにデータをInsert
                     [
                         'title_id' => '1',
-                        'heading' => 'サンプル日本語heading',
+                        'heading' => 'heading',
                         'body' => 'body1',
                         'status' => '1',
                         'due_date' => "2020-12-31",
@@ -27,7 +27,7 @@ class ContentTableSeeder extends Seeder
                       ],
                       [
                         'title_id' => '1',
-                        'heading' => 'サンプル日本語heading2',
+                        'heading' => 'heading2',
                         'body' => 'body2',
                         'status' => '1',
                         'due_date' => "2020-12-31",
@@ -36,7 +36,7 @@ class ContentTableSeeder extends Seeder
                       ],
                       [
                         'title_id' => '1',
-                        'heading' => 'サンプル日本語heading3',
+                        'heading' => 'heading3',
                         'body' => 'body3',
                         'status' => '2',
                         'due_date' => "2020-12-31",

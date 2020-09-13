@@ -50,7 +50,7 @@
       <div class="row">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
-            <p><a class="" data-toggle="modal" data-target="#titleModal">タイトル追加</a></p>
+            <p><a class="" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
             <!-- Modal -->
             <div id="titleModal" class="modal fade" role="dialog">
               <div class="modal-dialog">             
@@ -62,7 +62,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル追加</h4>
-                    <form action="/" method="post">
+                    <form action="{{ action('TaskController@createtitle') }}" method="post">
                       <div class="form-group">
                         <input id="heading" type="text" name="heading" class="form-control">
                       </div>
@@ -91,7 +91,7 @@
         
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
-            <p class="test">右のスペース</p>
+            <p class="test">見出し</p>
             <ul class="list-group" >
                @foreach($contents as $content)
                   <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}">{{$content->heading}}

@@ -25,6 +25,7 @@ class TaskController extends Controller
             ]);
     }
 
+
     public function update(int $id, Request $request)
     {   
         $current_title = Title::find($id);
@@ -38,6 +39,19 @@ class TaskController extends Controller
         return redirect()->route('admin.task', [
             'id' => $current_title ->id,
         ]);  
-    }//
+    }
 
+    public function createtitle(Request $request)
+    {   
+        $title = Title::all();
+        
+        $title = new Title;
+        $title->title = $request->title;
+        
+        $title->save();
+        
+        return redirect('/');
+    }
+    
 }
+
