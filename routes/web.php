@@ -25,7 +25,6 @@ Route::get('/admin/task', 'TaskController@add');
 Route::get('/admin/task/{id?}', 'TaskController@index')->name('admin.task');
 Route::post('/admin/task/{id?}', 'TaskController@update');
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::post('/admin/task/{id?}', 'TaskController@createtitle');
 Route::post('/admin/task/{id?}', 'TaskController@createtitle');
 
 Auth::routes();
