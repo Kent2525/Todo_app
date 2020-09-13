@@ -25,33 +25,42 @@ class TaskController extends Controller
             ]);
     }
 
-
-    public function update(int $id, Request $request)
+    // 属性直入れスタイル
+    public function create(Request $request)
     {   
-        $current_title = Title::find($id);
-        
-        $content = new Content;
-        $content->heading = $request->heading;
-        $content->body = $request->body;
-        
-        $current_title->contents()->save($content);
-        
-        return redirect()->route('admin.task', [
-            'id' => $current_title ->id,
-        ]);  
-    }
-
-    public function createtitle(Request $request)
-    {   
-        $title = Title::all();
-        
+       
         $title = new Title;
         $title->title = $request->title;
-        
         $title->save();
+
+        // $content = new Content;
+        // $content->heading = $request->heading;
+        // $content->body = $request->body;
+        // $current_title = Title::find($id);
+        // $content_title->contents($content)->save($content);
+        
+        return redirect('/');
+    // }
+
+        // public function create(Request $request)
+        // {   
+
+        //     $title = new Title;
+        //     $title->fill($request->all())->save($title);
+            // $content = new Content;
+            // $content->fill($request->all())->save();
+    
+        // $title = new Title;
+        // $title->title = $request->title;
+        // $title->save();
+
+        // $content = new Content;
+        // $content->heading = $request->heading;
+        // $content->body = $request->body;
+        // $current_title = Title::find($id);
+        // $content_title->contents()->save($content);
         
         return redirect('/');
     }
-    
 }
 

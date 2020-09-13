@@ -62,7 +62,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル追加</h4>
-                    <form action="{{ action('TaskController@createtitle') }}" method="post">
+                    <form action="{{ action('TaskController@create') }}" method="post">
                       <div class="form-group">
                         <input id="title" type="text" name="title" class="form-control">
                       </div>
@@ -110,7 +110,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form action="{{ route('admin.task', ['id' => $title->id]) }}" method="post">
+                    <form action="{{ action('TaskController@create') }}" method="post">
                       <div class="form-group">
                         <label for="inputHeading_modal">見出し</label>
                         <input id="inputHeading_modal" type="text" name="heading" class="form-control">
