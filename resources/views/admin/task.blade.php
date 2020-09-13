@@ -94,7 +94,7 @@
             <p class="test">右のスペース</p>
             <ul class="list-group" >
                @foreach($contents as $content)
-                  <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" id="title">{{$content->heading}}
+                  <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}">{{$content->heading}}
                   </a></li>
                @endforeach
             </ul>
@@ -112,8 +112,8 @@
                     <h4 class="text-center">タイトル</h4>
                     <form action="{{ route('admin.task', ['id' => $title->id]) }}" method="post">
                       <div class="form-group">
-                        <label for="inputTitle">見出し</label>
-                        <input id="inputTitle" type="text" name="heading" class="form-control">
+                        <label for="inputHeading_modal">見出し</label>
+                        <input id="inputHeading_modal" type="text" name="heading" class="form-control">
                       </div>
                       <div class="form-group">
                         <label for="content">メモ</label>
@@ -121,7 +121,7 @@
                       </div>
                       {{ csrf_field() }}
                       <div class="text-center">
-                        <button type="submit" class="btn btn-primary">送信</button>
+                        <button type="submit" class="btn btn-primary">更新</button>
                       </div>
                     </form>
                   </div>
@@ -139,20 +139,20 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-    $('#myModal').on('show.bs.modal', function (e) {
-      var title = $('#title').html();
-      var content = $('#content').html();
-
-      $('#inputTitle').val(title);
-      $('#inputContent').val(content);
+    $('.heading_modal').click(function() {
+      var heading_modal = $(this).data('title');
+      $('#inputHeading_modal').val(heading_modal);
     });
+    // $('#myModal').on('show.bs.modal', function (e) {
+    //   var heading_modal = $('#heading_modal').html();
+
+    //   $('#inputHeading_modal').val(heading_modal);
+    // });
 
     $('#save').click(function() {
-      var inputTitle = $('#inputTitle').val();
-      var inputContent = $('#inputContent').val();
+      var inputHeading_modal = $('#inputHeading_modal').val();
 
-      $('#title').html(inputTitle);
-      $('#content').html(inputContent);
+      $('#heading_modal').html(inputHeading_modal);
     });
     </script>
   </body>
