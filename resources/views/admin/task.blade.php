@@ -64,7 +64,7 @@
                     <h4 class="text-center">タイトル追加</h4>
                     <form action="{{ action('TaskController@createtitle') }}" method="post">
                       <div class="form-group">
-                        <input id="heading" type="text" name="heading" class="form-control">
+                        <input id="title" type="text" name="title" class="form-control">
                       </div>
                       {{ csrf_field() }}
                       <div class="text-center">
