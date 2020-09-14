@@ -15,7 +15,7 @@ class ContentController extends Controller
 
     public function update(Request $request)
     {   
-        $content = Title::find($request->id);
+        $content = Content::find($request->id);
         $form = $request->all();
         unset($form['_token']);
         $content->fill($form)->save();

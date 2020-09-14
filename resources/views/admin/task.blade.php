@@ -98,7 +98,7 @@
             <p class="test">見出し</p>
             <ul class="list-group" >
                @foreach($contents as $content)
-                  <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-id="{{ $content->id }}" >{{$content->heading}}
+                  <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
                   </a></li>
                @endforeach
             </ul>
@@ -146,12 +146,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
+    
+    // heading-modal（ループしているデータ）をクリックした時に
     $('.heading_modal').on('click', function() {
-      var heading_modal = $(this).data('title');
-      var heading_modal = $(this).data('title');
+      // このdata('title')（data-title="{{$content->heading}}"）をtitleに代入
+      var title = $(this).data('title');
+      // このdata('body')（data-body="{{$content->body}}"）をtitleに代入
+      var body = $(this).data('body');
 
-      $('#inputHeading_modal').val(heading_modal);
-      $('#inputBody_modal').val(heading_modal);
+      // '#inputHeading_modal'に対してtitleを埋める
+      $('#inputHeading_modal').val(title);
+      // '#inputBody_modal'に対してbodyを埋める
+      $('#inputBody_modal').val(body);
 
 
       var id = $(this).data('id');
@@ -163,15 +169,15 @@
     //   $('#inputHeading_modal').val(heading_modal);
     // });
 
-    $('#save').click(function() {
-      var inputHeading_modal = $('#inputHeading_modal').val();
-      var inputBody_modal = $('#inputBody_modal').val();
+    // $('#save').click(function() {
+    //   var inputHeading_modal = $('#inputHeading_modal').val();
+    //   var inputBody_modal = $('#inputBody_modal').val();
 
-      $('#heading_modal').html(inputHeading_modal);      
-      $('#heading_modal').html(inputBody_modal);
+    //   $('#heading_modal').html(inputHeading_modal);      
+    //   $('#heading_modal').html(inputBody_modal);
 
 
-    });
+    // });
     </script>
   </body>
 </html>
