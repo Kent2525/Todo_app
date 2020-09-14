@@ -17,7 +17,6 @@ class TaskController extends Controller
     {
         $titles = Title::all();
         $currentTitle = Title::find($id);
-        // dd($currentTitle->contents);
 
         return view('admin.task', [
             'titles' => $titles,
@@ -32,13 +31,6 @@ class TaskController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $title->fill($form)->save();
-
-        // $content = new Content;
-        // $form = $request->all();
-        // unset($form['_token']);
-        // $current_title = Title::find($id);
-        // $current_title->content->save($content);
-
         
         // public function create(Request $request)
         // {   
@@ -46,16 +38,7 @@ class TaskController extends Controller
         //     $title = new Title;
         //     $title->title = $request->title;
         //     $title->save();
-
-        //     $content = new Content;
-        //     $content->heading = $request->heading;
-        //     $content->body = $request->body;
-        //     $current_title = Title::find($id);
-        //     $content_title->contents()->save($content);
-            
-        //     return redirect('/');
-        // // }
-        
+        // }
     
         return redirect('/admin/task/1');
     }
