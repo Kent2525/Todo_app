@@ -24,43 +24,40 @@ class TaskController extends Controller
             'contents' => $contents,
             ]);
     }
+    
 
-    // 属性直入れスタイル
     public function create(Request $request)
     {   
-       
-        $title = new Title;
-        $title->title = $request->title;
-        $title->save();
+        $title = new Title;     
+        $form = $request->all();
+        unset($form['_token']);
+        $title->fill($form)->save();
 
         // $content = new Content;
-        // $content->heading = $request->heading;
-        // $content->body = $request->body;
+        // $form = $request->all();
+        // unset($form['_token']);
         // $current_title = Title::find($id);
-        // $content_title->contents($content)->save($content);
-        
-        return redirect('/');
-    // }
+        // $current_title->content->save($content);
 
+        
         // public function create(Request $request)
         // {   
-
+            
         //     $title = new Title;
-        //     $title->fill($request->all())->save($title);
-            // $content = new Content;
-            // $content->fill($request->all())->save();
-    
-        // $title = new Title;
-        // $title->title = $request->title;
-        // $title->save();
+        //     $title->title = $request->title;
+        //     $title->save();
 
-        // $content = new Content;
-        // $content->heading = $request->heading;
-        // $content->body = $request->body;
-        // $current_title = Title::find($id);
-        // $content_title->contents()->save($content);
+        //     $content = new Content;
+        //     $content->heading = $request->heading;
+        //     $content->body = $request->body;
+        //     $current_title = Title::find($id);
+        //     $content_title->contents()->save($content);
+            
+        //     return redirect('/');
+        // // }
         
-        return redirect('/');
+    
+        return redirect('/admin/task/1');
     }
 }
 

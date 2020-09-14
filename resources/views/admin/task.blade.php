@@ -30,6 +30,7 @@
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
   </head>
 
+  <!-- ヘッダー -->
   <body>
     <nav class="navbar navbar-default bg-primary">
       <div class="container-fluid">
@@ -46,12 +47,13 @@
       </div>
     </nav>
 
+    <!-- メインコンテンツ -->
     <div class="main">
       <div class="row">
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
             <p><a class="" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
-            <!-- Modal -->
+            <!-- 左側のタイトル追加Modal -->
             <div id="titleModal" class="modal fade" role="dialog">
               <div class="modal-dialog">             
                 <!-- Modal content-->
@@ -79,6 +81,7 @@
               </div>
             </div>
 
+            <!-- タイトルループ処理 -->
             <ul class="list-group">
               @foreach($titles as $title)
               <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item">
@@ -89,19 +92,20 @@
           </div>
         </div>
         
+        <!-- 右側の見出しのView -->
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">見出し</p>
             <ul class="list-group" >
                @foreach($contents as $content)
-                  <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}">{{$content->heading}}
+                  <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-id="{{ $content->id }}" >{{$content->heading}}
                   </a></li>
                @endforeach
             </ul>
 
-            <!-- Modal -->
+            <!-- 右側の見出しクリックModal -->
             <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">             
+              <div class="modal-dialog"> 
                 <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header">
@@ -110,7 +114,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form action="{{ action('TaskController@create') }}" method="post">
+                    <form action="{{ action('ContentController@edit') }}" method="post">
                       <div class="form-group">
                         <label for="inputHeading_modal">見出し</label>
                         <input id="inputHeading_modal" type="text" name="heading" class="form-control">
@@ -120,6 +124,7 @@
                         <textarea id="content" type="text" name="body" class="form-control" row="5"></textarea>
                       </div>
                       {{ csrf_field() }}
+                      <input type="hidden" id="modal_id" name="id" value="">
                       <div class="text-center">
                         <button type="submit" class="btn btn-primary">更新</button>
                       </div>
@@ -136,12 +141,16 @@
       </div>
     </div>
 
+    <!-- モータルへデータを送るjavascript -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-    $('.heading_modal').click(function() {
+    $('.heading_modal').on('click', function() {
       var heading_modal = $(this).data('title');
       $('#inputHeading_modal').val(heading_modal);
+
+      var id = $(this).data('id');
+      $('#modal_id').val(id);
     });
     // $('#myModal').on('show.bs.modal', function (e) {
     //   var heading_modal = $('#heading_modal').html();
