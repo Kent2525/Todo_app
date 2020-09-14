@@ -43,6 +43,15 @@ class ContentTableSeeder extends Seeder
                         'created_at' => date('Y-m-d H:i:s'),
                         'updated_at' => date('Y-m-d H:i:s'),
                       ],
+                      [
+                        'title_id' => '2',
+                        'heading' => 'heading',
+                        'body' => 'body',
+                        'status' => '1',
+                        'due_date' => "2020-12-31",
+                        'created_at' => date('Y-m-d H:i:s'),
+                        'updated_at' => date('Y-m-d H:i:s'),
+                      ],
                     ]);
         
                 // (2)基本文。毎回Mysqlにてレコードの削除が必要。（mysql>truncate table テーブル名;)

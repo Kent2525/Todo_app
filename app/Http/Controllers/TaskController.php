@@ -16,13 +16,13 @@ class TaskController extends Controller
     public function index(int $id)
     {
         $titles = Title::all();
-        $current_title = Title::find($id);   
-        $contents = Content::where('title_id', $current_title->id)->get();
+        $currentTitle = Title::find($id);
+        // dd($currentTitle->contents);
 
         return view('admin.task', [
             'titles' => $titles,
-            'contents' => $contents,
-            ]);
+            'currentTitle' => $currentTitle,
+        ]);
     }
     
 
