@@ -13,9 +13,9 @@ class ContentController extends Controller
         return view('admin.task');  
     }//
 
-    public function edit(Request $request)
+    public function update(Request $request)
     {   
-        $content = new Content;     
+        $content = Title::find($request->id);
         $form = $request->all();
         unset($form['_token']);
         $content->fill($form)->save();

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
-    protected $guarded = ['id', 'title_id'];
+    protected $guarded = ['id'];
 
     public static $rules = array(
         'heading' => 'required',

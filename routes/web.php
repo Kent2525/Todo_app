@@ -26,7 +26,7 @@ Route::get('/admin/task', 'TaskController@add');
 Route::get('/admin/task/{id?}', 'TaskController@index')->name('admin.task');
 Route::post('/admin/task/{id?}', 'TaskController@create');
 Route::get('/admin/content/{id?}', 'ContentController@add');
-Route::post('/admin/content/{id?}', 'ContentController@edit');
+Route::post('/admin/content/{id?}', 'ContentController@update');
 
 
 

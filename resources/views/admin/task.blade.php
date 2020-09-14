@@ -102,6 +102,7 @@
                   </a></li>
                @endforeach
             </ul>
+            
 
             <!-- 右側の見出しクリックModal -->
             <div id="myModal" class="modal fade" role="dialog">
@@ -114,14 +115,14 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form action="{{ action('ContentController@edit') }}" method="post">
+                    <form action="{{ action('ContentController@update') }}" method="post">
                       <div class="form-group">
                         <label for="inputHeading_modal">見出し</label>
                         <input id="inputHeading_modal" type="text" name="heading" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label for="content">メモ</label>
-                        <textarea id="content" type="text" name="body" class="form-control" row="5"></textarea>
+                        <label for="inputBody_modal">メモ</label>
+                        <textarea id="inputBody_modal" type="text" name="body" class="form-control" row="5"></textarea>
                       </div>
                       {{ csrf_field() }}
                       <input type="hidden" id="modal_id" name="id" value="">
@@ -147,7 +148,11 @@
     <script>
     $('.heading_modal').on('click', function() {
       var heading_modal = $(this).data('title');
+      var heading_modal = $(this).data('title');
+
       $('#inputHeading_modal').val(heading_modal);
+      $('#inputBody_modal').val(heading_modal);
+
 
       var id = $(this).data('id');
       $('#modal_id').val(id);
@@ -160,8 +165,12 @@
 
     $('#save').click(function() {
       var inputHeading_modal = $('#inputHeading_modal').val();
+      var inputBody_modal = $('#inputBody_modal').val();
 
-      $('#heading_modal').html(inputHeading_modal);
+      $('#heading_modal').html(inputHeading_modal);      
+      $('#heading_modal').html(inputBody_modal);
+
+
     });
     </script>
   </body>
