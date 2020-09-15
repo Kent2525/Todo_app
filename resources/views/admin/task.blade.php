@@ -32,18 +32,19 @@
 
   <!-- ヘッダー -->
   <body>
-    <nav class="navbar navbar-default bg-primary">
+    <nav class="navbar navbar-default bg-primary text-white">
       <div class="container-fluid">
-        <div class="navbar-header">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bootstrapサンプル</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navigation">
-          <p class="navbar-text navbar-right">ログイン中</p>
-        </div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          <a class="navbar-brand text-white" href="#">Todo</a>
+        </ul>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="btn btn-primary" href="/login">ログイン</a>
+              <a class="btn btn-primary" href="/register">新規登録</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -84,9 +85,9 @@
             <!-- タイトルループ処理 -->
             <ul class="list-group">
               @foreach($titles as $title)
-              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light">
+              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item titleLoop border-0 bg-light">
                 {{ $title->title }}
-                <i class="fas fa-ellipsis-h fa-pull-right"></i>
+              <a<i class="fas fa-ellipsis-h fa-pull-right"></i></a>
               </a>
               @endforeach
             </ul>

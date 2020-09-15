@@ -18,3 +18,19 @@ ul {
   list-style: none;
 }
 
+.fa-ellipsis-h {
+  opacity: 0;
+}
+
+.fa-ellipsis-h:hover {
+  opacity: 0.5;
+}
+
+/* .fa-link::after {
+  content: "\f0a4";
+  font-weight: 400;
+  font-family: "Font Awesome 5 Free";
+  color: #313131;
+  font-size: 125%;
+  padding: 0 3px;
+} */
