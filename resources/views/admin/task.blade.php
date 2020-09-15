@@ -98,11 +98,10 @@
             <p class="test">見出し</p>
             <ul class="list-group" >
                @foreach($currentTitle->contents as $content)
-                  <li><a class="list-group-item task_index heading_modal" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+                  <li><a class="list-group-item task_index heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
                   </a></li>
                @endforeach
             </ul>
-            
 
             <!-- 右側の見出しクリックModal -->
             <div id="myModal" class="modal fade" role="dialog">
@@ -114,7 +113,7 @@
                     <h4 class="modal-title"></h4>
                   </div>
                   <div class="modal-body">
-                    <h4 class="text-center">タイトル</h4>
+                    <h4 class="text-center">!!タイトル反映!!</h4>
                     <form action="{{ action('ContentController@update') }}" method="post">
                       <div class="form-group">
                         <label for="inputHeading_modal">見出し</label>
@@ -128,6 +127,35 @@
                       <input type="hidden" id="modal_id" name="id" value="">
                       <div class="text-center">
                         <button type="submit" class="btn btn-primary">更新</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                  </div>
+                </div>             
+              </div>
+            </div>
+            <a type="button" class="btn btn-primary mt-3 text-white" data-toggle="modal" data-target="#addHeadingModal">追加</a>
+
+            <!-- 右側の見出しの追加ボタンModal -->
+            <div id="addHeadingModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">          
+                <!-- Modal content-->
+                <div class="modal-content">
+                   <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4 class="text-center">見出し追加</h4>
+                    <form action="{{ action('ContentController@create') }}" method="post">
+                      <div class="form-group">
+                        <input id="title" type="text" name="title" class="form-control">
+                      </div>
+                      {{ csrf_field() }}
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-primary">追加</button>
                       </div>
                     </form>
                   </div>
