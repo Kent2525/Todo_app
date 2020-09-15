@@ -84,10 +84,11 @@
             <!-- タイトルループ処理 -->
             <ul class="list-group">
               @foreach($titles as $title)
-              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item">
+              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light">
                 {{ $title->title }}
               </a>
               @endforeach
+              <i class="fas fa-ellipsis-h"></i>
             </ul>
           </div>
         </div>
