@@ -149,9 +149,9 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">見出し追加</h4>
-                    <form action="{{ action('ContentController@create') }}" method="post">
+                    <form action="{{ action('AddHeadingController@create') }}"  method="post">
                       <div class="form-group">
-                        <input id="title" type="text" name="title" class="form-control">
+                        <input id="title" type="text" name="heading" class="form-control">
                       </div>
                       {{ csrf_field() }}
                       <div class="text-center">

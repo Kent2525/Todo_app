@@ -25,7 +25,7 @@ class CreateContentsTable extends Migration
             $table->increments('id');
             $table->integer('title_id')->unsigned();
             $table->string('heading', 200);
-            $table->string('body');
+            $table->string('body')->nullable();
             $table->integer('status')->default(1);
             $table->date('due_date')->default('2020-01-01');
             $table->timestamps();
