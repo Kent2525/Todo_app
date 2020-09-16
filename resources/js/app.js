@@ -1,4 +1,4 @@
-// whateverを通じて、headingに値をいれる
+// data属性を通じて、フォームの項目に値をいれる
 $('#myModal').on('show.bs.modal', function (event) {
     console.log("モーダルが開きました");
     var button = jQuery(event.relatedTarget) // Button that triggered the modal
