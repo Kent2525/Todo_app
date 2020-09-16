@@ -86,8 +86,10 @@
               @foreach($titles as $title)
               <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item titleLoop border-0 bg-light">
                 {{ $title->title }}
-              <a<i class="fas fa-ellipsis-h fa-pull-right"></i></a>
-              </a>
+              <!-- <div class="fontAwesomeArea"> -->
+                <a<i class="fas fa-ellipsis-h fa-pull-right"></i></a>
+              <!-- </div> -->
+                </a>
               @endforeach
             </ul>
           </div>
