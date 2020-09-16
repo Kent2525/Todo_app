@@ -80,7 +80,7 @@
             <ul class="list-group">
             @foreach($title_posts as $title)
               @foreach($title->contents as $content)
-               <li><a class="list-group-item task_index" data-toggle="modal" data-target="#myModal" data-heading="{{ $content->heading }}" data-content="{{ $content->body }}">{{ $content->heading }}</a></li>
+               <li><a class="list-group-item task_index" id="modalbutton" data-toggle="modal" data-target="#myModal" data-heading="{{ $content->heading }}" data-content="{{ $content->body }}">{{ $content->heading }}</a></li>
               @endforeach
             @endforeach
             </ul>
@@ -110,7 +110,7 @@
                       @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>
-                        <input id="heading" type="text" class="form-control" name="heading">
+                        <input id="heading" type="text" class="form-control" name="heading" value="{{ old('heading') }}">
                       </div>
                       <div class="form-group">
                         <label for="ccontent">メモ</label>
