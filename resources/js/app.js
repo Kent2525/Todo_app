@@ -7,5 +7,11 @@ $('#myModal').on('show.bs.modal', function (event) {
     var modal = jQuery(this)
     modal.find('#heading').val(heading);
     modal.find('#content').text(content);
+});
 
-})
+// エラーがあった場合は、モーダルは再度開く
+$(document).ready(function() {
+    if($('.alert').length) {
+        $('#myModal').modal('show');
+    }
+});

@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// whateverを通じて、headingに値をいれる
+// data属性を通じて、フォームの項目に値をいれる
 $('#myModal').on('show.bs.modal', function (event) {
   console.log("モーダルが開きました");
   var button = jQuery(event.relatedTarget); // Button that triggered the modal
@@ -104,7 +104,24 @@ $('#myModal').on('show.bs.modal', function (event) {
   var modal = jQuery(this);
   modal.find('#heading').val(heading);
   modal.find('#content').text(content);
-});
+}); // エラーがあった場合は、モーダルは開いたまま
+
+$(document).ready(function () {
+  if ($('.alert').length) {
+    $('#myModal').modal('show');
+  }
+}); // $('#myModal').on('hide.bs.modal', function (event) {
+//     if($('.alert').length) {
+//         $('#myModal').modal('show');
+//     }
+//     // console.log("モーダルが開きました");
+//     // var button = jQuery(event.relatedTarget) // Button that triggered the modal
+//     // var heading = button.data('heading')
+//     // var content = button.data('content') // Extract info from data-* attributes
+//     // var modal = jQuery(this)
+//     // modal.find('#heading').val(heading);
+//     // modal.find('#content').text(content);
+// });
 
 /***/ }),
 

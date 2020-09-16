@@ -67,7 +67,7 @@
             <p class="sample">左のスペース</p>
             <ul class="list-group">
               @foreach($title_posts as $title)
-              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item">
+              <a href="/admin/title/{{$title->id}}" class="list-group-item">
                 {{ $title->title }}
               </a>
               @endforeach
@@ -96,8 +96,17 @@
                     <h4 class="modal-title"></h4>
                   </div>
                   <div class="modal-body">
+                  @if ($errors->any())
+                      <div class="alert alert-danger">
+                          <ul>
+                              @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                              @endforeach
+                          </ul>
+                      </div>
+                  @endif
                     <h4 class="text-center">タイトル</h4>
-                    <form action="/admin/title/<?php echo (isset($id))? $id : null; ?>}}" method="POST">
+                    <form action="/admin/title/{{$title->id}}" method="POST">
                       @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>

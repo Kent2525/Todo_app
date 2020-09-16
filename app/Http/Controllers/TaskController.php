@@ -15,7 +15,6 @@ class TaskController extends Controller
 
     public function index()
     {
-        $title = new Title;
         $title_posts = Title::where('user_id', auth()->user()->id)->get();
         return view('admin.task', ['title_posts' => $title_posts]);
     }
@@ -23,7 +22,7 @@ class TaskController extends Controller
     // admin/title/3のようなURLにアクセスした際にそのidに対応したContentsを表示する
     public function show($id) 
     {
-        $title_posts = Title::all();
+        $title_posts = Title::where('user_id', auth()->user()->id)->get();
         $heading_posts = Content::where('title_id', $id)->get();
         return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts, 'id' => $id]);
     }
@@ -31,6 +30,7 @@ class TaskController extends Controller
     // モーダルでの保存処理
     public function store(Request $request, $id) 
     {
+        $request->validate(['heading' => 'required']);
         $content = Content::find($id);
         $content->heading = $request->input('heading');
         $content->body = $request->input('content');
