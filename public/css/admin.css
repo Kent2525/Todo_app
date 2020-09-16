@@ -14,17 +14,26 @@ body {
   height: 100%;
 }
 
-ul {
+.list-group {
   list-style: none;
 }
 
-.fa-ellipsis-h {
+.taskIndex {
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-right: 150px;
+}
+
+
+
+
+/* .fa-ellipsis-h {
   opacity: 0;
 }
 
 .fa-ellipsis-h:hover {
   opacity: 0.5;
-}
+} */
 
 /* .fa-link::after {
   content: "\f0a4";

@@ -15,10 +15,15 @@ class AddHeadingController extends Controller
 
     public function create(Request $request)
     {   
-        $content = new Content; 
-        $form = $request->all();
-        unset($form['_token']);
-        $content->save();
+        $current_title = Title::find($request->id);
+        $content = new Content();
+        $content->heading = $request->heading;
+        $current_title->contents()->save($content);
+
+        // $content = Content::find($request->id);
+        // $form = $request->all();
+        // unset($form['_token']);
+        // $content->fill($form)->save();
         
         return redirect('/admin/task/1');
     }

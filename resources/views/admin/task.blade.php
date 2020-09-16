@@ -38,7 +38,6 @@
           <li class="nav-item active">
           <a class="navbar-brand text-white" href="#">Todo</a>
         </ul>
-        </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
               <a class="btn btn-primary" href="/login">ログイン</a>
@@ -82,7 +81,7 @@
               </div>
             </div>
 
-            <!-- タイトルループ処理 -->
+            <!-- 左側のタイトルループ処理 -->
             <ul class="list-group">
               @foreach($titles as $title)
               <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item titleLoop border-0 bg-light">
@@ -100,7 +99,7 @@
             <p class="test">見出し</p>
             <ul class="list-group" >
                @foreach($currentTitle->contents as $content)
-                  <li><a class="list-group-item task_index heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+                  <li><a class="list-group-item taskIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
                   </a></li>
                @endforeach
             </ul>
@@ -152,6 +151,7 @@
                   <div class="modal-body">
                     <h4 class="text-center">見出し追加</h4>
                     <form action="{{ action('AddHeadingController@create') }}"  method="post">
+                    <input type="hidden" name="id" value="{{$currentTitle->id}}">
                       <div class="form-group">
                         <input id="title" type="text" name="heading" class="form-control">
                       </div>
@@ -178,9 +178,9 @@
     <script>
  // heading-modal（ループしているデータ）をクリックした時に
  $('.heading_modal').on('click', function() {
-      // このdata('title')（data-title="content->heading"）をtitleに代入
+      // このdata('title')（data-title="ドルcontent->heading"）をtitleに代入
       var title = $(this).data('title');
-      // このdata('body')（data-body="content->body"）をtitleに代入
+      // このdata('body')（data-body="ドルcontent->body"）をtitleに代入
       var body = $(this).data('body');
 
       // '#inputHeading_modal'に対してtitleを埋める
