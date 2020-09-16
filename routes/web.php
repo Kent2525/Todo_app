@@ -11,16 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('/', 'TaskController@add');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@index');
+    Route::get('/admin/title/{id}', 'TaskController@show')->name('admin.task');
+    Route::post('/admin/title/{id}', 'TaskController@store');
 });
 Auth::routes();
 
-Route::get('/admin/title/{id}', 'TaskController@show')->name('admin.task');
-Route::post('/admin/title/{id}', 'TaskController@store');
 Route::get('/home', 'HomeController@index')->name('home');
