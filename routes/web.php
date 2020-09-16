@@ -13,8 +13,8 @@
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@index');
-    Route::get('/admin/title/{id}', 'TaskController@show')->name('admin.task');
-    Route::post('/admin/title/{id}', 'TaskController@store');
+    Route::get('/title/{id}', 'TaskController@show')->name('admin.task');
+    Route::post('/title/{id}', 'TaskController@store');
 });
 Auth::routes();
 
