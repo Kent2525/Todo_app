@@ -23,4 +23,11 @@ class ContentController extends Controller
         return redirect('/admin/task/1');
     }
 
+    // public function delete(Request $request)
+    // {   
+    //     $content = Content::find($request->id);
+    //     $content->delete();
+        
+    //     return redirect('/admin/task/1');
+    // }
 }

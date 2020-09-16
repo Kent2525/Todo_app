@@ -29,7 +29,7 @@ Route::get('/admin/content/{id?}', 'ContentController@add');
 Route::post('/admin/content/{id?}', 'ContentController@update');
 Route::get('/admin/addheading/{id?}', 'AddHeadingController@add');
 Route::post('/admin/addheading/{id?}', 'AddHeadingController@create');
-
+Route::post('/admin/deletecontent/{id?}', 'DeleteContentController@delete');
 
 
 Auth::routes();

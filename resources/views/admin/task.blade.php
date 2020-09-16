@@ -97,9 +97,9 @@
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">見出し</p>
-            <ul class="list-group" >
+            <ul class="list-group">
                @foreach($currentTitle->contents as $content)
-                  <li><a class="list-group-item taskIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-title="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+                  <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
                   </a></li>
                @endforeach
             </ul>
@@ -114,7 +114,7 @@
                     <h4 class="modal-title"></h4>
                   </div>
                   <div class="modal-body">
-                    <h4 class="text-center">!!タイトル反映!!</h4>
+                    <h4 class="text-center">{{$currentTitle->title}}</h4>
                     <form action="{{ action('ContentController@update') }}" method="post">
                       <div class="form-group">
                         <label for="inputHeading_modal">見出し</label>
@@ -128,6 +128,7 @@
                       <input type="hidden" id="modal_id" name="id" value="">
                       <div class="text-center">
                         <button type="submit" class="btn btn-primary">更新</button>
+                        <button type="submit"action="{{action('DeleteContentController@delete')}}" method="post" class="btn btn-danger">削除</button>
                       </div>
                     </form>
                   </div>
@@ -179,12 +180,12 @@
  // heading-modal（ループしているデータ）をクリックした時に
  $('.heading_modal').on('click', function() {
       // このdata('title')（data-title="ドルcontent->heading"）をtitleに代入
-      var title = $(this).data('title');
+      var heading = $(this).data('heading');
       // このdata('body')（data-body="ドルcontent->body"）をtitleに代入
       var body = $(this).data('body');
 
       // '#inputHeading_modal'に対してtitleを埋める
-      $('#inputHeading_modal').val(title);
+      $('#inputHeading_modal').val(heading);
       // '#inputBody_modal'に対してbodyを埋める
       $('#inputBody_modal').val(body);
 
