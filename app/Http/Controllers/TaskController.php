@@ -15,11 +15,9 @@ class TaskController extends Controller
 
     public function index()
     {
+        $title = new Title;
         $title_posts = Title::where('user_id', auth()->user()->id)->get();
-
-        // ひとまず初期表示は、title_idが1のコンテントにする
-        $heading_posts = Content::where('title_id', 1)->get();
-        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
+        return view('admin.task', ['title_posts' => $title_posts]);
     }
 
     // admin/title/3のようなURLにアクセスした際にそのidに対応したContentsを表示する

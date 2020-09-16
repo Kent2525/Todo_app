@@ -12,4 +12,9 @@ class Content extends Model
         'heading' => 'required',
         'body' => 'required',
     );
+
+    public function titles()
+    {
+        return $this->belongsTo('App\Title');
+    }
 }
