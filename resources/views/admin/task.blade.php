@@ -95,7 +95,7 @@
                   </div>
                   <div class="modal-body">
                     <h4 class="text-center">タイトル</h4>
-                    <form action="/admin/title/{{$id}}" method="POST">
+                    <form action="/admin/title/<?php echo (isset($id))? $id : null; ?>}}" method="POST">
                       @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>
