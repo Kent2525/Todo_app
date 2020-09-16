@@ -30,7 +30,10 @@ class TaskController extends Controller
     // モーダルでの保存処理
     public function store(Request $request, $id) 
     {
-        $request->validate(['heading' => 'required']);
+        $request->validate([
+            'heading' => 'required',
+            'content' => 'required',
+        ]);
         $content = Content::find($id);
         $content->heading = $request->input('heading');
         $content->body = $request->input('content');
