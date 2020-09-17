@@ -14,6 +14,10 @@ body {
   height: 100%;
 }
 
+ul {  
+  list-style: none;
+}
+
 .list-group {
   list-style: none;
 }
@@ -24,26 +28,10 @@ body {
   margin-right: 150px;
 }
 
-
-/* .fa-ellipsis-h {
-  opacity: 0;
-} */
-
-.fa-ellipsis-h:hover {
-  opacity: 0.5;
+.titleIcon {
+  height: 17px;
+  width: 17px;
 }
 
-.titleLoop:hover {
-  opacity: 0.5;
-} 
-
-/* .fa-link::after {
-  content: "\f0a4";
-  font-weight: 400;
-  font-family: "Font Awesome 5 Free";
-  color: #313131;
-  font-size: 125%;
-  padding: 0 3px;
-}
-
-
+.bg-light:hover {
+  background-color: transparent;

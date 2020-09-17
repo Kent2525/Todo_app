@@ -26,6 +26,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('js/app.js') }}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/css/app.css"> -->
     <!-- <link rel="stylesheet" href="/css/admin.css">        -->
   </head>
@@ -42,6 +43,7 @@
           <li class="nav-item">
               <a class="btn btn-primary" href="/login">ログイン</a>
               <a class="btn btn-primary" href="/register">新規登録</a>
+              
           </li>
         </ul>
       </div>
@@ -50,8 +52,8 @@
     <!-- メインコンテンツ -->
     <div class="main">
       <div class="row">
-        <div class="col-3  mx-auto">
-          <div class="left-tttle-box my-4 mx-5">
+        <div class="col-3  mx-aut">
+          <div class="left-title-box my-4 mx-5">
             <p><a class="" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
             <!-- 左側のタイトル追加Modal -->
             <div id="titleModal" class="modal fade" role="dialog">
@@ -84,12 +86,12 @@
             <!-- 左側のタイトルループ処理 -->
             <ul class="list-group">
               @foreach($titles as $title)
-              <div class="titleLoop">
+              <div class="titleLoop section">
                 <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light">
                   {{ $title->title }}
-                <!-- <div class="fontAwesomeArea"> -->
-                  <!-- <i class="fas fa-ellipsis-h fa-pull-right"></i> -->
-                <!-- </div> -->
+                  <!-- <div class="section"> -->
+                    <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px;" data-toggle="modal" data-target="#deleteTitleModal">
+                    <img class="titleIcon" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right;" data-toggle="modal" data-target="#editTitleModal"> 
                   </a>
               </div>
               @endforeach
