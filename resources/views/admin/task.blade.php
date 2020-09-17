@@ -84,12 +84,14 @@
             <!-- 左側のタイトルループ処理 -->
             <ul class="list-group">
               @foreach($titles as $title)
-              <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item titleLoop border-0 bg-light">
-                {{ $title->title }}
-              <!-- <div class="fontAwesomeArea"> -->
-                <a<i class="fas fa-ellipsis-h fa-pull-right"></i></a>
-              <!-- </div> -->
-                </a>
+              <div class="titleLoop">
+                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light">
+                  {{ $title->title }}
+                <!-- <div class="fontAwesomeArea"> -->
+                  <i class="fas fa-ellipsis-h fa-pull-right"></i>
+                <!-- </div> -->
+                  </a>
+              </div>
               @endforeach
             </ul>
           </div>
@@ -130,7 +132,7 @@
                       <input type="hidden" id="modal_id" name="id" value="">
                       <div class="text-center">
                         <button type="submit" class="btn btn-primary">更新</button>
-                        <button type="submit"action="{{action('DeleteContentController@delete')}}" method="post" class="btn btn-danger">削除</button>
+                        <a href="{{ action('ContentController@delete', ['id' => $content->id]) }}"  class="btn btn-danger">削除</a>
                       </div>
                     </form>
                   </div>

@@ -17,6 +17,7 @@ class TaskController extends Controller
     {
         $titles = Title::all();
         $currentTitle = Title::find($id);
+        $currentContent = Content::find($id);
 
         return view('admin.task', [
             'titles' => $titles,
