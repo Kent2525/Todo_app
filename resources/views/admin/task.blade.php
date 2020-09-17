@@ -88,7 +88,7 @@
                 <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light">
                   {{ $title->title }}
                 <!-- <div class="fontAwesomeArea"> -->
-                  <i class="fas fa-ellipsis-h fa-pull-right"></i>
+                  <!-- <i class="fas fa-ellipsis-h fa-pull-right"></i> -->
                 <!-- </div> -->
                   </a>
               </div>
@@ -118,7 +118,10 @@
                     <h4 class="modal-title"></h4>
                   </div>
                   <div class="modal-body">
-                    <h4 class="text-center">{{$currentTitle->title}}</h4>
+                    <div class="contentTitleBox text-center">
+                      <h4 class="text-center" style="display: inline-block;">{{$currentTitle->title}}</h4>
+                      <a href="{{ action('ContentController@delete', ['id' => $content->id]) }}"  class="btn btn-danger text-right" style="float: right";>削除</a>
+                    </div>
                     <form action="{{ action('ContentController@update') }}" method="post">
                       <div class="form-group">
                         <label for="inputHeading_modal">見出し</label>
@@ -131,8 +134,7 @@
                       {{ csrf_field() }}
                       <input type="hidden" id="modal_id" name="id" value="">
                       <div class="text-center">
-                        <button type="submit" class="btn btn-primary">更新</button>
-                        <a href="{{ action('ContentController@delete', ['id' => $content->id]) }}"  class="btn btn-danger">削除</a>
+                        <button type="submit" class="btn btn-primary btn-block mt-4">更  新</button>
                       </div>
                     </form>
                   </div>
