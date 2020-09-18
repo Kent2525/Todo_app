@@ -87,8 +87,9 @@
             <ul class="list-group">
               @foreach($titles as $title)
               <div class="titleLoop section">
-                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light title" style="display: inline-block">
+                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light title" style="display: inline-block" data-title="{{$title->title}}" data-idTitle="{{ $title->id }}">
                   {{ $title->title }}</a>
+
                 <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
                   
                   <!-- タイトル削除のモーダル -->
@@ -104,7 +105,7 @@
                           <h4 class="text-center">{{$title->title}}</h4>
                           <p class="text-center my-4" style="font-size: 15px;">このTodoを削除しますか？</p>
                           <div class="text-center">
-                            <a href="{{ action('TaskController@delete', ['id' => $title->id]) }}"  class="btn btn-danger">削除</a>
+                            <!-- <a href="{{ action('TaskController@delete', ['id' => $title->id]) }}"  class="btn btn-danger">削除</a> -->
                           </div>
                           </form>
                         </div>
@@ -115,7 +116,7 @@
                     </div>
                   </div>
 
-                <img class="titleIcon" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal"> 
+                <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal"> 
                 <div id="editTitleModal" class="modal fade" role="dialog">
                   <div class="modal-dialog">          
                     <!-- Modal content-->
@@ -127,11 +128,11 @@
                       <div class="modal-body">
                         <h4 class="text-center">タイトル変更</h4>
                         <form action=""  method="post">
-                        <input type="hidden" name="id" value="{{$currentTitle->id}}">
                           <div class="form-group">
-                            <input id="title" type="text" name="heading" class="form-control">
+                            <input id="editModal" type="text" name="title" class="form-control">
                           </div>
                           {{ csrf_field() }}
+                          <input type="hidden" id="modal_idTitle" name="id" value="">
                           <div class="text-center">
                             <button type="submit" class="btn btn-primary">変更</button>
                           </div>
@@ -251,14 +252,12 @@
       $('#modal_id').val(id);
     });
 
- $('.heading_modal').on('click', function() {
-      var heading = $(this).data('heading');
-      var body = $(this).data('body');
-      $('#inputHeading_modal').val(heading);
-      $('#inputBody_modal').val(body);
+ $('.editModal').on('click', function() {
+      var title = $(this).data('title');
+      $('#inputModal').val(title);
 
-      var id = $(this).data('id');
-      $('#modal_id').val(id);
+      var idTitle = $(this).data('idTitle');
+      $('#modal_idTitle').val(idTitle);
     });
 
 
