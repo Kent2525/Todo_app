@@ -87,12 +87,33 @@
             <ul class="list-group">
               @foreach($titles as $title)
               <div class="titleLoop section">
-                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light">
+                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light" style="display: inline-block">
                   {{ $title->title }}
-                  <!-- <div class="section"> -->
-                    <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px;" data-toggle="modal" data-target="#deleteTitleModal">
-                    <img class="titleIcon" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right;" data-toggle="modal" data-target="#editTitleModal"> 
-                  </a>
+                </a>
+                    <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#modal1">
+
+                     <div class="modal fade" id="modal1" tabindex="-1"
+                          role="dialog" aria-labelledby="label1" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="label1">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Modal body
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">OK</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <img class="titleIcon" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#myModal"> 
+                  
               </div>
               @endforeach
             </ul>
