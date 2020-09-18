@@ -129,7 +129,7 @@
                         <h4 class="text-center">タイトル変更</h4>
                         <form action=""  method="post">
                           <div class="form-group">
-                            <input id="editModal" type="text" name="title" class="form-control">
+                            <input id="editModal" type="text" name="title" class="form-control" value="{{$title->id}}">
                           </div>
                           {{ csrf_field() }}
                           <input type="hidden" id="modal_idTitle" name="id" value="">
