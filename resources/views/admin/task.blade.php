@@ -105,7 +105,7 @@
                           <h4 class="text-center">{{$title->title}}</h4>
                           <p class="text-center my-4" style="font-size: 15px;">このTodoを削除しますか？</p>
                           <div class="text-center">
-                            <!-- <a href="{{ action('TaskController@delete', ['id' => $title->id]) }}"  class="btn btn-danger">削除</a> -->
+                            <a href="{{ action('TaskController@delete', ['id' => $title->id]) }}"  class="btn btn-danger">削除</a>
                           </div>
                           </form>
                         </div>
@@ -127,7 +127,7 @@
                       </div>
                       <div class="modal-body">
                         <h4 class="text-center">タイトル変更</h4>
-                        <form action=""  method="post">
+                        <form action="{{ action('UpdateTitleController@update' , ['id' => $title->id]) }}" method="post">
                           <div class="form-group">
                             <input id="editModal" type="text" name="title" class="form-control" value="{{$title->id}}">
                           </div>
