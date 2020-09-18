@@ -87,32 +87,38 @@
             <ul class="list-group">
               @foreach($titles as $title)
               <div class="titleLoop section">
-                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light" style="display: inline-block">
+                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light title" style="display: inline-block">
                   {{ $title->title }}
                 </a>
-                    <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#modal1">
+                
+                  <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
+              
 
-                     <div class="modal fade" id="modal1" tabindex="-1"
-                          role="dialog" aria-labelledby="label1" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="label1">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            Modal body
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">OK</button>
-                          </div>
+                  <div id="deleteModal{{$title->id}}" class="modal fade" role="dialog">
+                    <div class="modal-dialog">          
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title"></h4>
                         </div>
-                      </div>
-                    </div>  
-                    <img class="titleIcon" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#myModal"> 
+                        <div class="modal-body">
+                          <h4 class="text-center">{{$title->title}}</h4>
+                          <p class="text-center my-4" style="font-size: 15px;">このTodoを削除しますか？</p>
+                          <div class="text-center">
+                            <a href=""  class="btn btn-danger text-right" style="float: right";>削除</a>
+                            <!-- <button type="submit" class="btn btn-danger">削除</button> -->
+                          </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                        </div>
+                      </div>             
+                    </div>
+                  </div>
+
+                  <img class="titleIcon" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#myModal"> 
                   
               </div>
               @endforeach
@@ -208,7 +214,7 @@
     <script>
  // heading-modal（ループしているデータ）をクリックした時に
  $('.heading_modal').on('click', function() {
-      // このdata('title')（data-title="ドルcontent->heading"）をtitleに代入
+      // このdata('heading')（data-title="ドルcontent->heading"）をheadingに代入
       var heading = $(this).data('heading');
       // このdata('body')（data-body="ドルcontent->body"）をtitleに代入
       var body = $(this).data('body');
@@ -222,21 +228,18 @@
       var id = $(this).data('id');
       $('#modal_id').val(id);
     });
-    // $('#myModal').on('show.bs.modal', function (e) {
-    //   var heading_modal = $('#heading_modal').html();
 
-    //   $('#inputHeading_modal').val(heading_modal);
-    // });
+ $('.heading_modal').on('click', function() {
+      var heading = $(this).data('heading');
+      var body = $(this).data('body');
+      $('#inputHeading_modal').val(heading);
+      $('#inputBody_modal').val(body);
 
-    // $('#save').click(function() {
-    //   var inputHeading_modal = $('#inputHeading_modal').val();
-    //   var inputBody_modal = $('#inputBody_modal').val();
-
-    //   $('#heading_modal').html(inputHeading_modal);      
-    //   $('#heading_modal').html(inputBody_modal);
+      var id = $(this).data('id');
+      $('#modal_id').val(id);
+    });
 
 
-    // });
     </script>
   </body>
 </html>

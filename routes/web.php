@@ -25,11 +25,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/task', 'TaskController@add');
 Route::get('/admin/task/{id?}', 'TaskController@index')->name('admin.task');
 Route::post('/admin/task/{id?}', 'TaskController@create');
+// Route::get('/admin/task/{id?}', 'TaskController@delete');
+
 Route::get('/admin/content/{id?}', 'ContentController@add');
 Route::post('/admin/content/{id?}', 'ContentController@update');
+Route::get('/admin/content/{id?}', 'ContentController@delete');
+
 Route::get('/admin/addheading/{id?}', 'AddHeadingController@add');
 Route::post('/admin/addheading/{id?}', 'AddHeadingController@create');
-Route::get('/admin/content/{id?}', 'ContentController@delete');
+
 
 
 Auth::routes();

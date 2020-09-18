@@ -43,5 +43,13 @@ class TaskController extends Controller
     
         return redirect('/admin/task/1');
     }
+
+    // public function delete(Request $request)
+    // {   
+    //     $content = Title::find($request->id);
+    //     $content->delete();
+        
+    //     return redirect('/admin/task/1');
+    // }
 }
 
