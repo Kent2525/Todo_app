@@ -87,15 +87,14 @@
             <ul class="list-group">
               @foreach($titles as $title)
               <div class="titleLoop section">
-                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light title" style="display: inline-block" data-title="{{$title->title}}" data-idTitle="{{ $title->id }}">
+                <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light title" style="display: inline-block">
                   {{ $title->title }}</a>
-
-                <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
+                <!-- <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}"> -->
                   
-                  <!-- タイトル削除のモーダル -->
+                  <!-- タイトル削除のモーダル
                   <div id="deleteModal{{$title->id}}" class="modal fade" role="dialog">
                     <div class="modal-dialog">          
-                      <!-- Modal content-->
+                      Modal content
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -114,9 +113,9 @@
                         </div>
                       </div>             
                     </div>
-                  </div>
+                  </div> -->
 
-                <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal"> 
+                <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
                 <div id="editTitleModal" class="modal fade" role="dialog">
                   <div class="modal-dialog">          
                     <!-- Modal content-->
@@ -127,12 +126,12 @@
                       </div>
                       <div class="modal-body">
                         <h4 class="text-center">タイトル変更</h4>
-                        <form action="{{ action('UpdateTitleController@update' , ['id' => $title->id]) }}" method="post">
+                        <form action="{{ action('UpdateTitleController@update') }}" method="post">
                           <div class="form-group">
-                            <input id="editModal" type="text" name="title" class="form-control" value="{{$title->id}}">
+                            <input id="inputModal" type="text" name="title" class="form-control" value="">
                           </div>
                           {{ csrf_field() }}
-                          <input type="hidden" id="modal_idTitle" name="id" value="">
+                          <input id="modalIdTitle" type="hidden" name="id" value="">
                           <div class="text-center">
                             <button type="submit" class="btn btn-primary">変更</button>
                           </div>
@@ -244,9 +243,8 @@
 
       // '#inputHeading_modal'に対してtitleを埋める
       $('#inputHeading_modal').val(heading);
-      // '#inputBody_modal'に対してbodyを埋める
+      // '#inputBody_modal'のvalueにbodyを設定する。
       $('#inputBody_modal').val(body);
-
 
       var id = $(this).data('id');
       $('#modal_id').val(id);
@@ -256,8 +254,11 @@
       var title = $(this).data('title');
       $('#inputModal').val(title);
 
-      var idTitle = $(this).data('idTitle');
-      $('#modal_idTitle').val(idTitle);
+      console.log('this', $(this));
+      console.log('title', title);
+      var id_title = $(this).data('id_title');
+      console.log('idTitle', id_title);
+      $('#modalIdTitle').val(id_title);
     });
 
 

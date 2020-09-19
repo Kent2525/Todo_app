@@ -18,6 +18,7 @@ class ContentController extends Controller
         $content = Content::find($request->id);
         $form = $request->all();
         unset($form['_token']);
+        // dd($form);
         $content->fill($form)->save();
         
         return redirect('/admin/task/1');

@@ -14,13 +14,13 @@ class UpdateTitleController extends Controller
         return view('admin.task');  
     }//
 
-    public function update(int $id, Request $request)
+    public function update(Request $request)
     {   
-        $content = Title::find($request->id);
+        $title = Title::find($request->id);
         $form = $request->all();
         unset($form['_token']);
-        dd($form);
-        $content->fill($form)->save();
+        // dd($form);
+        $title->fill($form)->save();
         
         return redirect('/admin/task/1');
     }
