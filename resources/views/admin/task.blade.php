@@ -89,9 +89,9 @@
               <div class="titleLoop section">
                 <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 bg-light title" style="display: inline-block">
                   {{ $title->title }}</a>
-                <!-- <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}"> -->
+                <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
                   
-                  <!-- タイトル削除のモーダル
+                  <!-- タイトル削除のモーダル -->
                   <div id="deleteModal{{$title->id}}" class="modal fade" role="dialog">
                     <div class="modal-dialog">          
                       Modal content
@@ -113,7 +113,7 @@
                         </div>
                       </div>             
                     </div>
-                  </div> -->
+                  </div>
 
                 <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
                 <div id="editTitleModal" class="modal fade" role="dialog">
@@ -131,7 +131,7 @@
                             <input id="inputModal" type="text" name="title" class="form-control" value="">
                           </div>
                           {{ csrf_field() }}
-                          <input id="modalIdTitle" type="hidden" name="id" value="">
+                          <input id="inputIdTitle" type="hidden" name="id" value="">
                           <div class="text-center">
                             <button type="submit" class="btn btn-primary">変更</button>
                           </div>
@@ -254,11 +254,8 @@
       var title = $(this).data('title');
       $('#inputModal').val(title);
 
-      console.log('this', $(this));
-      console.log('title', title);
       var id_title = $(this).data('id_title');
-      console.log('idTitle', id_title);
-      $('#modalIdTitle').val(id_title);
+      $('#inputIdTitle').val(id_title);
     });
 
 
