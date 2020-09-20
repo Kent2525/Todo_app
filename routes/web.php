@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/', 'HomeController@index')->name('home');
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', 'TaskController@add');
     Route::get('/', 'TaskController@index');
@@ -36,7 +38,6 @@ Route::get('/admin/content/{id?}', 'ContentController@delete');
 
 Route::get('/admin/addheading/{id?}', 'AddHeadingController@add');
 Route::post('/admin/addheading/{id?}', 'AddHeadingController@create');
-
 
 
 Auth::routes();

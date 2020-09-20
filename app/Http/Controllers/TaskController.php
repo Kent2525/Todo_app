@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Title;
 use App\Content;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
@@ -15,6 +16,7 @@ class TaskController extends Controller
 
     public function index(int $id)
     {
+        // $titles = Auth::user()->titles()->get();
         $titles = Title::all();
         $currentTitle = Title::find($id);
         $currentContent = Content::find($id);
@@ -28,6 +30,7 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {   
+        
         $title = new Title;     
         $form = $request->all();
         unset($form['_token']);
