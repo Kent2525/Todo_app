@@ -45,34 +45,10 @@
                   @include('components.DeleteTitleModal', ['title' => $title])
 
                 <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
-                
-                <div id="editTitleModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog">          
-                    {{-- Modal content--}}
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title"></h4>
-                      </div>
-                      <div class="modal-body">
-                        <h4 class="text-center">タイトル変更</h4>
-                        <form action="{{ action('UpdateTitleController@update') }}" method="post">
-                          <div class="form-group">
-                            <input id="inputModal" type="text" name="title" class="form-control" value="">
-                          </div>
-                          {{ csrf_field() }}
-                          <input id="inputIdTitle" type="hidden" name="id" value="">
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-primary">変更</button>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                      </div>
-                    </div>             
-                  </div>         
-                </div>
+
+                {{-- 左側の更新アイコンモーダル --}}
+                @include('components.UpdateTitleModal')
+
               @endforeach
             </ul>
           </div>
