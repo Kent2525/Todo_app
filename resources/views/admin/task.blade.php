@@ -21,18 +21,15 @@
       </div>
     </nav>
 
-    {{-- メインコンテンツ --}}
     <div class="main">
       <div class="row">
         <div class="col-3  mx-aut">
           <div class="left-title-box my-4 mx-5">
             <p><a class="" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
 
-            {{-- 左側のタイトル追加Modal --}}
-            @component('components.AddTitleModal')
-            @endcomponent
+            {{-- 左側のタイトル追加モーダル --}}
+            @include('components.AddTitleModal')
 
-            {{-- 左側のタイトルループ処理 --}}
             <ul class="list-group">
               @foreach($titles as $title)
               <div class="titleLoop section">
@@ -54,7 +51,7 @@
           </div>
         </div>
         
-        {{-- 右側の見出しのView --}}
+        {{-- 右側 --}}
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">見出し</p>
