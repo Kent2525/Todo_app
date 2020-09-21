@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-3  mx-aut">
           <div class="left-title-box my-4 mx-5">
-            <p><a class="" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
+          <p><a class="AddTitleModal" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
 
             {{-- 左側のタイトル追加モーダル --}}
             @include('components.AddTitleModal')
@@ -54,8 +54,7 @@
         {{-- 右側 --}}
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
-            <p class="test">見出し</p>
-              <p>記事を選択してください。</p>
+              <p>Todoタイトルを選択してください。</p>
           </div>
         </div>
       </div>
@@ -88,6 +87,7 @@
       var id_title = $(this).data('id_title');
       $('#inputIdTitle').val(id_title);
     });
+
 
     </script>
   </body>

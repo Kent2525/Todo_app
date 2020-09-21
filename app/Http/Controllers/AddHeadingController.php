@@ -25,7 +25,7 @@ class AddHeadingController extends Controller
         // unset($form['_token']);
         // $content->fill($form)->save();
         
-        return redirect('/admin/task/1');
+        return redirect('/admin/task');
     }
 }
 

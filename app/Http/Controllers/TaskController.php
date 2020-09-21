@@ -19,7 +19,7 @@ class TaskController extends Controller
         // ログイン中のユーザーのタイトルテーブルを取得
         $titles = Auth::user()->titles()->get();
         // $titles = Title::all();
-
+        // dd($titles);
         return view('admin.task.index', [
             'titles' => $titles,
         ]);
@@ -32,6 +32,7 @@ class TaskController extends Controller
         // $titles = Title::all();
         $currentTitle = Title::find($id);
         $currentContent = Content::find($id);
+        
 
         return view('admin.task.show', [
             'titles' => $titles,
@@ -45,6 +46,7 @@ class TaskController extends Controller
         $title = new Title;     
         $form = $request->all();
         unset($form['_token']);
+        $title->user_id = Auth::id();
         $title->fill($form)->save();
         
         // public function create(Request $request)

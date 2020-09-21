@@ -14,7 +14,6 @@
           <input id="title" type="text" name="title" class="form-control">
         </div>
         {{ csrf_field() }}
-        <input type="hidden" name="">
         <div class="text-center">
           <button type="submit" class="btn btn-primary">追加</button>
         </div>

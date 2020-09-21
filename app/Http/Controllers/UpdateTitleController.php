@@ -22,6 +22,6 @@ class UpdateTitleController extends Controller
         // dd($form);
         $title->fill($form)->save();
         
-        return redirect('/admin/task/1');
+        return redirect('/admin/task');
     }
 }
