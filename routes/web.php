@@ -19,13 +19,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', 'TaskController@add');
-    Route::get('/', 'TaskController@index');
 });
 
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/task', 'TaskController@add');
-Route::get('/admin/task/{id?}', 'TaskController@index')->name('admin.task');
+Route::get('/admin/task', 'TaskController@index');
+Route::get('/admin/task/{id?}', 'TaskController@show')->name('admin.task');
 Route::post('/admin/task/{id?}', 'TaskController@create');
 Route::get('/admin/task/{id?}/delete', 'TaskController@delete');
 
@@ -41,4 +38,4 @@ Route::post('/admin/addheading/{id?}', 'AddHeadingController@create');
 
 
 Auth::routes();
-
+Route::get('/home', 'HomeController@index')->name('home');

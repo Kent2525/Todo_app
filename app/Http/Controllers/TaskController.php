@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Title;
 use App\Content;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
@@ -14,14 +14,26 @@ class TaskController extends Controller
         return view('admin.task');  
     }//
 
-    public function index(int $id)
+    public function index()
     {
-        // $titles = Auth::user()->titles()->get();
-        $titles = Title::all();
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        // $titles = Title::all();
+
+        return view('admin.task.index', [
+            'titles' => $titles,
+        ]);
+    }
+
+    public function show(int $id)
+    {
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        // $titles = Title::all();
         $currentTitle = Title::find($id);
         $currentContent = Content::find($id);
 
-        return view('admin.task', [
+        return view('admin.task.show', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
         ]);
@@ -30,7 +42,6 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {   
-        
         $title = new Title;     
         $form = $request->all();
         unset($form['_token']);
