@@ -119,10 +119,13 @@
                       <div class="text-center">
                       @method('PUT')
                        <button type="submit" class="btn btn-primary">更新</button>
-                       @method('DELETE')
-                       <button type="submit" class="btn btn-primary">削除</button>
-                      </div>
                     </form>
+                    <form action="/admin/task/{{$title->id}}" method="POST">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-primary">削除</button>
+                    </form>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>

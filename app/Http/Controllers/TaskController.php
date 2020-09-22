@@ -44,6 +44,6 @@ class TaskController extends Controller
 
     public function delete($id) {
         Content::destroy($id);
-        return back();
+        return redirect('/admin');
     }
 }
