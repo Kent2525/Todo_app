@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 // Route::get('/', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@add');
     Route::get('/task', 'TaskController@index');
     Route::get('/task/{id?}', 'TaskController@show')->name('admin.task');

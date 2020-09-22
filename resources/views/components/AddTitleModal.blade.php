@@ -9,6 +9,15 @@
     </div>
     <div class="modal-body">
       <h4 class="text-center">タイトル追加</h4>
+      
+      @if (count($errors) > 0)
+        <ul class="validateAlert">
+            @foreach($errors->all() as $e)
+                <li>{{ $e }}</li>
+            @endforeach
+        </ul>
+      @endif
+
       <form action="{{ action('TaskController@create') }}" method="post">
         <div class="form-group">
           <input id="title" type="text" name="title" class="form-control">

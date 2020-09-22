@@ -43,6 +43,7 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {   
+        $this ->validate($request, Title::$rules);
         $title = new Title;     
         $form = $request->all();
         unset($form['_token']);
@@ -57,7 +58,7 @@ class TaskController extends Controller
         //     $title->save();
         // }
     
-        return redirect('/admin/task/1');
+        return redirect('/admin/task');
     }
 
     public function delete(Request $request)
@@ -65,7 +66,7 @@ class TaskController extends Controller
         $content = Title::find($request->id);
         $content->delete();
         
-        return redirect('/admin/task/1');
+        return redirect('/admin/task');
     }
 }
 

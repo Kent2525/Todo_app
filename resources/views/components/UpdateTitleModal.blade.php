@@ -8,6 +8,13 @@
       </div>
       <div class="modal-body">
         <h4 class="text-center">タイトル変更</h4>
+        @if (count($errors) > 0)
+        <ul class="validateAlert">
+            @foreach($errors->all() as $e)
+                <li>{{ $e }}</li>
+            @endforeach
+        </ul>
+        @endif
         <form action="{{ action('UpdateTitleController@update') }}" method="post">
           <div class="form-group">
             <input id="inputModal" type="text" name="title" class="form-control" value="">
