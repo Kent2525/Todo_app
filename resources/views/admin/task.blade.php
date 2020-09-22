@@ -67,7 +67,7 @@
             <p class="sample">左のスペース</p>
             <ul class="list-group">
               @foreach($title_posts as $title)
-              <a href="/admin/title/{{$title->id}}" class="list-group-item">
+              <a href="/admin/task/{{$title->id}}" class="list-group-item">
                 {{ $title->title }}
               </a>
               @endforeach
@@ -106,7 +106,7 @@
                       </div>
                   @endif
                     <h4 class="text-center">タイトル</h4>
-                    <form action="/admin/title/{{$title->id}}" method="POST">
+                    <form action="/admin/task/{{$title->id}}" method="POST">
                       @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>
