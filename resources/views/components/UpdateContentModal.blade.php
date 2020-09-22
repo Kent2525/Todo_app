@@ -12,6 +12,15 @@
           <h4 class="text-center" style="display: inline-block;">{{$currentTitle->title}}</h4>
           <a href="{{ action('ContentController@delete', ['id' => $content->id]) }}"  class="btn btn-danger text-right" style="float: right";>削除</a>
         </div>
+
+        @if (count($errors) > 0)
+        <ul class="validateAlert">
+            @foreach($errors->all() as $e)
+                <li>{{ $e }}</li>
+            @endforeach
+        </ul>
+        @endif
+        
         <form action="{{ action('ContentController@update') }}" method="post">
           <div class="form-group">
             <label for="inputHeading_modal">見出し</label>
