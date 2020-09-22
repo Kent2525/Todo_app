@@ -19,23 +19,18 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', 'TaskController@add');
+    Route::get('/task', 'TaskController@index');
+    Route::get('/task/{id?}', 'TaskController@show')->name('admin.task');
+    Route::post('/task/{id?}', 'TaskController@create');
+    Route::get('/task/{id?}/delete', 'TaskController@delete');
+    Route::get('/updatetitle/{id?}', 'UpdateTitleController@add');
+    Route::post('/updatetitle/{id?}', 'UpdateTitleController@update');
+    Route::get('/content/{id?}', 'ContentController@add');
+    Route::post('/content/{id?}', 'ContentController@update');
+    Route::get('/content/{id?}', 'ContentController@delete');
+    Route::get('/addheading/{id?}', 'AddHeadingController@add');
+    Route::post('/addheading/{id?}', 'AddHeadingController@create');
 });
-
-Route::get('/admin/task', 'TaskController@index');
-Route::get('/admin/task/{id?}', 'TaskController@show')->name('admin.task');
-Route::post('/admin/task/{id?}', 'TaskController@create');
-Route::get('/admin/task/{id?}/delete', 'TaskController@delete');
-
-Route::get('/admin/updatetitle/{id?}', 'UpdateTitleController@add');
-Route::post('/admin/updatetitle/{id?}', 'UpdateTitleController@update');
-
-Route::get('/admin/content/{id?}', 'ContentController@add');
-Route::post('/admin/content/{id?}', 'ContentController@update');
-Route::get('/admin/content/{id?}', 'ContentController@delete');
-
-Route::get('/admin/addheading/{id?}', 'AddHeadingController@add');
-Route::post('/admin/addheading/{id?}', 'AddHeadingController@create');
-
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
