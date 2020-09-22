@@ -28,7 +28,7 @@ class TaskController extends Controller
     }
 
     // モーダルでの保存処理
-    public function store(Request $request, $id) 
+    public function update(Request $request, $id) 
     {
         $request->validate([
             'heading' => 'required',
@@ -39,6 +39,11 @@ class TaskController extends Controller
         $content->body = $request->input('content');
         $content->title_id = $id;
         $content->save();
+        return back();
+    }
+
+    public function delete($id) {
+        Content::destroy($id);
         return back();
     }
 }

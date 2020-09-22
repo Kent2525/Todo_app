@@ -14,7 +14,8 @@
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@index');
     Route::get('/title/{id}', 'TaskController@show')->name('admin.task');
-    Route::post('/title/{id}', 'TaskController@store');
+    Route::put('/title/{id}', 'TaskController@update');
+    Route::delete('/title/{id}', 'TaskController@delete');
 });
 Auth::routes();
 
