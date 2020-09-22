@@ -117,10 +117,10 @@
                         <textarea id="content" type="text" class="form-control" row="5" name="content"></textarea>
                       </div>
                       <div class="text-center">
+                      @method('PUT')
                        <button type="submit" class="btn btn-primary">更新</button>
-                       @method('PUT')
-                       <button type="submit" class="btn btn-primary">削除</button>
                        @method('DELETE')
+                       <button type="submit" class="btn btn-primary">削除</button>
                       </div>
                     </form>
                   </div>
