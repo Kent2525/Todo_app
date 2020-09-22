@@ -76,9 +76,14 @@ class TitleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request)
+    {        
+        $id = $request->input('titleid'); 
+        $title = Title::find($id);
+        $title->user_id = auth()->user()->id;
+        $title->title = $request->input('title');
+        $title->save();
+        return back();
     }
 
     /**
@@ -89,6 +94,7 @@ class TitleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Title::destroy($id);
+        return back();
     }
 }

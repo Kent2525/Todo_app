@@ -15,3 +15,17 @@ $(document).ready(function() {
         $('#myModal').modal('show');
     }
 });
+
+$('.editTitleButton').on('click', function (event) {
+    var titleid = jQuery(this).data('titleid');
+    console.log(titleid);
+    var modal = $('#editTitleModal')
+    modal.find('#titleid').val(titleid);
+});
+
+// エラーがあった場合は、モーダルは再度開く
+$(document).ready(function() {
+    if($('.alert').length) {
+        $('#editTitleModal').modal('show');
+    }
+});

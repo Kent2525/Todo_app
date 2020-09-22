@@ -95,10 +95,8 @@
 
 // data属性を通じて、フォームの項目に値をいれる
 $('#myModal').on('show.bs.modal', function (event) {
-  console.log("モーダルが開きました"); // var button = jQuery(event.relatedTarget) || jQuery('.btn')[0]// Button that triggered the modal
-
+  console.log("モーダルが開きました");
   var button = jQuery('#modalbutton');
-  console.log(button);
   var heading = button.data('heading');
   var content = button.data('content'); // Extract info from data-* attributes
 
@@ -109,12 +107,19 @@ $('#myModal').on('show.bs.modal', function (event) {
 
 $(document).ready(function () {
   if ($('.alert').length) {
-    $('#myModal').modal('show'); // var button = jQuery('btn')[0]; // Button that triggered the modal
-    // var heading = button.data('heading')
-    // var content = button.data('content') // Extract info from data-* attributes
-    // var modal = jQuery(this)
-    // modal.find('#heading').val(heading);
-    // modal.find('#content').text(content);
+    $('#myModal').modal('show');
+  }
+});
+$('.editTitleButton').on('click', function (event) {
+  var titleid = jQuery(this).data('titleid');
+  console.log(titleid);
+  var modal = $('#editTitleModal');
+  modal.find('#titleid').val(titleid);
+}); // エラーがあった場合は、モーダルは再度開く
+
+$(document).ready(function () {
+  if ($('.alert').length) {
+    $('#editTitleModal').modal('show');
   }
 });
 

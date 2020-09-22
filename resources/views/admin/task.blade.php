@@ -71,8 +71,15 @@
               <a href="/admin/title/{{$title->id}}" class="list-group-item">
                 {{ $title->title }}
               </a>
+              <a class="editTitleButton" id="editTitleButton" data-toggle="modal" data-target="#editTitleModal" data-titleid="{{ $title->id }}">編集する</a>
+              <form action="/admin/title/{{$title->id}}" method="POST">
+              <input type="submit" value="削除する">
+              @csrf
+              @method('DELETE')
+            </form>
               @endforeach
             </ul>
+            @include('admin.modal3')
           </div>
         </div>
         <div class="col-9 mx-auto bg-white">

@@ -20,6 +20,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/title', 'TitleController@index');
     Route::post('/title', 'TitleController@store');
     Route::get('/title/{id}', 'TitleController@show');
+    Route::put('/title', 'TitleController@update');
+    Route::delete('/title/{id}', 'TitleController@destroy');
 });
 Auth::routes();
 
