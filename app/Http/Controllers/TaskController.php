@@ -8,18 +8,27 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function add()
-    {
-        return view('admin.task');  
-    }//
-
     public function index()
     {
         $title_posts = Title::where('user_id', auth()->user()->id)->get();
         return view('admin.task', ['title_posts' => $title_posts]);
     }
 
-    // admin/title/3のようなURLにアクセスした際にそのidに対応したContentsを表示する
+    public function store(Request $request, $id)
+    {
+        $request->validate([
+            'heading' => 'required',
+            'content' => 'required',
+        ]);
+        $content = new Content;
+        $content->heading = $request->input('heading');
+        $content->body = $request->input('content');
+        $content->title_id = $id;
+        $content->save();
+        return back();
+    }
+
+    // admin/task/3のようなURLにアクセスした際にそのidに対応したContentsを表示する
     public function show($id) 
     {
         $title_posts = Title::where('user_id', auth()->user()->id)->get();

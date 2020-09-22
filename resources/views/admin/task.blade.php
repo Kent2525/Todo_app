@@ -77,7 +77,8 @@
         <div class="col-9 mx-auto bg-white">
           <div class="right-title-box my-4 mx-5">
             <p class="test">右のスペース</p>
-            <a href="/task/create">新規作成</a>
+            <a class="task_index" data-toggle="modal" data-target="#createTaskModal">新規作成</a>
+            @include('admin.modal2')
             <ul class="list-group">
             @foreach($title_posts as $title)
               @foreach($title->contents as $content)
@@ -85,8 +86,6 @@
               @endforeach
             @endforeach
             </ul>
-
-
           @include('admin.modal')
           </div>
  

@@ -1,5 +1,5 @@
             <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
+            <div id="createTaskModal" class="modal fade" role="dialog">
               <div class="modal-dialog">             
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -18,7 +18,7 @@
                       </div>
                   @endif
                     <h4 class="text-center">タイトル</h4>
-                    <form action="/admin/task/{{$title->id}}" method="POST">
+                    <form action="/admin/{{$title->id}}" method="POST">
                       @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>
@@ -29,13 +29,7 @@
                         <textarea id="content" type="text" class="form-control" row="5" name="content"></textarea>
                       </div>
                       <div class="text-center">
-                      @method('PUT')
-                       <button type="submit" class="btn btn-primary">更新</button>
-                    </form>
-                    <form action="/admin/task/{{$title->id}}" method="POST">
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-primary">削除</button>
+                       <button type="submit" class="btn btn-primary">作成</button>
                     </form>
                     </div>
                   </div>
@@ -44,4 +38,4 @@
                   </div>
                 </div>             
               </div>
-            </div>
+          </div>
