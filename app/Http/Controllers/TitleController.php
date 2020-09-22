@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Title;
+use App\Content;
 
 class TitleController extends Controller
 {
@@ -13,7 +15,9 @@ class TitleController extends Controller
      */
     public function index()
     {
-        //
+        $title_posts = Title::where('user_id', auth()->user()->id)->get();
+        $heading_posts = $title_posts[0]->contents;
+        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
     }
 
     /**
@@ -23,7 +27,7 @@ class TitleController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +38,11 @@ class TitleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $title = new Title;
+        $title->user_id = auth()->user()->id;
+        $title->title = '新規作成されました';
+        $title->save();
+        return back();
     }
 
     /**
@@ -44,8 +52,10 @@ class TitleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {        
+        $title_posts = Title::where('user_id', auth()->user()->id)->get();
+        $heading_posts = Content::where('title_id', $id)->get();
+        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts, 'id' => $id]);
     }
 
     /**

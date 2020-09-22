@@ -65,9 +65,10 @@
         <div class="col-3  mx-auto">
           <div class="left-tttle-box my-4 mx-5">
             <p class="sample">左のスペース</p>
+            <a href="/admin/title">新規作成</a>
             <ul class="list-group">
               @foreach($title_posts as $title)
-              <a href="/admin/task/{{$title->id}}" class="list-group-item">
+              <a href="/admin/title/{{$title->id}}" class="list-group-item">
                 {{ $title->title }}
               </a>
               @endforeach
@@ -80,11 +81,11 @@
             <a class="task_index" data-toggle="modal" data-target="#createTaskModal">新規作成</a>
             @include('admin.modal2')
             <ul class="list-group">
-            @foreach($title_posts as $title)
-              @foreach($title->contents as $content)
-               <li><a class="list-group-item task_index" id="modalbutton" data-toggle="modal" data-target="#myModal" data-heading="{{ $content->heading }}" data-content="{{ $content->body }}">{{ $content->heading }}</a></li>
+            @if ($heading_posts)
+              @foreach($heading_posts as $heading_post)
+               <li><a class="list-group-item task_index" id="modalbutton" data-toggle="modal" data-target="#myModal" data-heading="{{ $heading_post->heading }}" data-content="{{ $heading_post->body }}">{{ $heading_post->heading }}</a></li>
               @endforeach
-            @endforeach
+            @endif
             </ul>
           @include('admin.modal')
           </div>

@@ -28,12 +28,8 @@ class TaskController extends Controller
         return back();
     }
 
-    // admin/task/3のようなURLにアクセスした際にそのidに対応したContentsを表示する
     public function show($id) 
     {
-        $title_posts = Title::where('user_id', auth()->user()->id)->get();
-        $heading_posts = Content::where('title_id', $id)->get();
-        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts, 'id' => $id]);
     }
 
     // モーダルでの保存処理
