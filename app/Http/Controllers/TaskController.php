@@ -31,7 +31,6 @@ class TaskController extends Controller
         $titles = Auth::user()->titles()->get();
         // $titles = Title::all();
         $currentTitle = Title::find($id);
-        // git test
 
         return view('admin.task.show', [
             'titles' => $titles,
