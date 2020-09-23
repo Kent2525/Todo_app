@@ -19,7 +19,7 @@
           <div class="form-group">
             <input id="inputModal" type="text" name="title" class="form-control" value="">
           </div>
-          {{ csrf_field() }}
+          @csrf
           <input id="inputIdTitle" type="hidden" name="id" value="">
           <div class="text-center">
             <button type="submit" class="btn btn-primary">変更</button>

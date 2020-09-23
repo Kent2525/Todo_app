@@ -30,7 +30,7 @@
             <label for="inputBody_modal">メモ</label>
             <textarea id="inputBody_modal" type="text" name="body" class="form-control" row="5"></textarea>
           </div>
-          {{ csrf_field() }}
+          @csrf
           <input type="hidden" id="modal_id" name="id" value="">
           <div class="text-center">
             <button type="submit" class="btn btn-primary btn-block mt-4">更  新</button>

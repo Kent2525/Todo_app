@@ -20,7 +20,6 @@ class UpdateTitleController extends Controller
         $title = Title::find($request->id);
         $form = $request->all();
         unset($form['_token']);
-        // dd($form);
         $title->fill($form)->save();
         
         return redirect('/admin/task');
