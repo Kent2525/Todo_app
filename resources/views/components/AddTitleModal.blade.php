@@ -18,7 +18,7 @@
         <div class="form-group">
           <input id="title" type="text" name="title" class="form-control">
         </div>
-        {{ csrf_field() }}
+        @csrf
         <div class="text-center">
           <button type="submit" class="btn btn-primary">追加</button>
         </div>
