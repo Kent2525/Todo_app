@@ -1,12 +1,12 @@
 @extends('layouts.admin')
-@section('title','Todo一覧  ')
+@section('title','Todo一覧')
 
 @section('content')
 <div class="main">
   <div class="row">
     <div class="col-3  mx-aut">
       <div class="left-title-box my-4 mx-5">
-        <p><a class="AddTitleModal" data-toggle="modal" data-target="#titleModal">+タイトル追加</a></p>
+        <p><a class="AddTitleModal" data-toggle="modal" data-target="#titleModal">+ タイトル追加</a></p>
 
         {{-- 左側のタイトル追加モーダル --}}
         @include('components.AddTitleModal')
