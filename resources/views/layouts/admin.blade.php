@@ -31,7 +31,6 @@
       <!-- <link rel="stylesheet" href="/css/admin.css">        -->
 </head>
 <body>
-  <!-- ヘッダー -->
   <nav class="navbar navbar-default bg-primary navbar-light">
     <div class="container-fluid">
       <ul class="navbar-nav mr-auto">
