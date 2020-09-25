@@ -14,11 +14,7 @@
         </div>
 
         @if (count($errors) > 0)
-        <ul class="validateAlert">
-            @foreach($errors->all() as $e)
-                <li>{{ $e }}</li>
-            @endforeach
-        </ul>
+          <p class="validateAlert">{{$errors->first('heading')}}</p>
         @endif
         
         <form action="{{ action('ContentController@update') }}" method="post">
@@ -30,7 +26,7 @@
             <label for="inputBody_modal">メモ</label>
             <textarea id="inputBody_modal" type="text" name="body" class="form-control" row="5"></textarea>
           </div>
-          {{ csrf_field() }}
+          @csrf
           <input type="hidden" id="modal_id" name="id" value="">
           <div class="text-center">
             <button type="submit" class="btn btn-primary btn-block mt-4">更  新</button>

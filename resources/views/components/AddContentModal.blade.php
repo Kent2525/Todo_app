@@ -10,11 +10,7 @@
       <div class="modal-body">
         <h4 class="text-center">見出し追加</h4>
         @if (count($errors) > 0)
-        <ul class="validateAlert">
-            @foreach($errors->all() as $e)
-                <li>{{ $e }}</li>
-            @endforeach
-        </ul>
+          <p class="validateAlert">{{$errors->first('heading')}}</p>
         @endif
         <form action="{{ action('AddHeadingController@create') }}"  method="post">
         <input type="hidden" name="id" value="{{$currentTitle->id}}">
