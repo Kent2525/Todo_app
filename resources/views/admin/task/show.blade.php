@@ -8,6 +8,7 @@
       <div class="left-title-box my-4 mx-5">
         <p><a class="AddTitleModal" data-toggle="modal" data-target="#titleModal">+ タイトル追加</a></p>
 
+
         {{-- 左側のタイトル追加モーダル --}}
         @include('components.AddTitleModal')
 
@@ -36,21 +37,15 @@
     <div class="col-9 mx-auto bg-white">
       <div class="right-title-box my-4 mx-5">
         <p class="test">見出し</p>
-        @if (empty($currentTitle))
-          <p>記事を選択してください。</p>
-        @else
-        
-        <ul class="list-group">
-            @foreach($currentTitle->contents as $content)
-              <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+          <ul class="list-group">
+              @foreach($currentTitle->contents as $content)
+                <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
               </a></li>
-            @endforeach
-        </ul>
+                {{-- 右側の見出しクリックモーダル --}}
+                @include('components.UpdateContentModal')
 
-        @endif
-
-        {{-- 右側の見出しクリックモーダル --}}
-        @include('components.UpdateContentModal')
+              @endforeach
+          </ul>
 
         <a type="button" class="btn btn-primary mt-3 text-white" data-toggle="modal" data-target="#addHeadingModal">追加</a>
         
@@ -66,16 +61,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
-// heading-modal（ループしているデータ）をクリックした時に
+
 $('.heading_modal').on('click', function() {
-  // このdata('heading')（data-title="ドルcontent->heading"）をheadingに代入
+
   var heading = $(this).data('heading');
-  // このdata('body')（data-body="ドルcontent->body"）をtitleに代入
+
   var body = $(this).data('body');
 
-  // '#inputHeading_modal'に対してtitleを埋める
+
   $('#inputHeading_modal').val(heading);
-  // '#inputBody_modal'のvalueにbodyを設定する。
+
   $('#inputBody_modal').val(body);
 
   var id = $(this).data('id');
