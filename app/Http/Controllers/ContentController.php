@@ -21,7 +21,7 @@ class ContentController extends Controller
         unset($form['_token']);
         $content->fill($form)->save();
         
-        return redirect('/admin/task');
+        return back();
     }
 
     public function delete(Request $request)
@@ -29,6 +29,6 @@ class ContentController extends Controller
         $content = Content::find($request->id);
         $content->delete();
         
-        return redirect('/admin/task');
+        return back();
     }
 }
