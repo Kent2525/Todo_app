@@ -37,18 +37,17 @@
     <div class="col-9 mx-auto bg-white">
       <div class="right-title-box my-4 mx-5">
         <p class="test">見出し</p>
-        @if ($testcontents !=NULL)
+
           <ul class="list-group">
               @foreach($currentTitle->contents as $content)
                 <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
-                </a></li>
-
+              </a></li>
                 {{-- 右側の見出しクリックモーダル --}}
                 @include('components.UpdateContentModal')
 
               @endforeach
           </ul>
-        @endif
+
 
         <a type="button" class="btn btn-primary mt-3 text-white" data-toggle="modal" data-target="#addHeadingModal">追加</a>
         
