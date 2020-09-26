@@ -70,12 +70,10 @@ $('.editModal').on('click', function() {
     });
 
 $(document).ready(function () {
-  console.log('titleModal', $('#titleModal'));
   if ($('.addTitleAlert').length) {
-    // console.log('titleModal', $('#titleModal'));
-    $('#titleModal').show();
+    $('#titleModal').modal('show');
   }
-});    
+});  
 </script>
   
 @endsection

@@ -11,7 +11,7 @@
       <h4 class="text-center">タイトル追加</h4>
       
       @if (count($errors) > 0)
-        <p class="validateAlert alert">{{$errors->first('title')}}</p>
+        <p class="validateAlert addTitleAlert">{{$errors->first('title')}}</p>
       @endif
 
       <form action="{{ action('TaskController@create') }}" method="post">

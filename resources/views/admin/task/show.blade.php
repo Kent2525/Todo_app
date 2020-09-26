@@ -86,10 +86,10 @@ $('.editModal').on('click', function() {
 });
 
 $(document).ready(function () {
-  if ($('.alert').length) {
+  if ($('.addTitleAlert').length) {
     $('#titleModal').modal('show');
   }
-});   
+}); 
 
 
 </script>
