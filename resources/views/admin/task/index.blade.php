@@ -72,8 +72,11 @@ $('.editModal').on('click', function() {
 $(document).ready(function () {
   if ($('.addTitleAlert').length) {
     $('#titleModal').modal('show');
+  } else if ($('.editTitleAlert').length) {
+    $('#editTitleModal').modal('show');
   }
-});  
+}); 
+
 </script>
   
 @endsection
