@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@add');
     Route::get('/task', 'TaskController@index');
-    Route::get('/task/{id?}', 'TaskController@show')->name('admin.task');
+    Route::get('/task/{id}', 'TaskController@show')->name('admin.task');
     Route::post('/task/{id?}', 'TaskController@create');
     Route::get('/task/{id?}/delete', 'TaskController@delete');
     Route::get('/updatetitle/{id?}', 'UpdateTitleController@add');
