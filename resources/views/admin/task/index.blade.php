@@ -68,6 +68,14 @@ $('.editModal').on('click', function() {
       var id_title = $(this).data('id_title');
       $('#inputIdTitle').val(id_title);
     });
+
+$(document).ready(function () {
+  console.log('titleModal', $('#titleModal'));
+  if ($('.addTitleAlert').length) {
+    // console.log('titleModal', $('#titleModal'));
+    $('#titleModal').show();
+  }
+});    
 </script>
   
 @endsection

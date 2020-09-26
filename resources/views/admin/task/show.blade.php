@@ -85,6 +85,13 @@ $('.editModal').on('click', function() {
   $('#inputIdTitle').val(id_title);
 });
 
+$(document).ready(function () {
+  if ($('.alert').length) {
+    $('#titleModal').modal('show');
+  }
+});   
+
+
 </script>
 
 @endsection
