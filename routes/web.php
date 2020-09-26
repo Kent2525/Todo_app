@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 // Route::get('/', 'HomeController@index')->name('home');
-
+// テスト
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@add');
     Route::get('/task', 'TaskController@index');
