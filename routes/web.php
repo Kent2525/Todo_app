@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Route::get('/', 'HomeController@index')->name('home');
-// テスト
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'TaskController@add');
     Route::get('/task', 'TaskController@index');
@@ -35,4 +31,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('/', 'TopController@index');
+// Route::get('/', function () {
+//     return view('top');
+// });
+
+
+Route::get('/', 'TopController@index');
