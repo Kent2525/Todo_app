@@ -25,8 +25,8 @@
 
             <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
 
-              {{-- 左側の更新アイコンモーダル --}}
-              @include('components.UpdateTitleModal')
+            {{-- 左側の更新アイコンモーダル --}}
+              @include('components.UpdateTitleModal')  
 
           @endforeach
         </ul>
@@ -86,6 +86,8 @@ $('.editModal').on('click', function() {
 });
 
 $(document).ready(function () {
+  console.log('edit', $('.editTitleAlert').length);
+  console.log('add', $('.addTitleAlert').length);
   if ($('.addTitleAlert').length) {
     $('#titleModal').modal('show');
   } else if ($('.editTitleAlert').length) {

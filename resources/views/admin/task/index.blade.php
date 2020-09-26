@@ -70,6 +70,8 @@ $('.editModal').on('click', function() {
     });
 
 $(document).ready(function () {
+  console.log('edit', $('.editTitleAlert').length);
+  console.log('add', $('.addTitleAlert').length);
   if ($('.addTitleAlert').length) {
     $('#titleModal').modal('show');
   } else if ($('.editTitleAlert').length) {
