@@ -11,6 +11,7 @@
 <div class="text-center" style="margin : 0 auto">
   <img src="{{ asset('image/welcomeTop.jpg') }}" style="width: 85%;" alt="welcome Top">
 </div>
+<h3 class="text-center" style="margin: 100px;">帰国時の予定を建てましょう</h3>
 <div style="margin: 300px 0;">テスト</div>
 
 @endsection
