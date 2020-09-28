@@ -30,7 +30,7 @@
       <!-- <link rel="stylesheet" href="/css/app.css"> -->
       <!-- <link rel="stylesheet" href="/css/admin.css">        -->
 </head>
-<body>
+<body class="bg-white">
   <nav class="navbar navbar-default bg-primary navbar-light">
     <div class="container-fluid">
       <ul class="navbar-nav mr-auto">
