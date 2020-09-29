@@ -29,6 +29,42 @@
       <button class="btn btn-primary">リストを出力する</button>
     </div>  
   </form>  
+  <div class="tagContainer" style="margin: 80px 270px;">
+    <div class="meetContainer">
+      <h4 style="margin-bottom: 20px;">人と会う</h4>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#友達と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; ">#親戚に会う</button>
+    </div>
+    <div class="meetContainer">
+      <h4 style="margin: 20px 0;">買い物</h4>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#服を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#化粧を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#文房具を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; ">#メガネを買う</button>
+      <div class="forTagSpace" style="margin: 10px;"></div>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#スーツを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#スマホを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#PCを買う</button>
+
+    </div>
+    <div class="meetContainer">
+      <h4 style="margin: 20px 0;">食事</h4>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#日本食を食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#寿司を食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#ラーメンを食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; ">#カレーを食べる</button>
+    </div>
+    <div class="meetContainer">
+      <h4 style="margin: 20px 0;">手続き関連</h4>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px;">#役所へ行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#運転免許の更新</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; margin-right: 30px">#住民票手続き</button>
+      <button class="btn btn_tag btn-primary btn-lg" id="defaultTag" style="border-radius: 20px; ">#大使館へ行く</button>
+    </div>
+
+
   <div style="margin: 300px 0;">テスト</div>
 </div>
 
