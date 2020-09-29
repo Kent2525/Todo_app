@@ -20,10 +20,15 @@
   <input type="text" placeholder="Todoを入力しましょう">
     <i class="fas fa-list-ul" aria-hidden="true"></i>
   </div>
-  <div class="text-center mt-4">
-    <textarea type="text" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
-    <inpu type="hidden" name="" value=""></input>
-  </div>
+  <form action="" method="post">
+    <div class="text-center mt-4">
+      <textarea type="text" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
+      <input type="hidden" name="" value=""></input>
+    </div>
+    <div class="text-center" style="margin-left: 610px;">
+      <button class="btn btn-primary">リストを出力する</button>
+    </div>  
+  </form>  
   <div style="margin: 300px 0;">テスト</div>
 </div>
 
