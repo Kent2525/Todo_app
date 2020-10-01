@@ -17,12 +17,14 @@
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
   </div>
   <div class="cp_iptxt">
-  <input type="text" placeholder="Todoを入力しましょう">
+  <input type="text" id="text1" placeholder="Todoを入力しましょう">
     <i class="fas fa-list-ul" aria-hidden="true"></i>
+    <button onclick="addText();" style="float: right;">Todo追加</button>
   </div>
+  <!-- <input type="text" id="text1" value="挿入する文字"> -->
   <form action="" method="post">
     <div class="text-center mt-4">
-      <textarea class="textarea" type="text" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
+      <textarea id="textarea1" type="text" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
       <input type="hidden" name="" value=""></input>
     </div>
     <div class="text-center" style="margin-left: 610px;">
@@ -69,18 +71,58 @@
 </div>
 
 <input type="button" id="myfunc" value="ぼたん">
+<input type="button" class="trigger testjava" value="テスト">
+<div>
+  <ul id="dropdown">
+    <li class="dropdown-child">HOME</li>
+    <li class="dropdown-child trigger">ABOUT
+      <ul class="dropdown_menu">
+        <li>profile</li>
+        <li>portofolio</li>
+      </ul>
+    </li>
+    <li class="dropdown-child trigger">WORK
+      <ul class="dropdown_menu">
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 <script>
+
   // document.getElementByClassName("btn-lg").onclick = function() {
   //   document.getElementByClassName("textarea").innerHTML = "クリック変化";
   // };
 
-  const myfunc = document.getElementById("myfunc");
-myfunc.addEventListener("click", function() {
-  console.log("ほげほげ1");
-});
-myfunc.addEventListener("click", function() {
-  console.log("ほげほげ２");
-});
+// 参考:https://qiita.com/KKKarin/items/ccb8ed361ab9acd1f9cf
+//   var myfunc = document.getElementById("myfunc");
+// myfunc.addEventListener("click", function() {
+//   console.log("ほげほげ1");
+// });
+// myfunc.addEventListener("click", function() {
+//   console.log("ほげほげ２");
+// });
+
+// 参考:https://develop.logical-studio.com/web/20191213-js-class-addeventlistener/
+// var testjava = document.querySelectorAll(".testjava");
+//   testjava.forEach(function(target) {
+//   target.addEventListener('mouseenter', function() {
+//      target.firstElementChild.style.display = 'block';
+//   });
+//   target.addEventListener('mouseleave', function() {
+//      target.firstElementChild.style.display = 'none';
+//   });
+// });
+
+// 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
+function addText()
+{
+	document.getElementById('textarea1').value
+		+= document.getElementById('text1').value;
+}
+
 </script>
 
 @endsection
