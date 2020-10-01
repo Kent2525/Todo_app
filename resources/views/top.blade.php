@@ -68,10 +68,19 @@
   <div style="margin: 300px 0;">テスト</div>
 </div>
 
+<input type="button" id="myfunc" value="ぼたん">
 <script>
-  document.getElementByClassName("btn-lg").onclick = function() {
-    document.getElementByClassName("textarea").innerHTML = "クリック変化";
-  };
+  // document.getElementByClassName("btn-lg").onclick = function() {
+  //   document.getElementByClassName("textarea").innerHTML = "クリック変化";
+  // };
+
+  const myfunc = document.getElementById("myfunc");
+myfunc.addEventListener("click", function() {
+  console.log("ほげほげ1");
+});
+myfunc.addEventListener("click", function() {
+  console.log("ほげほげ２");
+});
 </script>
 
 @endsection
