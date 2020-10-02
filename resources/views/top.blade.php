@@ -11,7 +11,7 @@
   </div>
   <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
   <div class="text-center">
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" >#家族と会う</button>
+    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickBtn3()" type="button">#家族と会う</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#買い物に行く</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お土産を買う</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
@@ -31,7 +31,6 @@
       <button class="btn btn-primary">リストを出力する</button>
     </div>  
   </form>  
-  <input type="button" value="ボタン1" onclick="clickBtn3()">
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>
@@ -104,9 +103,10 @@ function addText2()
 		+= document.getElementsByClassName('btn-lg').value;
 }
 
+// 参考:https://itsakura.com/js-textbox
 function clickBtn3(){
 	// 値を設定
-	document.form2.text2.value = "blue";
+	document.form2.text2.value = "#家族と会う";
 }
 function clickBtn4(){
 	document.form2.text2.value = ""; //クリア
