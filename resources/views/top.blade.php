@@ -11,26 +11,27 @@
   </div>
   <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
   <div class="text-center">
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
+    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" >#家族と会う</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#買い物に行く</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お土産を買う</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
   </div>
   <div class="cp_iptxt">
-  <input type="text" id="text1" placeholder="Todoを入力しましょう">
+  <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
     <i class="fas fa-list-ul" aria-hidden="true"></i>
     <button onclick="addText();" style="float: right;">Todo追加</button>
   </div>
   <!-- <input type="text" id="text1" value="挿入する文字"> -->
-  <form action="" method="post">
+  <form action="" method="post" name="form2">
     <div class="text-center mt-4">
-      <textarea id="textarea1" type="text" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
+      <textarea id="textarea1" type="text" name="text2" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
       <input type="hidden" name="" value=""></input>
     </div>
     <div class="text-center" style="margin-left: 610px;">
       <button class="btn btn-primary">リストを出力する</button>
     </div>  
   </form>  
+  <input type="button" value="ボタン1" onclick="clickBtn3()">
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>
@@ -91,6 +92,25 @@
   </ul>
 </div>
 <script>
+// 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
+function addText()
+{
+	document.getElementById('textarea1').value
+		+= document.getElementById('inputTodoText').value;
+}
+function addText2()
+{
+	document.getElementById('textarea1').value
+		+= document.getElementsByClassName('btn-lg').value;
+}
+
+function clickBtn3(){
+	// 値を設定
+	document.form2.text2.value = "blue";
+}
+function clickBtn4(){
+	document.form2.text2.value = ""; //クリア
+}
 
   // document.getElementByClassName("btn-lg").onclick = function() {
   //   document.getElementByClassName("textarea").innerHTML = "クリック変化";
@@ -115,14 +135,6 @@
 //      target.firstElementChild.style.display = 'none';
 //   });
 // });
-
-// 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
-function addText()
-{
-	document.getElementById('textarea1').value
-		+= document.getElementById('text1').value;
-}
-
 </script>
 
 @endsection
