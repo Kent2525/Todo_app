@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Title;
 use App\Content;
+use Illuminate\Support\Facades\Auth;
 
 class TitleController extends Controller
 {
@@ -15,8 +16,12 @@ class TitleController extends Controller
      */
     public function index()
     {
+        if( ! empty(session('tags')) ) {
+            $this->sessionTags();
+        }
         $title_posts = Title::where('user_id', auth()->user()->id)->get();
         $heading_posts = $title_posts[0]->contents;
+        dump( session('tags') );
         return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
     }
 
@@ -96,5 +101,25 @@ class TitleController extends Controller
     {
         Title::destroy($id);
         return back();
+    }
+
+
+    public function sessionTags() {
+        $tags = session('tags');
+        // タイトルの新規作成
+        $title = new Title;
+        $title->user_id = Auth::id();
+        $title->title = '新規作成されました';
+        $title->save();
+
+        // コンテントの新規作成
+        foreach( $tags as $tag ) {
+            $content = new Content;
+            $content->heading = $tag;
+            $content->body = '';
+            $content->title_id = $title->id;
+            $content->save();
+        }
+
     }
 }
