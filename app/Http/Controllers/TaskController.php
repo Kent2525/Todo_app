@@ -39,16 +39,17 @@ class TaskController extends Controller
             'heading' => 'required',
             'content' => 'required',
         ]);
+        $title_id = $request->input('title_id');
         $content = Content::find($id);
         $content->heading = $request->input('heading');
         $content->body = $request->input('content');
-        $content->title_id = $id;
+        $content->title_id = $title_id;
         $content->save();
         return back();
     }
 
     public function delete($id) {
         Content::destroy($id);
-        return redirect('/admin');
+        return back();
     }
 }

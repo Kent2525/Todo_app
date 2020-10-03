@@ -93,25 +93,17 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// data属性を通じて、フォームの項目に値をいれる
-// $('#myModal').on('show.bs.modal', function (event) {
-//     console.log("モーダルが開きました");
-//     var button = jQuery('#modalbutton')
-//     var heading = button.data('heading')
-//     console.log(heading);
-//     var content = button.data('content') // Extract info from data-* attributes
-//     var modal = jQuery(this)
-//     modal.find('#heading').val(heading);
-//     modal.find('#content').text(content);
-// });
+// タスクをクリックした際に、そのタスクに応じたheadingとcontextに変更する
 $('.task_index').on('click', function (event) {
   var button = $(this);
   var heading = button.data('heading');
   var content = button.data('content');
+  var task_id = button.data('task_id');
   console.log(heading);
   console.log(content);
   $('#myModal').find('#heading').val(heading);
   $('#myModal').find('#content').text(content);
+  $('#myModal').find('form').attr('action', '/admin/task/' + task_id);
 }); // エラーがあった場合は、モーダルは再度開く
 
 $(document).ready(function () {

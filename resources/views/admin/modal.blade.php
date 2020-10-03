@@ -18,7 +18,7 @@
                       </div>
                   @endif
                     <h4 class="text-center">タイトル</h4>
-                    <form action="/admin/task/{{$title->id}}" method="POST">
+                    <form action="" method="POST">
                       @csrf
                       <div class="form-group">
                         <label for="heading">見出し</label>
@@ -31,11 +31,13 @@
                       <div class="text-center">
                       @method('PUT')
                        <button type="submit" class="btn btn-primary">更新</button>
+                       <input type="hidden" value="{{$heading_posts[0]->id}}" name="title_id">
                     </form>
-                    <form action="/admin/task/{{$title->id}}" method="POST">
+                    <form action="" method="POST">
                       @csrf
                       @method('DELETE')
                       <button type="submit" class="btn btn-primary">削除</button>
+                      <input type="hidden" value="{{$heading_posts[0]->id}}" name="title_id">
                     </form>
                     </div>
                   </div>

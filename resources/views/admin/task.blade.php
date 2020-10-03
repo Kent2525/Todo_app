@@ -90,7 +90,7 @@
             <ul class="list-group">
             @if ($heading_posts)
               @foreach($heading_posts as $heading_post)
-               <li><a class="list-group-item task_index" id="modalbutton" data-toggle="modal" data-target="#myModal" data-heading="{{ $heading_post->heading }}" data-content="{{ $heading_post->body }}">{{ $heading_post->heading }}</a></li>
+               <li><a class="list-group-item task_index" id="modalbutton" data-toggle="modal" data-task_id="{{$heading_post->id}}" data-target="#myModal" data-heading="{{ $heading_post->heading }}" data-content="{{ $heading_post->body }}">{{ $heading_post->heading }}</a></li>
               @endforeach
             @endif
             </ul>
