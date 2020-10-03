@@ -68,17 +68,23 @@ $('.editModal').on('click', function() {
 
       var id_title = $(this).data('id_title');
       $('#inputIdTitle').val(id_title);
-    });
+});
 
 $(document).ready(function () {
   console.log('edit', $('.editTitleAlert').length);
   console.log('add', $('.addTitleAlert').length);
   if ($('.addTitleAlert').length) {
     $('#titleModal').modal('show');
-  } else if ($('.editTitleAlert').length) {
-    $('#editTitleModal').modal('show');
-  }
+  } 
 }); 
+
+$(document).ready(function () {
+  if ($('.editTitleAlert').length) {
+    $('#editTitleModal').modal('show');
+  } 
+}); 
+
+
 
 </script>
   
