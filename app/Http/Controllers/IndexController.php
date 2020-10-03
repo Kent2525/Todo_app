@@ -21,6 +21,9 @@ class IndexController extends Controller
         
         // 最初は空なので除く
         array_shift($tags);
+
+        // すでにセッションに値が入っている場合に備えて削除する
+        $request->session()->forget('tags');
         
         // セッションに保存する
         session(['tags' => $tags]);

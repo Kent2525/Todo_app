@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Title;
 use App\Content;
+use Illuminate\Foundation\Console\Presets\React;
 use Illuminate\Support\Facades\Auth;
 
 class TitleController extends Controller
@@ -19,10 +20,12 @@ class TitleController extends Controller
         if( ! empty(session('tags')) ) {
             $this->sessionTags();
         }
-        $title_posts = Title::where('user_id', auth()->user()->id)->get();
+        $id = Auth::id();
+        $title_posts = Title::where('user_id', $id)->get();
         $heading_posts = $title_posts[0]->contents;
-        dump( session('tags') );
-        return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
+        $title_id = $title_posts[0]->id;
+        return redirect("/admin/title/{$title_id}");
+        // return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts]);
     }
 
     /**
@@ -44,7 +47,7 @@ class TitleController extends Controller
     public function store(Request $request)
     {
         $title = new Title;
-        $title->user_id = auth()->user()->id;
+        $title->user_id = Auth::id();
         $title->title = '新規作成されました';
         $title->save();
         return back();
@@ -58,7 +61,9 @@ class TitleController extends Controller
      */
     public function show($id)
     {        
-        $title_posts = Title::where('user_id', auth()->user()->id)->get();
+        dump( session('tags') );
+        dump($id);
+        $title_posts = Title::where('user_id', Auth::id())->get();
         $heading_posts = Content::where('title_id', $id)->get();
         return view('admin.task', ['title_posts' => $title_posts, 'heading_posts' => $heading_posts, 'id' => $id]);
     }
@@ -112,6 +117,8 @@ class TitleController extends Controller
         $title->title = '新規作成されました';
         $title->save();
 
+        // dd($title->id);
+
         // コンテントの新規作成
         foreach( $tags as $tag ) {
             $content = new Content;
@@ -120,6 +127,10 @@ class TitleController extends Controller
             $content->title_id = $title->id;
             $content->save();
         }
+
+        // dd($title->id);
+        // session()->forget('tags');
+        
 
         return redirect("/admin/title/{$title->id}");
 
