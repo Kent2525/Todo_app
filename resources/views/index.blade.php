@@ -1,4 +1,5 @@
-<form action="/aaa" method="POST">
+<form action="/" method="POST">
+  @csrf
   <div class="taginput"></div>
   <input type="hidden" name="tags" id="tags" value="">
   <div class="candidate">
