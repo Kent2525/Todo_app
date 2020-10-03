@@ -13,7 +13,14 @@ class IndexController extends Controller
         return view('index');
     }
     public function store(Request $request) {
-        $request->input('tags');
+        $tags = $request->input('tags');
+
+        // #区切りで送られてくるので、配列の形に分割する
+        $tags = explode('#', $tags);
+        
+        // 最初は空なので除く
+        array_shift($tags);
+        
         if( Auth::check() ) {
             
             // タイトルの新規作成
@@ -23,11 +30,13 @@ class IndexController extends Controller
             $title->save();
 
             // コンテントの新規作成
-            $content = new Content;
-            $content->heading = 'aaa';
-            $content->body = '';
-            $content->title_id = $title->id;
-            $content->save();
+            foreach( $tags as $tag ) {
+                $content = new Content;
+                $content->heading = $tag;
+                $content->body = '';
+                $content->title_id = $title->id;
+                $content->save();
+            }
 
             return redirect('/admin/title');
         }
