@@ -121,5 +121,7 @@ class TitleController extends Controller
             $content->save();
         }
 
+        return redirect("/admin/title/{$title->id}");
+
     }
 }
