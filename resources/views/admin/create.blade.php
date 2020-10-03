@@ -1,7 +1,8 @@
-<!-- 左側のタイトル追加Modal -->
-<div id="titleModal" class="modal fade" role="dialog">
-<div class="modal-dialog">             
-  <!-- Modal content-->
+@extends('layouts.admin')
+@section('title','タイトル作成')
+
+@section('content')
+
   <div class="modal-content">
       <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -10,7 +11,7 @@
     <div class="modal-body">
       <h4 class="text-center">タイトル追加</h4>
       
-      @if (count($errors->first('title')) > 0)
+      @if (count($errors) > 0)
         <p class="validateAlert addTitleAlert">{{$errors->first('title')}}</p>
       @endif
 
@@ -27,6 +28,6 @@
     <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
     </div>
-  </div>             
-</div>
-</div>
+  </div>     
+  </body>
+@endsection

@@ -9,13 +9,13 @@
       <div class="modal-body">
         <h4 class="text-center">タイトル変更</h4>
         
-        @if (count($errors) > 0)
-          <p class="validateAlert editTitleAlert">{{$errors->first('title')}}</p>
+        @if (count($errors->first('title1')) > 0)
+          <p class="validateAlert editTitleAlert">{{$errors->first('title1')}}</p>
         @endif
         
         <form action="{{ action('UpdateTitleController@update') }}" method="post">
           <div class="form-group">
-            <input id="inputModal" type="text" name="title" class="form-control" value="">
+            <input id="inputModal" type="text" name="title1" class="form-control" value="">
           </div>
           @csrf
           <input id="inputIdTitle" type="hidden" name="id" value="">

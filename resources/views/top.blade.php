@@ -12,7 +12,7 @@
   <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
   <div class="text-center">
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickBtn3()" type="button">#家族と会う</button>
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#買い物に行く</button>
+    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickBtn4()" type="button">#買い物に行く</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お土産を買う</button>
     <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
   </div>
@@ -108,9 +108,17 @@ function clickBtn3(){
 	// 値を設定
 	document.form2.text2.value = "#家族と会う";
 }
+
 function clickBtn4(){
+	// 値を設定
+	document.form2.text2.value = "#買い物に行く";
+}
+
+
+function clickBtn5(){
 	document.form2.text2.value = ""; //クリア
 }
+
 
   // document.getElementByClassName("btn-lg").onclick = function() {
   //   document.getElementByClassName("textarea").innerHTML = "クリック変化";
