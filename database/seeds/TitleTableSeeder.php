@@ -12,28 +12,28 @@ class TitleTableSeeder extends Seeder
      */
     public function run()
     {
-                // (1)レコードデータをいちいち消さなくていい文
-                DB::table('titles')->truncate(); // 全レコードを削除、自動増分のIDを0にリセット
-                DB::table('titles')->insert([  // テーブルにデータをInsert
-                    [
-                        'user_id' => '1',
-                        'title' => 'Sample Title1',
-                        'created_at' => date('Y-m-d H:i:s'),
-                        'updated_at' => date('Y-m-d H:i:s'),
-                      ],
-                      [
-                        'user_id' => '2',
-                        'title' => 'Sample Title2',
-                        'created_at' => date('Y-m-d H:i:s'),
-                        'updated_at' => date('Y-m-d H:i:s'),
-                      ],
-                      [
-                        'user_id' => '3',
-                        'title' => 'Sample Title3',
-                        'created_at' => date('Y-m-d H:i:s'),
-                        'updated_at' => date('Y-m-d H:i:s'),
-                      ],
-                    ]);
+                // // (1)レコードデータをいちいち消さなくていい文
+                // DB::table('titles')->truncate(); // 全レコードを削除、自動増分のIDを0にリセット
+                // DB::table('titles')->insert([  // テーブルにデータをInsert
+                //     [
+                //         'user_id' => '1',
+                //         'title' => 'Sample Title1',
+                //         'created_at' => date('Y-m-d H:i:s'),
+                //         'updated_at' => date('Y-m-d H:i:s'),
+                //       ],
+                //       [
+                //         'user_id' => '2',
+                //         'title' => 'Sample Title2',
+                //         'created_at' => date('Y-m-d H:i:s'),
+                //         'updated_at' => date('Y-m-d H:i:s'),
+                //       ],
+                //       [
+                //         'user_id' => '3',
+                //         'title' => 'Sample Title3',
+                //         'created_at' => date('Y-m-d H:i:s'),
+                //         'updated_at' => date('Y-m-d H:i:s'),
+                //       ],
+                //     ]);
         
                 // (2)基本文。毎回Mysqlにてレコードの削除が必要。（mysql>truncate table テーブル名;)
                 // $param = [
