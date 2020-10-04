@@ -10,7 +10,7 @@
     <div class="modal-body">
       <h4 class="text-center">タイトル追加</h4>
       
-      @if (count($errors->first('title')) > 0)
+      @if (count($errors) > 0)
         <p class="validateAlert addTitleAlert">{{$errors->first('title')}}</p>
       @endif
 
