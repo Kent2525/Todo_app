@@ -14,7 +14,7 @@
         </div>
 
         @if (count($errors) > 0)
-          <p class="validateAlert">{{$errors->first('heading')}}</p>
+          <p class="validateAlert updateContetnAlert">{{$errors->first('heading')}}</p>
         @endif
         
         <form action="{{ action('ContentController@update') }}" method="post">

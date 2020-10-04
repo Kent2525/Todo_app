@@ -92,9 +92,25 @@ $(document).ready(function () {
   console.log('add', $('.addTitleAlert').length);
   if ($('.addTitleAlert').length) {
     $('#titleModal').modal('show');
-  } else if ($('.editTitleAlert').length) {
+  } 
+}); 
+
+$(document).ready(function () {
+  if ($('.editTitleAlert').length) {
     $('#editTitleModal').modal('show');
-  }
+  } 
+}); 
+
+$(document).ready(function () {
+  if ($('.updateContetnAlert').length) {
+    $('#myModal').modal('show');
+  } 
+}); 
+
+$(document).ready(function () {
+  if ($('.addContentAlert').length) {
+    $('#addHeadingModal').modal('show');
+  } 
 }); 
 
 
