@@ -15,7 +15,7 @@
         
         <form action="{{ action('UpdateTitleController@update') }}" method="post">
           <div class="form-group">
-            <input id="inputModal" type="text" name="title1" class="form-control" value="">
+            <input id="inputModal" type="text" name="title" class="form-control" value="">
           </div>
           @csrf
           <input id="inputIdTitle" type="hidden" name="id" value="">
