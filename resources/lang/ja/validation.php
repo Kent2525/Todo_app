@@ -148,7 +148,9 @@ return [
     'attributes' => [
         'title' => 'タイトル',
         'title1' => 'タイトル',
-        'heading' => '見出し'
+        'heading' => '見出し',
+        'heading1' => '見出し'
+
     ],
 
 ];

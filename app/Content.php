@@ -10,5 +10,6 @@ class Content extends Model
     
     public static $rules = array(
         'heading' => 'required',
+        'heading1' => 'required',
     );
 }

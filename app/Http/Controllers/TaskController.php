@@ -42,7 +42,7 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {   
-        $this ->validate($request, array('title' =>'required'));
+        $this ->validate($request, ['title' =>'required']);
         $title = new Title;     
         $form = $request->all();
         unset($form['_token']);

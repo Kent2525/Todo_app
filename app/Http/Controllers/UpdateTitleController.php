@@ -16,7 +16,7 @@ class UpdateTitleController extends Controller
 
     public function update(Request $request)
     {   
-        $this ->validate($request, array('title1' =>'required'));
+        $this ->validate($request, ['title1' =>'required']);
         $title = Title::find($request->id);
         $form = $request->all();
         unset($form['_token']);

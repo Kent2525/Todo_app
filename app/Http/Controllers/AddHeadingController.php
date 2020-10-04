@@ -15,7 +15,7 @@ class AddHeadingController extends Controller
 
     public function create(Request $request)
     {   
-        $this ->validate($request, Content::$rules);
+        $this ->validate($request, ['heading1' =>'required']);
         $current_title = Title::find($request->id);
         $content = new Content();
         $content->heading = $request->heading;
