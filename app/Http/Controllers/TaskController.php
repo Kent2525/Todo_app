@@ -11,8 +11,12 @@ class TaskController extends Controller
 {
     public function add()
     {
-        return view('admin.task');  
-    }//
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        return view('admin.task.add', [
+            'titles' => $titles,
+        ]);
+    }
 
     public function index()
     {

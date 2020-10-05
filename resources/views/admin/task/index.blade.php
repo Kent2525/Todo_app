@@ -6,11 +6,11 @@
   <div class="row">
     <div class="col-3  mx-aut">
       <div class="left-title-box my-4 mx-5">
-        <p><a class="AddTitleModal" data-toggle="modal" data-target="#titleModal">+ タイトル追加</a></p>
+        <p><a href="{{ route('admin.task.add') }}">+ タイトル追加</a></p>
 
 
-        {{-- 左側のタイトル追加モーダル --}}
-        @include('components.AddTitleModal')
+        <!-- {{-- 左側のタイトル追加モーダル --}}
+        {{--@include('components.AddTitleModal') --}} -->
 
         <ul class="list-group">
           @foreach($titles as $title)
@@ -70,19 +70,21 @@ $('.editModal').on('click', function() {
       $('#inputIdTitle').val(id_title);
 });
 
-$(document).ready(function () {
-  console.log('edit', $('.editTitleAlert').length);
-  console.log('add', $('.addTitleAlert').length);
-  if ($('.addTitleAlert').length) {
-    $('#titleModal').modal('show');
-  } 
-}); 
+// $(document).ready(function () {
+//   console.log('edit', $('.editTitleAlert').length);
+//   console.log('add', $('.addTitleAlert').length);
+//   if ($('.addTitleAlert').length) {
+//     $('#titleModal').modal('show');
+//   } 
+// }); 
 
 $(document).ready(function () {
   if ($('.editTitleAlert').length) {
     $('#editTitleModal').modal('show');
   } 
 }); 
+
+
 
 </script>
   
