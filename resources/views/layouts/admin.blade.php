@@ -35,12 +35,12 @@
     <div class="container-fluid">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-        <a class="navbar-brand text-white" href="#">Todo</a>
+        <a class="navbar-brand text-white" href="/">Todo</a>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item navbar-light">
           @if(Auth::check())
-            <span class="text-white">{{ Auth::user()-> name }}さんページ</span>
+            <a class="btn btn-primary text-white" href="/admin/task">{{ Auth::user()-> name }}さんページ</span>
             <a class="btn btn-primary" href="{{ route('logout') }}"
               onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">

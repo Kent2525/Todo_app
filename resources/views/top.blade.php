@@ -34,7 +34,7 @@
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#友達と会う</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#親戚に会う</button>
@@ -120,6 +120,7 @@ function clickBtn5(){
 }
 
 
+
   // document.getElementByClassName("btn-lg").onclick = function() {
   //   document.getElementByClassName("textarea").innerHTML = "クリック変化";
   // };
@@ -129,6 +130,7 @@ function clickBtn5(){
 // myfunc.addEventListener("click", function() {
 //   console.log("ほげほげ1");
 // });
+
 // myfunc.addEventListener("click", function() {
 //   console.log("ほげほげ２");
 // });
