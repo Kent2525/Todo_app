@@ -9,8 +9,8 @@
         <p><a href="{{ route('admin.task.add') }}">+ タイトル追加</a></p>
 
 
-        {{-- 左側のタイトル追加モーダル --}}
-        {{-- @include('components.AddTitleModal') --}}
+        <!-- {{-- 左側のタイトル追加モーダル --}}
+        {{-- @include('components.AddTitleModal') --}} -->
 
         <ul class="list-group">
           @foreach($titles as $title)
@@ -42,7 +42,7 @@
               @foreach($currentTitle->contents as $content)
                 <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
               </a></li>
-                {{-- 右側の見出しクリックモーダル --}}
+                {{-- 右側の見出しクリック編集モーダル --}}
                 @include('components.UpdateContentModal')
 
               @endforeach
@@ -51,8 +51,8 @@
 
         <a href="{{ route('admin.task.addheading', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
         
-        {{-- 右側の見出し追加モーダル --}}
-        @include('components.AddContentModal')
+        <!-- {{-- 右側の見出し追加モーダル --}} -->
+        <!-- {{-- @include('components.AddContentModal') --}} -->
 
       </div>
     </div>
