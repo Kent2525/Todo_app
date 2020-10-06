@@ -9,28 +9,32 @@
   <div class="text-center" style="margin : 0 auto">
     <img src="{{ asset('image/welcomeTop5.jpg') }}" style="width: 85%;" alt="welcome Top">
   </div>
-  <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
-  <div class="text-center">
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickBtn3()" type="button">#家族と会う</button>
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickBtn4()" type="button">#買い物に行く</button>
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お土産を買う</button>
-    <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
-  </div>
-  <div class="cp_iptxt">
-  <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
-    <i class="fas fa-list-ul" aria-hidden="true"></i>
-    <button onclick="addText();" style="float: right;">Todo追加</button>
-  </div>
-  <!-- <input type="text" id="text1" value="挿入する文字"> -->
-  <form action="" method="post" name="form2">
-    <div class="text-center mt-4">
-      <textarea id="textarea1" type="text" name="text2" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
-      <input type="hidden" name="" value=""></input>
+  <div style="margin: 0 300px;">
+    <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
+    <div class="text-center">
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickBtn3()" type="button">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickBtn4()" type="button">#買い物に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お土産を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
     </div>
-    <div class="text-center" style="margin-left: 610px;">
-      <button class="btn btn-primary">リストを出力する</button>
-    </div>  
-  </form>  
+    <div class="flex-box my-3">
+      <div class="cp_iptxt mr-1">
+        <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
+        <i class="fas fa-list-ul" aria-hidden="true"></i>
+      </div>
+      <button onclick="addText();" class="btn btn-outline-primary mr-5">Todo追加</button>
+      </div>
+      <!-- <input type="text" id="text1" value="挿入する文字"> -->
+    <form action="" method="post" name="form2">
+      <div class="text-center mt-4">
+        <textarea id="textarea1" type="text" name="text2" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
+        <input type="hidden" name="" value=""></input>
+      </div>
+      <div class="text-center" style="margin-left: 610px;">
+        <button class="btn btn-success">リストを出力する</button>
+      </div>  
+    </form>  
+  </div>
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>

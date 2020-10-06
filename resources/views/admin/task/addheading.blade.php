@@ -118,7 +118,7 @@ $(document).on('click', function(e) {
   // e.stopPropagation();
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
-    location.href = "/admin/task";
+    hisotry.back();
 
   }
 });
