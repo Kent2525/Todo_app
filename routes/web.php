@@ -34,8 +34,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/', function () {
-//     return view('top');
-// });
-
+    //     return view('top');
+    // });
 
 Route::get('/', 'TopController@index');
