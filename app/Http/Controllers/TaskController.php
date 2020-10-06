@@ -44,11 +44,11 @@ class TaskController extends Controller
         ]);
     }
 
-    public function addheading(int $id)
+    public function addheading(int $id, Request $request)
     {
         // ログイン中のユーザーのタイトルテーブルを取得
         $titles = Auth::user()->titles()->get();
-        $currentTitle = Title::find($id);
+        $currentTitle = Title::find($request->id);
         $testcontents = Content::all();
         return view('admin.task.addheading', [
             'titles' => $titles,
