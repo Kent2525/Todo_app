@@ -77,6 +77,18 @@ class TaskController extends Controller
         return redirect('/admin/task');
     }
 
+    public function edit(Request $request)
+    {
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        $currentTitle = Title::find($request->id);
+        // dd($currentTitle);
+        return view('admin.task.edit', [
+            'titles' => $titles,
+            'currentTitle' => $currentTitle,
+        ]);
+    }
+
     public function delete(Request $request)
     {   
         $content = Title::find($request->id);
