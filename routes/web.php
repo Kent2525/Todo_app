@@ -27,6 +27,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/addheading/{id?}', 'AddHeadingController@add');
     Route::post('/addheading/{id?}', 'AddHeadingController@create');
     Route::get('/task/add', 'TaskController@add')->name('admin.task.add');
+    Route::get('/task/show/addheading/{id?}', 'TaskController@addheading')->name('admin.task.addheading');
     
 });
 

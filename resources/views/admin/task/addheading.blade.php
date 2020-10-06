@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Todo一覧')
+@section('title','タイトル追加')
 
 @section('content')
 <div class="main">
@@ -7,10 +7,6 @@
     <div class="col-3  mx-aut">
       <div class="left-title-box my-4 mx-5">
         <p><a href="{{ route('admin.task.add') }}">+ タイトル追加</a></p>
-
-
-        {{-- 左側のタイトル追加モーダル --}}
-        {{-- @include('components.AddTitleModal') --}}
 
         <ul class="list-group">
           @foreach($titles as $title)
@@ -49,34 +45,53 @@
           </ul>
 
 
-        <a href="{{ route('admin.task.addheading', ['id' => $title->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
+          <a href="{{ route('admin.task.addheading') }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
         
-        {{-- 右側の見出し追加モーダル --}}
-        @include('components.AddContentModal')
 
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal in" id="addHeadingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="testtest">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+              <h4 class="text-center">タイトル追加</h4>
+              
+              @if (count($errors) > 0)
+                <p>{{$errors->first('title')}}</p>
+              @endif
+
+              <form action="{{ action('AddHeadingController@create') }}" method="post">
+                <div class="form-group">
+                  <input id="title" type="text" name="title" class="form-control">
+                </div>
+                @csrf
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">追加</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="{{ route('admin.task.index') }}" type="button" class="btn btn-default">閉じる</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-{{-- モータルへデータを送るjavascript --}}
+<!-- Latest compiled and minified JavaScript -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
-
-$('.heading_modal').on('click', function() {
-
-  var heading = $(this).data('heading');
-
-  var body = $(this).data('body');
-
-
-  $('#inputHeading_modal').val(heading);
-
-  $('#inputBody_modal').val(body);
-
-  var id = $(this).data('id');
-  $('#modal_id').val(id);
+$(window).on('load',function(){
+  $('#addHeadingModal').modal('show');
 });
 
 $('.editModal').on('click', function() {
@@ -87,32 +102,29 @@ $('.editModal').on('click', function() {
   $('#inputIdTitle').val(id_title);
 });
 
-$(document).ready(function () {
-  console.log('edit', $('.editTitleAlert').length);
-  console.log('add', $('.addTitleAlert').length);
-  if ($('.addTitleAlert').length) {
-    $('#titleModal').modal('show');
-  } 
-}); 
+$('.heading_modal').on('click', function() {
+  var heading = $(this).data('heading');
+  var body = $(this).data('body');
+  $('#inputHeading_modal').val(heading);
+  $('#inputBody_modal').val(body);
 
-$(document).ready(function () {
-  if ($('.editTitleAlert').length) {
-    $('#editTitleModal').modal('show');
-  } 
-}); 
+  var id = $(this).data('id');
+  $('#modal_id').val(id);
+});
 
-$(document).ready(function () {
-  if ($('.updateContetnAlert').length) {
-    $('#myModal').modal('show');
-  } 
-}); 
+function clickBg1() {
+  location.href = "/admin/task";
+}
 
-$(document).ready(function () {
-  if ($('.addContentAlert').length) {
-    $('#addHeadingModal').modal('show');
-  } 
-}); 
+$(document).on('click', function(e) {
+  // e.preventDefault();
+  // e.stopPropagation();
+  console.log("test", $(e.target));
+  if ($(e.target).hasClass('modal')) {
+    location.href = "/admin/task";
 
+  }
+});
 
 </script>
 

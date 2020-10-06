@@ -9,14 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
-    public function add()
-    {
-        // ログイン中のユーザーのタイトルテーブルを取得
-        $titles = Auth::user()->titles()->get();
-        return view('admin.task.add', [
-            'titles' => $titles,
-        ]);
-    }
 
     public function index()
     {
@@ -43,6 +35,27 @@ class TaskController extends Controller
         ]);
     }
     
+    public function add()
+    {
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        return view('admin.task.add', [
+            'titles' => $titles,
+        ]);
+    }
+
+    public function addheading(int $id)
+    {
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        $currentTitle = Title::find($id);
+        $testcontents = Content::all();
+        return view('admin.task.addheading', [
+            'titles' => $titles,
+            'currentTitle' => $currentTitle,
+            'testcontents' => $testcontents,
+        ]);
+    }
 
     public function create(Request $request)
     {   
