@@ -24,10 +24,10 @@ class ContentController extends Controller
         return back();
     }
 
-    public function delete(int $id)
+    public function delete(Request $request)
     {   
-        $content = Content::find($id);
-        // dd($id);
+        $content = Content::find($request->id);
+        // dd($content);
         $content->delete();
         
         return back();
