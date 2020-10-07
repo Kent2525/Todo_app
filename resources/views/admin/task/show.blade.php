@@ -58,8 +58,6 @@
 
 {{-- モータルへデータを送るjavascript --}}
 <script>
-
-
 $('.editModal').on('click', function() {
   var title = $(this).data('title');
   $('#inputModal').val(title);

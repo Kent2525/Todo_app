@@ -27,14 +27,11 @@ class TaskController extends Controller
         // $titles = Title::all();
         $currentTitle = Title::find($id);
         $testcontents = Content::all();
-        // $content = Content::all();
-        // dd($testcontents);
+        
         return view('admin.task.show', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
             'testcontents' => $testcontents,
-            // 'content' => $content,
-
         ]);
     }
     

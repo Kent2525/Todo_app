@@ -74,7 +74,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        <a href="{{ route('admin.task', [$currentTitle->id]) }}" type="button" class="btn btn-default">閉じる</a>
       </div>
     </div>         
       </div>
@@ -117,7 +117,7 @@ $(document).on('click', function(e) {
   // e.stopPropagation();
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
-    hisotry.back();
+    location.href = "/admin/task/show"+paramstr;
 
   }
 });
