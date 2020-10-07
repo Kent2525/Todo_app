@@ -117,7 +117,7 @@ $(document).on('click', function(e) {
   // e.stopPropagation();
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
-    location.href = "/admin/task/show"+paramstr;
+    location.href = "/admin/task/show/{{$currentTitle->id}}" 
 
   }
 });
