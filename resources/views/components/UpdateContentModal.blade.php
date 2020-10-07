@@ -1,5 +1,5 @@
 {{-- 右側の見出しクリックModal --}}
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal{{$content->id}}" class="modal fade" role="dialog">
   <div class="modal-dialog"> 
     {{-- Modal content--}}
     <div class="modal-content">
@@ -14,20 +14,25 @@
         </div>
 
         @if (count($errors) > 0)
-          <p class="validateAlert updateContetnAlert">{{$errors->first('heading')}}</p>
+          <script>
+            // $(function(){
+            //   $('#myModal{{$content->id}}').modal('show');
+            // })
+          </script>
+          <p class="validateAlert updateContentAlert">{{$errors->first('heading')}}</p>
         @endif
         
         <form action="{{ action('ContentController@update') }}" method="post">
           <div class="form-group">
             <label for="inputHeading_modal">見出し</label>
-            <input id="inputHeading_modal" type="text" name="heading" class="form-control">
+            <input id="inputHeading_modal" type="text" name="heading" value="{{$content->heading}}" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="inputBody_modal">メモ</label>
-            <textarea id="inputBody_modal" type="text" name="body" class="form-control" row="5"></textarea>
+            <textarea id="inputBody_modal" type="text" name="body" class="form-control" row="5">{{$content->body}}</textarea>
           </div>
           @csrf
-          <input type="hidden" id="modal_id" name="id" value="">
+          <input type="hidden" id="modal_id" name="id" value="{{$content->id}}">
           <div class="text-center">
             <button type="submit" class="btn btn-primary btn-block mt-4">更  新</button>
           </div>

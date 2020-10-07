@@ -7,11 +7,8 @@
     <div class="col-3  mx-aut">
       <div class="left-title-box my-4 mx-5">
         <p><a href="{{ route('admin.task.add') }}">+ タイトル追加</a></p>
-
-
         <!-- {{-- 左側のタイトル追加モーダル --}}
         {{-- @include('components.AddTitleModal') --}} -->
-
         <ul class="list-group">
           @foreach($titles as $title)
           <div class="titleLoop section">
@@ -40,7 +37,7 @@
 
           <ul class="list-group">
               @foreach($currentTitle->contents as $content)
-                <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+                <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
               </a></li>
                 {{-- 右側の見出しクリック編集モーダル --}}
                 @include('components.UpdateContentModal')
@@ -60,24 +57,8 @@
 </div>
 
 {{-- モータルへデータを送るjavascript --}}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 
-$('.heading_modal').on('click', function() {
-
-  var heading = $(this).data('heading');
-
-  var body = $(this).data('body');
-
-
-  $('#inputHeading_modal').val(heading);
-
-  $('#inputBody_modal').val(body);
-
-  var id = $(this).data('id');
-  $('#modal_id').val(id);
-});
 
 $('.editModal').on('click', function() {
   var title = $(this).data('title');
@@ -101,11 +82,11 @@ $(document).ready(function () {
   } 
 }); 
 
-$(document).ready(function () {
-  if ($('.updateContetnAlert').length) {
-    $('#myModal').modal('show');
-  } 
-}); 
+// $(document).ready(function () {
+//   if ($('.updateContentAlert').length) {
+//     $('#myModal').modal('show');
+//   } 
+// }); 
 
 $(document).ready(function () {
   if ($('.addContentAlert').length) {
