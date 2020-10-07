@@ -21,7 +21,7 @@
             <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
               
               {{-- 左側の削除アイコンモーダル --}}
-              @include('components.DeleteTitleModal', ['title' => $title])
+              @include('components.DeleteTitleModal')
 
               <a href="{{ route('admin.task.edit', ['id' => $title->id]) }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
 

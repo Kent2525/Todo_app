@@ -21,8 +21,8 @@
 
             <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
 
-            {{-- 左側の更新アイコンモーダル --}}
-              @include('components.UpdateTitleModal')  
+            <!-- {{-- 左側の更新アイコンモーダル --}} -->
+            <!-- {{-- @include('components.UpdateTitleModal') --}} -->
 
           @endforeach
         </ul>
@@ -45,9 +45,8 @@
           </ul>
 
 
-          <a href="{{ route('admin.task.addheading') }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
+        <a href="{{ route('admin.task.addheading', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
         
-
       </div>
     </div>
     <!-- Modal -->
