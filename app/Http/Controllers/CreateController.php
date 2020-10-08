@@ -23,13 +23,6 @@ class CreateController extends Controller
         $title->user_id = Auth::id();
         $title->fill($form)->save();
         
-        // public function create(Request $request)
-        // {   
-            
-        //     $title = new Title;
-        //     $title->title = $request->title;
-        //     $title->save();
-        // }
     
         return redirect('/admin/task');
     }
