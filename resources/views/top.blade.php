@@ -27,8 +27,8 @@
       <!-- <input type="text" id="text1" value="挿入する文字"> -->
     <form action="" method="post" name="form1">
       <div class="text-center mt-4">
-        <div id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb;"></div>
-        <div id="testarea" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;"></div>
+        <!-- <textarea id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb; resize: none;"></textarea> -->
+        <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
         <input type="hidden" name="" value=""></input>
       </div>
       <div class="text-center" style="margin-left: 610px;">
