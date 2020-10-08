@@ -25,9 +25,10 @@
       <button onclick="addText();" class="btn btn-outline-primary mr-5">Todo追加</button>
       </div>
       <!-- <input type="text" id="text1" value="挿入する文字"> -->
-    <form action="" method="post" name="form2">
+    <form action="" method="post" name="form1">
       <div class="text-center mt-4">
-        <textarea id="textarea1" type="text" name="text2" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; resize: none;"></textarea>
+        <div id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb;"></div>
+        <div id="testarea" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;"></div>
         <input type="hidden" name="" value=""></input>
       </div>
       <div class="text-center" style="margin-left: 610px;">
@@ -66,34 +67,20 @@
       <h4 style="margin: 20px 0;">手続き関連</h4>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#役所へ行く</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#運転免許の更新</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#住民票手続き</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#大使館へ行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="addElement2()">#住民票手続き</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="addElement()">#大使館へ行く</button>
     </div>
+    <div id="testbutton" class="btn btn-danger mt-4" >テストボタン</div>
+    <form action="" method="post" name="form2">
+      <div id="testarea2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
+        <p></p>
+        <input type="hidden" name="" value=""></input>
+      </div>
+    </form>  
+    <div id="parent">
+    <button>要素を追加</button><br>
+  </div>
 
-
-  <div style="margin: 300px 0;">テスト</div>
-</div>
-
-<input type="button" id="myfunc" value="ぼたん">
-<input type="button" class="trigger testjava" value="テスト">
-<div>
-  <ul id="dropdown">
-    <li class="dropdown-child">HOME</li>
-    <li class="dropdown-child trigger">ABOUT
-      <ul class="dropdown_menu">
-        <li>profile</li>
-        <li>portofolio</li>
-      </ul>
-    </li>
-    <li class="dropdown-child trigger">WORK
-      <ul class="dropdown_menu">
-        <li>aaa</li>
-        <li>bbb</li>
-        <li>ccc</li>
-      </ul>
-    </li>
-  </ul>
-</div>
 <script>
 // 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
 function addText()
@@ -107,21 +94,64 @@ function addText2()
 		+= document.getElementsByClassName('btn-lg').value;
 }
 
-// 参考:https://itsakura.com/js-textbox
-function clickBtn3(){
-	// 値を設定
-	document.form2.text2.value = "#家族と会う";
-}
+// 参考:https://techacademy.jp/magazine/20732
+function addElement() {
+  // 要素を作成する
+  var element = document.createElement("span");
+  element.innerText = "#大使館に行く" 
 
-function clickBtn4(){
-	// 値を設定
-	document.form2.text2.value = "#買い物に行く";
-}
+  // 要素を追加する「親要素」を指定する。
+  var testarea = document.getElementById("testarea");
+  // 要素を追加する
+  testarea.appendChild(element);
+  // 次の要素を改行して追加するために br 要素を追加する
+  testarea.appendChild(document.createElement(""));
+} 
+
+function addElement2() {
+    var element = document.createElement("span");
+    element.innerText = "#住民票の手続き" 
+    var testarea = document.getElementById("testarea");
+    testarea.appendChild(element);
+    testarea.appendChild(document.createElement(""));
+  } 
 
 
-function clickBtn5(){
-	document.form2.text2.value = ""; //クリア
-}
+// // 参考:https://itsakura.com/js-textbox
+// function clickBtn3(){
+// 	// 値を設定
+// 	document.form1.text1.value = "#家族と会う";
+// }
+
+// function clickBtn4(){
+// 	// 値を設定
+// 	document.form1.text1.value = "#買い物に行く";
+// }
+
+// function clickBtn5(){
+// 	document.form1.text1.value = ""; //クリア
+// }
+
+
+// $(function(){
+//   $(‘#testbutton‘).click(function(){
+//   $(‘#testarea p‘).prepend(‘<span>spansample</span>’);
+//   });
+// });
+
+// $(function(){
+//   $(‘#testbutton‘).on('click', function(){
+//   $(‘#testarea p‘).prepend(‘<span>spansample</span>’);
+//   });
+// });
+
+// $('#testbutton').click(function() {
+//   $('#testarea p').prepend(‘<span>spansample</span>’);
+// }
+
+// $('#testbutton').on('click', function() {
+//   $('#testarea p').prepend(‘<span>spansample</span>’);
+// }
 
 
 
