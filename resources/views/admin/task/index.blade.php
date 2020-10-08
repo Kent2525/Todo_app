@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-3  mx-aut">
       <div class="left-title-box my-4 mx-5">
-        <p><a href="{{ route('admin.task.add') }}">+ タイトル追加</a></p>
+        <p><a href="{{ route('admin.task.addTitle') }}">+ タイトル追加</a></p>
 
 
         <!-- {{-- 左側のタイトル追加モーダル --}}

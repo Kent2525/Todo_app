@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','タイトル編集')
+@section('title','タイトル追加')
 
 @section('content')
 <div class="main">
@@ -19,45 +19,46 @@
               {{-- 左側の削除アイコンモーダル --}}
               @include('components.DeleteTitleModal', ['title' => $title])
 
-              <a href="{{ route('admin.task.edit') }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
+            <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
 
-            <!-- {{-- 左側の更新アイコンモーダル --}} -->
-            <!-- {{-- @include('components.UpdateTitleModal') --}}   -->
+              {{-- 左側の更新アイコンモーダル --}}
+              @include('components.UpdateTitleModal')
 
           @endforeach
         </ul>
       </div>
     </div>
     <!-- Modal -->
-    <div class="modal in" id="editTitleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+    <div class="modal in" id="addTitleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"></h4>
+          <div class="testtest">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+              <h4 class="text-center">タイトル追加</h4>
+              
+              @if (count($errors) > 0)
+                <p>{{$errors->first('title')}}</p>
+              @endif
+
+              <form action="{{ action('TaskController@create') }}" method="post">
+                <div class="form-group">
+                  <input id="title" type="text" name="title" class="form-control">
+                </div>
+                @csrf
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">追加</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="{{ route('admin.task.index') }}" type="button" class="btn btn-default">閉じる</a>
+            </div>
           </div>
-          <div class="modal-body">
-            <h4 class="text-center">タイトル変更</h4>
-          
-            @if (count($errors) > 0)
-              <p class="editTitleAlert">{{$errors->first('title')}}</p>
-            @endif
-          
-            <form action="{{ action('UpdateTitleController@update') }}" method="post">
-              <div class="form-group">
-                <input id="inputModal" type="text" name="title" class="form-control" value="{{ $currentTitle->title}}">
-              </div>
-              @csrf
-              <input id="inputIdTitle" type="hidden" name="id" value="{{ $currentTitle->id}}">
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">変更</button>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-          </div>
-        </div>  
+        </div>
       </div>
     </div>
     {{-- 右側 --}}
@@ -74,7 +75,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 $(window).on('load',function(){
-  $('#editTitleModal').modal('show');
+  $('#addTitleModal').modal('show');
 });
 
 $('.editModal').on('click', function() {

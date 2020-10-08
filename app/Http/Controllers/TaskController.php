@@ -35,11 +35,11 @@ class TaskController extends Controller
         ]);
     }
     
-    public function add()
+    public function addTitle()
     {
         // ログイン中のユーザーのタイトルテーブルを取得
         $titles = Auth::user()->titles()->get();
-        return view('admin.task.add', [
+        return view('admin.task.addTitle', [
             'titles' => $titles,
         ]);
     }
