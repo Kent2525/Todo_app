@@ -13,7 +13,7 @@
           <p class="editTitleAlert">{{$errors->first('title')}}</p>
         @endif
         
-        <form action="{{ action('UpdateTitleController@update') }}" method="post">
+        <form action="{{ action('EditTitleController@edit') }}" method="post">
           <div class="form-group">
             <input id="inputModal" type="text" name="title" class="form-control" value="">
           </div>

@@ -23,10 +23,10 @@
               {{-- 左側の削除アイコンモーダル --}}
               @include('components.DeleteTitleModal')
 
-              <a href="{{ route('admin.task.edit', ['id' => $title->id]) }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
+              <a href="{{ route('admin.task.editTitle', ['id' => $title->id]) }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
 
-              {{-- 左側の更新アイコンモーダル --}}
-              @include('components.UpdateTitleModal')
+              <!-- {{-- 左側の更新アイコンモーダル --}}
+               {{-- @include('components.UpdateTitleModal') --}} -->
 
           @endforeach
         </ul>

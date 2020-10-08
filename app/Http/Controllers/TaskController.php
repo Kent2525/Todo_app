@@ -44,6 +44,39 @@ class TaskController extends Controller
         ]);
     }
 
+    
+    public function create(Request $request)
+    {   
+        $this ->validate($request, ['title' =>'required']);
+        $title = new Title;     
+        $form = $request->all();
+        unset($form['_token']);
+        $title->user_id = Auth::id();
+        $title->fill($form)->save();
+        
+        return redirect('/admin/task');
+    }
+    
+    public function delete(Request $request)
+    {   
+        $content = Title::find($request->id);
+        $content->delete();
+        
+        return redirect('/admin/task');
+    }
+
+    public function editTitle(Request $request)
+    {
+        // ログイン中のユーザーのタイトルテーブルを取得
+        $titles = Auth::user()->titles()->get();
+        $currentTitle = Title::find($request->id);
+        // dd($currentTitle);
+        return view('admin.task.editTitle', [
+            'titles' => $titles,
+            'currentTitle' => $currentTitle,
+        ]);
+    }
+    
     public function addheading(int $id, Request $request)
     {
         // ログイン中のユーザーのタイトルテーブルを取得
@@ -55,46 +88,6 @@ class TaskController extends Controller
             'currentTitle' => $currentTitle,
             'testcontents' => $testcontents,
         ]);
-    }
-
-    public function create(Request $request)
-    {   
-        $this ->validate($request, ['title' =>'required']);
-        $title = new Title;     
-        $form = $request->all();
-        unset($form['_token']);
-        $title->user_id = Auth::id();
-        $title->fill($form)->save();
-        
-        // public function create(Request $request)
-        // {   
-            
-        //     $title = new Title;
-        //     $title->title = $request->title;
-        //     $title->save();
-        // }
-    
-        return redirect('/admin/task');
-    }
-
-    public function edit(Request $request)
-    {
-        // ログイン中のユーザーのタイトルテーブルを取得
-        $titles = Auth::user()->titles()->get();
-        $currentTitle = Title::find($request->id);
-        // dd($currentTitle);
-        return view('admin.task.edit', [
-            'titles' => $titles,
-            'currentTitle' => $currentTitle,
-        ]);
-    }
-
-    public function delete(Request $request)
-    {   
-        $content = Title::find($request->id);
-        $content->delete();
-        
-        return redirect('/admin/task');
     }
 }
 

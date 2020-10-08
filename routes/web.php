@@ -17,19 +17,18 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/task', 'TaskController@index')->name('admin.task.index');
     Route::get('/task/show/{id}', 'TaskController@show')->name('admin.task');
     Route::get('/task/addTitle', 'TaskController@addTitle')->name('admin.task.addTitle');
-    Route::post('/task/create', 'TaskController@create');
-
     Route::get('/task/{id?}/delete', 'TaskController@delete');
-    Route::get('/updatetitle/{id?}', 'UpdateTitleController@add');
-    Route::post('/updatetitle/{id?}', 'UpdateTitleController@update');
+    Route::get('/task/editTitle', 'TaskController@editTitle')->name('admin.task.editTitle');
+    Route::post('/task/editTitle', 'EditTitleController@edit');
+    
     Route::get('/content/{id?}', 'ContentController@add');
     Route::post('/content/{id?}', 'ContentController@update');
     Route::get('/content/{id?}', 'ContentController@delete');
     Route::get('/addheading/{id?}', 'AddHeadingController@add');
     Route::post('/addheading/{id?}', 'AddHeadingController@create');
     Route::get('/task/show/addheading/{id?}', 'TaskController@addheading')->name('admin.task.addheading');
-    Route::get('/task/edit', 'TaskController@edit')->name('admin.task.edit');
     
+    Route::post('/task/create', 'TaskController@create');
 });
 
 Auth::routes();
