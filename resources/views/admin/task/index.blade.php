@@ -7,11 +7,6 @@
     <div class="col-3  mx-aut">
       <div class="left-title-box my-4 mx-5">
         <p><a href="{{ route('admin.task.addTitle') }}">+ タイトル追加</a></p>
-
-
-        <!-- {{-- 左側のタイトル追加モーダル --}}
-        {{--@include('components.AddTitleModal') --}} -->
-
         <ul class="list-group">
           @foreach($titles as $title)
           <div class="titleLoop section">
@@ -23,11 +18,7 @@
               {{-- 左側の削除アイコンモーダル --}}
               @include('components.DeleteTitleModal')
 
-              <a href="{{ route('admin.task.editTitle', ['id' => $title->id]) }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
-
-              <!-- {{-- 左側の更新アイコンモーダル --}}
-               {{-- @include('components.UpdateTitleModal') --}} -->
-
+            <a href="{{ route('admin.task.editTitle', ['id' => $title->id]) }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
           @endforeach
         </ul>
       </div>
