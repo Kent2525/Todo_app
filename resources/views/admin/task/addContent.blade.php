@@ -56,7 +56,7 @@
       <div class="modal-body">
         <h4 class="text-center">見出し追加</h4>
         @if (count($errors) > 0)
-          <p class="addContentAlert">{{$errors->first('heading')}}</p>
+          <p class="addContentAlert textAlert">{{$errors->first('heading')}}</p>
         @endif
         <form action="{{ action('AddContentController@create') }}"  method="post">
         <input type="hidden" name="id" value="{{$currentTitle->id}}">

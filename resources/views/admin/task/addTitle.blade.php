@@ -37,7 +37,7 @@
               <h4 class="text-center">タイトル追加</h4>
               
               @if (count($errors) > 0)
-                <p>{{$errors->first('title')}}</p>
+                <p class="textAlert">{{$errors->first('title')}}</p>
               @endif
 
               <form action="{{ action('AddTitleController@create') }}" method="post">

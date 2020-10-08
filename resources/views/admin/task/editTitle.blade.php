@@ -35,7 +35,7 @@
             <h4 class="text-center">タイトル変更</h4>
           
             @if (count($errors) > 0)
-              <p class="editTitleAlert">{{$errors->first('title')}}</p>
+              <p class="editTitleAlert textAlert">{{$errors->first('title')}}</p>
             @endif
           
             <form action="{{ action('EditTitleController@edit') }}" method="post">
