@@ -22,7 +22,7 @@
           <p class="validateAlert updateContentAlert">{{$errors->first('heading')}}</p>
         @endif
         
-        <form action="{{ action('ContentController@update') }}" method="post">
+        <form action="{{ action('ContentController@edit') }}" method="post">
           <div class="form-group">
             <label for="inputHeading_modal">見出し</label>
             <input id="inputHeading_modal" type="text" name="heading" value="{{$content->heading}}" class="form-control" required>

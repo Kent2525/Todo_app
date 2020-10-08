@@ -20,10 +20,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/task/{id?}/delete', 'TaskController@delete');
     Route::get('/task/editTitle', 'TaskController@editTitle')->name('admin.task.editTitle');
     Route::post('/task/editTitle', 'EditTitleController@edit');
+    Route::get('/task/content', 'ContentController@delete');
+    Route::post('/task/content', 'ContentController@edit');
     
-    Route::get('/content/{id?}', 'ContentController@add');
-    Route::post('/content/{id?}', 'ContentController@update');
-    Route::get('/content/{id?}', 'ContentController@delete');
     Route::get('/addheading/{id?}', 'AddHeadingController@add');
     Route::post('/addheading/{id?}', 'AddHeadingController@create');
     Route::get('/task/show/addheading/{id?}', 'TaskController@addheading')->name('admin.task.addheading');
