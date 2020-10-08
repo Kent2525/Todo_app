@@ -40,7 +40,7 @@
           </ul>
 
 
-        <a href="{{ route('admin.task.addheading', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
+        <a href="{{ route('admin.task.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
         
         <!-- {{-- 右側の見出し追加モーダル --}} -->
         <!-- {{-- @include('components.AddContentModal') --}} -->

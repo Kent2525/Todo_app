@@ -44,7 +44,7 @@
                 <p>{{$errors->first('title')}}</p>
               @endif
 
-              <form action="{{ action('TaskController@create') }}" method="post">
+              <form action="{{ action('AddTitleController@create') }}" method="post">
                 <div class="form-group">
                   <input id="title" type="text" name="title" class="form-control">
                 </div>

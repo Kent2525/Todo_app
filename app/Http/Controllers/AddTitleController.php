@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Title;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AddTitleController extends Controller
-{
-    public function add()
-    {
-        return view('admin.addtitle');  
-    }//
+{ 
+    public function create(Request $request)
+    {   
+        $this ->validate($request, ['title' =>'required']);
+        $title = new Title;     
+        $form = $request->all();
+        unset($form['_token']);
+        $title->user_id = Auth::id();
+        $title->fill($form)->save();
+        
+        return redirect('/admin/task');
+    }
 }

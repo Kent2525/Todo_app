@@ -45,18 +45,6 @@ class TaskController extends Controller
     }
 
     
-    public function create(Request $request)
-    {   
-        $this ->validate($request, ['title' =>'required']);
-        $title = new Title;     
-        $form = $request->all();
-        unset($form['_token']);
-        $title->user_id = Auth::id();
-        $title->fill($form)->save();
-        
-        return redirect('/admin/task');
-    }
-    
     public function delete(Request $request)
     {   
         $content = Title::find($request->id);
@@ -77,13 +65,13 @@ class TaskController extends Controller
         ]);
     }
     
-    public function addheading(int $id, Request $request)
+    public function addContent(int $id, Request $request)
     {
         // ログイン中のユーザーのタイトルテーブルを取得
         $titles = Auth::user()->titles()->get();
         $currentTitle = Title::find($request->id);
         $testcontents = Content::all();
-        return view('admin.task.addheading', [
+        return view('admin.task.addContent', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
             'testcontents' => $testcontents,
