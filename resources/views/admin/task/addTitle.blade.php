@@ -19,11 +19,7 @@
               {{-- 左側の削除アイコンモーダル --}}
               @include('components.DeleteTitleModal', ['title' => $title])
 
-            <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
-
-              {{-- 左側の更新アイコンモーダル --}}
-              @include('components.UpdateTitleModal')
-
+            <a href="{{ route('admin.task.editTitle', ['id' => $title->id]) }}"><img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
           @endforeach
         </ul>
       </div>
