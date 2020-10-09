@@ -14,12 +14,14 @@ class TopController extends Controller
         return view('top');  
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $content = Content::all();
+        $form = $request->all();
         unset($form['_token']);
+        dd($form);
         $content->fill($form)->save();  
-        dd($form);     
+             
         return back();
     }   
 }

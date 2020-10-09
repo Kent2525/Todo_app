@@ -14,7 +14,8 @@ class AddContentController extends Controller
         $current_title = Title::find($request->id);
         $content = new Content();
         $content->heading = $request->heading;
-        $current_title->contents()->save($content);        
+        $current_title->contents()->save($content);
+        dd($content);        
         return redirect()->route('admin.task', ['id' => $current_title->id]);
     }
 }

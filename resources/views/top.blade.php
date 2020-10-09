@@ -137,8 +137,8 @@ function clickTest1() {
 
 function clickTest2() {
   var test = document.createElement("input");
-  var test = document.querySelector("input")
-  test.setAttribute("name", "heading");
+  // var test = document.querySelector("input")
+  test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "お土産を買う");
   var testarea = document.getElementById("testarea");
@@ -159,8 +159,7 @@ function clickTest3() {
 
 function clickTest4() {
   var test = document.createElement("input");
-  var test = document.querySelector("input")
-  test.setAttribute("name", "heading");
+  test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "日本食を食べる");
   var testarea = document.getElementById("testarea");
