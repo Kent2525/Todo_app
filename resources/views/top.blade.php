@@ -12,36 +12,32 @@
   <div style="margin: 0 300px;">
     <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
     <div class="text-center">
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickBtn3()" type="button">#家族と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickBtn4()" type="button">#買い物に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お土産を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#日本食を食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="tagClick1()" type="button">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="tagClick2()" type="button">#買い物に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTotalTest1()">#お土産を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTotalTest2()">#日本食を食べる</button>
     </div>
     <div class="flex-box my-3">
-      <div class="cp_iptxt mr-1">
-        <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
-        <i class="fas fa-list-ul" aria-hidden="true"></i>
-      </div>
-      <button onclick="addText();" class="btn btn-outline-primary mr-5">Todo追加</button>
-      </div>
-      <!-- <input type="text" id="text1" value="挿入する文字"> -->
-    <form action=""{{ action('AddTitleController@create') }}"" method="post" name="form1">
+      <input class="w-75" placeholder="Todoを入力できます"></input>
+      <button class="btn btn-outline-primary mr-5">Todo追加</button>
+    </div>
+    <form action="{{ action('AddTitleController@create') }}" method="post" name="form1">
       <div class="text-center mt-4">
         <!-- <textarea id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb; resize: none;"></textarea> -->
         <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
-        <input type="hidden" name="heading" value=""></input>
       </div>
+      
       <div class="text-center" style="margin-left: 610px;">
-        <button class="btn btn-success">リストを出力する</button>
+      <button type="submit" class="btn btn-success" >リストを出力する</button>
       </div>  
     </form>  
   </div>
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>
-      <button id="family" class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;" onclick="tagClick1()">#家族と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="tagClick2()">#友達と会う</button>
-      <button id="koibito" class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#友達と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#親戚に会う</button>
     </div>
     <div class="shoppingContainer">
@@ -84,16 +80,16 @@
 
 <script>
 // 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
-function addText()
-{
-	document.getElementById('textarea1').value
-		+= document.getElementById('inputTodoText').value;
-}
-function addText2()
-{
-	document.getElementById('textarea1').value
-		+= document.getElementsByClassName('btn-lg').value;
-}
+// function addText()
+// {
+// 	document.getElementById('textarea1').value
+// 		+= document.getElementById('inputTodoText').value;
+// }
+// function addText2()
+// {
+// 	document.getElementById('textarea1').value
+// 		+= document.getElementsByClassName('btn-lg').value;
+// }
 
 function tagClick1() {
   addElement1();
@@ -118,13 +114,57 @@ function tagClick2() {
 
 function addElement2() {
   var element = document.createElement("span");
-  element.innerText = "#友達と会う" 
+  element.innerText = "#買い物に行く" 
   var testarea = document.getElementById("testarea");
   testarea.appendChild(element);
 } 
 
 function clickBtn2() {
-  document.form1.heading.value = "#友達と会う";
+  document.form1.heading.value = "#買い物に行く";
+}
+
+function clickTotalTest1() {
+  clickTest1();
+  clickTest2();
+}
+
+function clickTest1() {
+  var span = document.createElement("span");
+  span.innerText = "#お土産を買う"
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(span);
+}
+
+function clickTest2() {
+  var test = document.createElement("input");
+  var test = document.querySelector("input")
+  test.setAttribute("name", "heading");
+  test.setAttribute("type", "hidden");
+  test.setAttribute("value", "お土産を買う");
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(test);
+}
+
+function clickTotalTest2() {
+  clickTest3();
+  clickTest4();
+}
+
+function clickTest3() {
+  var span = document.createElement("span");
+  span.innerText = "#日本食を食べる"
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(span);
+}
+
+function clickTest4() {
+  var test = document.createElement("input");
+  var test = document.querySelector("input")
+  test.setAttribute("name", "heading");
+  test.setAttribute("type", "hidden");
+  test.setAttribute("value", "日本食を食べる");
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(test);
 }
 
 
