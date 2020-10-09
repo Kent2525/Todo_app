@@ -25,10 +25,8 @@ class TopController extends Controller
         // dd($currentTitleId);
         $form = $request->all();
         unset($form['_token']);
-        // dd($form);
-        $currentTitleId->fill($form)->save();
-
-        
+        dd($form);
+        $content->fill($form)->save();
              
         return back();
     }   

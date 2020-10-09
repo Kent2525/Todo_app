@@ -22,7 +22,7 @@
         <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
         <i class="fas fa-list-ul" aria-hidden="true"></i>
       </div>
-      <button class="btn btn-outline-primary mr-5">Todo追加</button>
+      <button class="btn btn-outline-primary mr-5" onclick="clickInput()">Todo追加</button>
     </div>
     <form action="{{ action('TopController@create') }}" method="post" name="form1">
       <div class="text-center mt-4">
@@ -169,6 +169,12 @@ function clickTest4() {
   testarea.appendChild(test);
 }
 
+function clickInput() {
+  var testarea = document.getElementById("testarea");
+  var sample = document.getElementById("inputTodoText");
+  testarea.textContent = sample.value;
+  testarea.appendChild(sample);
+}
 
 // 参考:https://techacademy.jp/magazine/20732
 // function addElement1() {
