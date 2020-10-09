@@ -9,5 +9,11 @@ class TopController extends Controller
     public function index()
     {
         return view('top');  
-    }//
+    }
+
+    public function create()
+    {
+        return view('top');  
+    }
+
 }

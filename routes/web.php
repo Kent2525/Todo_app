@@ -27,11 +27,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('/addContent/{id?}', 'AddContentController@create');
 });
 
+Route::get('/', 'TopController@index');
+Route::post('/create', 'TopController@create');
+
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/', function () {
     //     return view('top');
     // });
-
-Route::get('/', 'TopController@index');
