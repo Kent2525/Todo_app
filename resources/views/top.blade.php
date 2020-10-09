@@ -22,7 +22,7 @@
         <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
         <i class="fas fa-list-ul" aria-hidden="true"></i>
       </div>
-      <button class="btn btn-outline-primary mr-5" onclick="clickInput1()">Todo追加</button>
+      <button class="btn btn-outline-primary mr-5" onclick="clickTextTotal()">Todo追加</button>
     </div>
     <form action="{{ action('TopController@create') }}" method="post" name="form1">
       <div class="text-center mt-4">
@@ -170,13 +170,32 @@ function clickTest4() {
 }
 
 
+function clickTextTotal() {
+  clickHiddenText();
+  clickInput1();
+}
+
+function clickHiddenText() {
+  var test = document.createElement("input");
+  var inputTodoText = document.getElementById("inputTodoText").value;
+  test.setAttribute("name", "heading[]");
+  test.setAttribute("type", "hidden");
+  test.setAttribute("value", inputTodoText);
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(test);
+}
+
 function clickInput1() {
   var inputTodoText = document.getElementById("inputTodoText").value;
   const textPlus = '#' + inputTodoText;
   var outputText = document.getElementById("testarea");
   var textNode = document.createTextNode(textPlus);
   outputText.appendChild(textNode);
-
+  inputTodoText = '';
+  console.log('inputvalue', inputTodoText)
+  inputTodoText.focus();
+  console.log('inputfocus', inputTodoText)
+  
 
     // document.getElementById("testarea").innerHTML = sample;
 
