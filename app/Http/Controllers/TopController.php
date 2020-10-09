@@ -16,11 +16,18 @@ class TopController extends Controller
 
     public function create(Request $request)
     {
-        $content = Content::all();
+        $title = new Title;     
+        $title->user_id = Auth::id();
+        $title->save();
+
+        $currentTitleId = $title->id;
+        // dd($currentTitleId);
         $form = $request->all();
         unset($form['_token']);
-        dd($form);
-        $content->fill($form)->save();  
+        // dd($form);
+        $currentTitleId->fill($form)->save();
+
+        
              
         return back();
     }   

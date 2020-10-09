@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 });
 
 Route::get('/', 'TopController@index');
-Route::post('/create', 'TopController@create');
+Route::post('/create', 'TopController@create')->middleware('auth');
 
 
 Auth::routes();
