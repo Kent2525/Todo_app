@@ -29,7 +29,7 @@
       <div class="text-center mt-4">
         <!-- <textarea id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb; resize: none;"></textarea> -->
         <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
-        <input type="hidden" name="" value=""></input>
+        <input id="testinput" type="hidden" name="text1" value=""></input>
       </div>
       <div class="text-center" style="margin-left: 610px;">
         <button class="btn btn-success">リストを出力する</button>
@@ -39,9 +39,9 @@
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>
-      <button class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#友達と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
+      <button id="family" class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;" onclick="addElement()">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="click1()">#友達と会う</button>
+      <button id="koibito" class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#親戚に会う</button>
     </div>
     <div class="shoppingContainer">
@@ -67,16 +67,17 @@
       <h4 style="margin: 20px 0;">手続き関連</h4>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#役所へ行く</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#運転免許の更新</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="addElement2()">#住民票手続き</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="addElement()">#大使館へ行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#住民票手続き</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;">#大使館へ行く</button>
     </div>
     <div id="testbutton" class="btn btn-danger mt-4" >テストボタン</div>
-    <form action="" method="post" name="form2">
-      <div id="testarea2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
-        <p></p>
-        <input type="hidden" name="" value=""></input>
-      </div>
-    </form>  
+      <form action="" method="post" name="form2">
+        <div id="testarea2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
+          <p></p>
+          <input id="testinput" type="hidden" name="" value=""></input>
+        </div>
+      </form>
+    </div>  
     <div id="parent">
     <button>要素を追加</button><br>
   </div>
@@ -98,7 +99,8 @@ function addText2()
 function addElement() {
   // 要素を作成する
   var element = document.createElement("span");
-  element.innerText = "#大使館に行く" 
+  // var element = document.classList.add("test");
+  element.innerText = "#家族と会う" 
 
   // 要素を追加する「親要素」を指定する。
   var testarea = document.getElementById("testarea");
@@ -108,21 +110,34 @@ function addElement() {
   testarea.appendChild(document.createElement(""));
 } 
 
+function click1(){
+  addElement2();
+  clickBtn2();
+}
+
 function addElement2() {
     var element = document.createElement("span");
-    element.innerText = "#住民票の手続き" 
+    element.innerText = "#友達と会う" 
     var testarea = document.getElementById("testarea");
     testarea.appendChild(element);
-    testarea.appendChild(document.createElement(""));
   } 
 
+function clickBtn2(){
+	document.form1.text1.value = "#友達と会う";
+}
+
+
+// $(function(){
+//   $(‘#koibito‘).on('click', function(){
+//   $(‘#testinput‘).val(‘#家族と会う’);
+//   });
+// });
+
+  // document.getElementById("btn-lg").onclick = function() {
+  //   document.getElementById("textarea").innerHTML = "クリック変化";
+  // };
 
 // // 参考:https://itsakura.com/js-textbox
-// function clickBtn3(){
-// 	// 値を設定
-// 	document.form1.text1.value = "#家族と会う";
-// }
-
 // function clickBtn4(){
 // 	// 値を設定
 // 	document.form1.text1.value = "#買い物に行く";
@@ -154,10 +169,6 @@ function addElement2() {
 // }
 
 
-
-  // document.getElementByClassName("btn-lg").onclick = function() {
-  //   document.getElementByClassName("textarea").innerHTML = "クリック変化";
-  // };
 
 // 参考:https://qiita.com/KKKarin/items/ccb8ed361ab9acd1f9cf
 //   var myfunc = document.getElementById("myfunc");
