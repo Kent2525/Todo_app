@@ -16,10 +16,10 @@ class TopController extends Controller
 
     public function create()
     {
-        return view('top');
-        // $content = Content::all();
-        // unset($form['_token']);
-        // $content->fill($form)->save();       
-        // return back();
+        $content = Content::all();
+        unset($form['_token']);
+        $content->fill($form)->save();  
+        dd($form);     
+        return back();
     }   
 }
