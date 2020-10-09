@@ -20,6 +20,7 @@ class TopController extends Controller
         $title->user_id = Auth::id();
         $title->save();
 
+        $content = new Content;
         $currentTitleId = $title->id;
         // dd($currentTitleId);
         $form = $request->all();

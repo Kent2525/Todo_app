@@ -18,7 +18,10 @@
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTotalTest2()">#日本食を食べる</button>
     </div>
     <div class="flex-box my-3">
-      <input class="w-75" placeholder="Todoを入力できます"></input>
+      <div class="cp_iptxt mr-1">
+        <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
+        <i class="fas fa-list-ul" aria-hidden="true"></i>
+      </div>
       <button class="btn btn-outline-primary mr-5">Todo追加</button>
     </div>
     <form action="{{ action('TopController@create') }}" method="post" name="form1">
