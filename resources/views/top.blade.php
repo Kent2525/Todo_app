@@ -26,7 +26,7 @@
         <!-- <textarea id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb; resize: none;"></textarea> -->
         <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
       </div>
-      
+      @csrf
       <div class="text-center" style="margin-left: 610px;">
       <button type="submit" class="btn btn-success" >リストを出力する</button>
       </div>  
