@@ -22,7 +22,7 @@
         <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
         <i class="fas fa-list-ul" aria-hidden="true"></i>
       </div>
-      <button class="btn btn-outline-primary mr-5" onclick="clickInput()">Todo追加</button>
+      <button class="btn btn-outline-primary mr-5" onclick="clickInput1()">Todo追加</button>
     </div>
     <form action="{{ action('TopController@create') }}" method="post" name="form1">
       <div class="text-center mt-4">
@@ -71,7 +71,7 @@
     </div>
     <div id="testbutton" class="btn btn-danger mt-4" >テストボタン</div>
       <form action="" method="post" name="form2">
-        <div id="testarea2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
+        <div id=a2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
           <p></p>
           <input id="testinput" type="hidden" name="" value=""></input>
         </div>
@@ -169,11 +169,19 @@ function clickTest4() {
   testarea.appendChild(test);
 }
 
-function clickInput() {
-  var testarea = document.getElementById("testarea");
-  var sample = document.getElementById("inputTodoText");
-  testarea.textContent = sample.value;
-  testarea.appendChild(sample);
+
+function clickInput1() {
+  var inputTodoText = document.getElementById("inputTodoText").value;
+  const textPlus = '#' + inputTodoText;
+  var outputText = document.getElementById("testarea");
+  var textNode = document.createTextNode(textPlus);
+  outputText.appendChild(textNode);
+
+
+    // document.getElementById("testarea").innerHTML = sample;
+
+  // sample.textContent = testarea.value;
+  // testarea.appendChild(sample);
 }
 
 // 参考:https://techacademy.jp/magazine/20732
