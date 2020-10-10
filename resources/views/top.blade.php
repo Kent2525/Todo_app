@@ -156,6 +156,7 @@ function clickTotalTest2() {
 function clickTest3() {
   var span = document.createElement("span");
   span.innerText = "#日本食を食べる"
+  // console.log('test0', span)
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -171,11 +172,20 @@ function clickTest4() {
 // テスト
 
 function clickTextTotal() {
-  clickHiddenText();
-  clickInput1();
+  clickOutputText1();
+  clickHiddenText1();
 }
 
-function clickHiddenText() {
+function clickOutputText1() {
+  var inputTodoText = document.createElement("span");
+  var inputValue = document.getElementById("inputTodoText").value;
+  const textPlus = '#' + inputValue;
+  inputTodoText.innerText = textPlus;
+  var outputText = document.getElementById("testarea");
+  outputText.appendChild(inputTodoText);
+}
+
+function clickHiddenText1() {
   var test = document.createElement("input");
   var inputTodoText = document.getElementById("inputTodoText").value;
   test.setAttribute("name", "heading[]");
@@ -185,23 +195,6 @@ function clickHiddenText() {
   testarea.appendChild(test);
 }
 
-function clickInput1() {
-  var inputTodoText = document.getElementById("inputTodoText").value;
-  const textPlus = '#' + inputTodoText;
-  var outputText = document.getElementById("testarea");
-  var textNode = document.createTextNode(textPlus);
-  outputText.appendChild(textNode);
-  inputTodoText = '';
-  console.log('inputvalue', inputTodoText)
-  inputTodoText.focus();
-  console.log('inputfocus', inputTodoText)
-  
-
-    // document.getElementById("testarea").innerHTML = sample;
-
-  // sample.textContent = testarea.value;
-  // testarea.appendChild(sample);
-}
 
 // 参考:https://techacademy.jp/magazine/20732
 // function addElement1() {

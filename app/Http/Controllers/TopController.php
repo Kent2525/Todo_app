@@ -21,11 +21,9 @@ class TopController extends Controller
         $title->save();
 
         $currentTitleId = $title->id;
-        // dd($currentTitleId);
         $form = $request->all();
         unset($form['_token']);
         $headings = $form['heading'];
-        // dd($form['heading']);
         foreach ($headings as $heading) {
             // Content のインスタンスの heading に $heading を設定する。
             $content = new Content;
