@@ -14,8 +14,7 @@ class ContentController extends Controller
         $content = Content::find($request->id);
         $form = $request->all();
         unset($form['_token']);
-        $content->fill($form)->save(); 
-        dd($form);      
+        $content->fill($form)->save();     
         return back();
     }
 

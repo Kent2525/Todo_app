@@ -26,8 +26,6 @@ class CreateContentsTable extends Migration
             $table->integer('title_id')->unsigned();
             $table->string('heading', 200);
             $table->string('body')->nullable();
-            $table->integer('status')->default(1);
-            $table->date('due_date')->default('2020-01-01');
             $table->timestamps();
             $table->foreign('title_id')->references('id')->on('titles')->onDelete('cascade');
         });
