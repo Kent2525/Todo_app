@@ -20,13 +20,22 @@ class TopController extends Controller
         $title->user_id = Auth::id();
         $title->save();
 
-        $content = new Content;
         $currentTitleId = $title->id;
         // dd($currentTitleId);
         $form = $request->all();
         unset($form['_token']);
-        dd($form);
-        $content->fill($form)->save();
+        $headings = $form['heading'];
+        // dd($form['heading']);
+        foreach ($headings as $heading) {
+            // Content のインスタンスの heading に $heading を設定する。
+            $content = new Content;
+            $content ->heading = $heading;
+            $content ->title_id = $currentTitleId;
+            // Content を保存する。
+            $content->save();
+        }
+
+
              
         return back();
     }   
