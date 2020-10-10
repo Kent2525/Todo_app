@@ -32,9 +32,7 @@ class TopController extends Controller
             // Content を保存する。
             $content->save();
         }
-
-
              
-        return back();
+        return redirect('/admin/task');
     }   
 }

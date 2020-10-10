@@ -12,10 +12,10 @@
   <div style="margin: 0 300px;">
     <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
     <div class="text-center">
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="tagClick1()" type="button">#家族と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="tagClick2()" type="button">#買い物に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTotalTest1()">#お土産を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTotalTest2()">#日本食を食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTotal1()" type="button">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTotal2()" type="button">#買い物に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTotal3()">#お土産を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTotal4()">#日本食を食べる</button>
     </div>
     <div class="flex-box my-3">
       <div class="cp_iptxt mr-1">
@@ -82,65 +82,63 @@
   </div>
 
 <script>
-// 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
-// function addText()
-// {
-// 	document.getElementById('textarea1').value
-// 		+= document.getElementById('inputTodoText').value;
-// }
-// function addText2()
-// {
-// 	document.getElementById('textarea1').value
-// 		+= document.getElementsByClassName('btn-lg').value;
-// }
 
-function tagClick1() {
-  addElement1();
-  clickBtn1();
-}
-
-function addElement1() {
-  var element = document.createElement("span");
-  element.innerText = "#家族と会う" 
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(element);
-} 
-
-function clickBtn1() {
-  document.form1.heading.value = "#家族と会う";
-}
-
-function tagClick2() {
-  addElement2();
-  clickBtn2();
-}
-
-function addElement2() {
-  var element = document.createElement("span");
-  element.innerText = "#買い物に行く" 
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(element);
-} 
-
-function clickBtn2() {
-  document.form1.heading.value = "#買い物に行く";
-}
-
-function clickTotalTest1() {
+function clickTotal1() {
   clickTest1();
   clickTest2();
 }
 
 function clickTest1() {
   var span = document.createElement("span");
-  span.innerText = "#お土産を買う"
+  span.innerText = "#家族と会う"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
 
 function clickTest2() {
   var test = document.createElement("input");
-  // var test = document.querySelector("input")
+  test.setAttribute("name", "heading[]");
+  test.setAttribute("type", "hidden");
+  test.setAttribute("value", "家族と会う");
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(test);
+}
+
+function clickTotal2() {
+  clickTest3();
+  clickTest4();
+}
+
+function clickTest3() {
+  var span = document.createElement("span");
+  span.innerText = "#買い物に行く"
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(span);
+}
+
+function clickTest4() {
+  var test = document.createElement("input");
+  test.setAttribute("name", "heading[]");
+  test.setAttribute("type", "hidden");
+  test.setAttribute("value", "買い物に行く");
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(test);
+}
+
+function clickTotal3() {
+  clickTest5();
+  clickTest6();
+}
+
+function clickTest5() {
+  var span = document.createElement("span");
+  span.innerText = "#お土産を買う"
+  var testarea = document.getElementById("testarea");
+  testarea.appendChild(span);
+}
+
+function clickTest6() {
+  var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "お土産を買う");
@@ -148,12 +146,12 @@ function clickTest2() {
   testarea.appendChild(test);
 }
 
-function clickTotalTest2() {
-  clickTest3();
-  clickTest4();
+function clickTotal4() {
+  clickTest7();
+  clickTest8();
 }
 
-function clickTest3() {
+function clickTest7() {
   var span = document.createElement("span");
   span.innerText = "#日本食を食べる"
   // console.log('test0', span)
@@ -161,7 +159,7 @@ function clickTest3() {
   testarea.appendChild(span);
 }
 
-function clickTest4() {
+function clickTest8() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
@@ -195,6 +193,50 @@ function clickHiddenText1() {
   testarea.appendChild(test);
 }
 
+
+// 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
+// function addText()
+// {
+// 	document.getElementById('textarea1').value
+// 		+= document.getElementById('inputTodoText').value;
+// }
+// function addText2()
+// {
+// 	document.getElementById('textarea1').value
+// 		+= document.getElementsByClassName('btn-lg').value;
+// }
+
+// function tagClick1() {
+//   addElement1();
+//   clickBtn1();
+// }
+
+// function addElement1() {
+//   var element = document.createElement("span");
+//   element.innerText = "#家族と会う" 
+//   var testarea = document.getElementById("testarea");
+//   testarea.appendChild(element);
+// } 
+
+// function clickBtn1() {
+//   document.form1.heading.value = "#家族と会う";
+// }
+
+// function tagClick2() {
+//   addElement2();
+//   clickBtn2();
+// }
+
+// function addElement2() {
+//   var element = document.createElement("span");
+//   element.innerText = "#買い物に行く" 
+//   var testarea = document.getElementById("testarea");
+//   testarea.appendChild(element);
+// } 
+
+// function clickBtn2() {
+//   document.form1.heading.value = "#買い物に行く";
+// }
 
 // 参考:https://techacademy.jp/magazine/20732
 // function addElement1() {
