@@ -168,7 +168,7 @@ function clickTest4() {
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
-
+// テスト
 
 function clickTextTotal() {
   clickHiddenText();
