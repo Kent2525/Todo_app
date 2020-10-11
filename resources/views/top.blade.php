@@ -26,12 +26,14 @@
     </div>
     <form action="{{ action('TopController@create') }}" method="post" name="form1">
       <div class="text-center mt-4">
-        <!-- <textarea id="textarea1" type="text" name="text1" placeholder="デフォルトの計画をクリックするか、上記の入力フォームからTodoを作成してください。" style="width: 750px; height: 210px; border: 1px solid #dbdbdb; resize: none;"></textarea> -->
         <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
       </div>
       @csrf
-      <div class="text-center" style="margin-left: 610px;">
-      <button type="submit" class="btn btn-success" >リストを出力する</button>
+      <div class="flex-box">
+        <div class="text-center" style="margin-left: 610px;">
+          <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
+          <button type="submit" class="btn btn-success" >リストを出力する</button>
+        </div>
       </div>  
     </form>  
   </div>
@@ -71,7 +73,7 @@
     </div>
     <div id="testbutton" class="btn btn-danger mt-4" >テストボタン</div>
       <form action="" method="post" name="form2">
-        <div id=a2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
+        <div id="a2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
           <p></p>
           <input id="testinput" type="hidden" name="" value=""></input>
         </div>
@@ -154,7 +156,6 @@ function clickTotal4() {
 function clickTest7() {
   var span = document.createElement("span");
   span.innerText = "#日本食を食べる"
-  // console.log('test0', span)
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -167,7 +168,6 @@ function clickTest8() {
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
-// テスト
 
 function clickTextTotal() {
   clickOutputText1();
@@ -192,6 +192,21 @@ function clickHiddenText1() {
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
+
+function clickClear() {
+  const testarea = document.getElementById("testarea");
+  testarea.innerHTML ='';
+}
+
+
+// function clickClear () {
+//   cosole.log("test1");
+//   var clear = document.getElementById("testarea");
+//   cosole.log("test1", clear);
+//   clear.innerText ="";
+//   cosole.log("test1");
+// }
+
 
 
 // 参考：https://blog.ver001.com/javascript-textarea-selectionstartend/
