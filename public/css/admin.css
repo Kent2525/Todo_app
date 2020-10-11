@@ -41,6 +41,28 @@ ul {
   text-align: center;
 }
 
+.plusAwesome{
+  color: gray !important;
+}
+
+.addTitleButton {
+  color: black;
+}
+.addTitleButton:hover {
+  border: 1px solid #f5f0f0f3;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #f5f0f0f3;
+  color: black;
+}
+
+/* .addTitleButton:active {
+  box-shadow: none;
+  position: relative;
+  top: 1px;
+} */
+
 /* 以下TOPページのCSS */
 .topTitle {
   font-family: 'Oswald', sans-serif;
