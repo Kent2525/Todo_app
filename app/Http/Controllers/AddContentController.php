@@ -15,7 +15,7 @@ class AddContentController extends Controller
         $content = new Content();
         $content->heading = $request->heading;
         $current_title->contents()->save($content);      
-        return redirect()->route('admin.task', ['id' => $current_title->id]);
+        return redirect()->route('todo.show', ['id' => $current_title->id]);
     }
 }
 

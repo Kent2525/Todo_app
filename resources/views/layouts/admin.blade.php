@@ -41,7 +41,7 @@
       <ul class="navbar-nav">
         <li class="nav-item navbar-light">
           @if(Auth::check())
-            <a class="btn btn-primary text-white" href="/admin/task">{{ Auth::user()-> name }}さんページ</span>
+            <a class="btn btn-primary text-white" href="/todo/task">{{ Auth::user()-> name }}さんページ</span>
             <a class="btn btn-primary" href="{{ route('logout') }}"
               onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">

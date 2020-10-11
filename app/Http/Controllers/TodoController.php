@@ -48,7 +48,7 @@ class TodoController extends Controller
         $content = Title::find($request->id);
         $content->delete();
         
-        return redirect('/admin/task');
+        return redirect('/todo');
     }
 
     public function editTitle(Request $request)

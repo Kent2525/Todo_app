@@ -87,7 +87,7 @@ $('.editModal').on('click', function() {
 });
 
 function clickBg1() {
-  location.href = "/admin/task";
+  location.href = "/todo";
 }
 
 $(document).on('click', function(e) {
@@ -95,7 +95,7 @@ $(document).on('click', function(e) {
   // e.stopPropagation();
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
-    location.href = "/admin/task";
+    location.href = "/todo";
 
   }
 });

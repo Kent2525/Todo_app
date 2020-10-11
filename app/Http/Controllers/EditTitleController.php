@@ -16,6 +16,6 @@ class EditTitleController extends Controller
         unset($form['_token']);
         $title->fill($form)->save();
         
-        return redirect('/admin/task');
+        return redirect('/todo');
     }
 }

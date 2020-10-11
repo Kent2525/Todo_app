@@ -5,7 +5,7 @@
   <div class="text-center mt-3">
     <p>採用ご担当者様はこちらの簡易新規ログインページをご利用下さい。</p>
     <a class="btn btn-primary" href="">簡易新規登録＆ログイン</a>
-    <a class="btn btn-primary" href="/admin/task">管理画面</a>
+    <a class="btn btn-primary" href="/todo">管理画面</a>
   </div>
   <h1 class="topTitle mt-5 text-center text-info">Welcome Todo</h1>
   <!-- <h3 class="topTitle text-center">- 帰国Todo -</h3> -->

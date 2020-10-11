@@ -13,17 +13,17 @@
 
 // Route::get('/', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('/task', 'TodoController@index')->name('admin.task.index');
-    Route::get('/task/show/{id}', 'TodoController@show')->name('admin.task');
-    Route::get('/task/addTitle', 'TodoController@addTitle')->name('admin.task.addTitle');
-    Route::post('/task/create', 'AddTitleController@create');
-    Route::get('/task/{id?}/delete', 'TodoController@delete');
-    Route::get('/task/editTitle', 'TodoController@editTitle')->name('admin.task.editTitle');
-    Route::post('/task/editTitle', 'EditTitleController@edit');
-    Route::get('/task/content', 'ContentController@delete');
-    Route::post('/task/content', 'ContentController@edit');
-    Route::get('/task/addContent/{id?}', 'TodoController@addContent')->name('admin.task.addContent');
+Route::group(['prefix' => 'todo', 'middleware' => 'auth'], function() {
+    Route::get('/', 'TodoController@index')->name('todo.index');
+    Route::get('/show/{id}', 'TodoController@show')->name('todo.show');
+    Route::get('/addTitle', 'TodoController@addTitle')->name('todo.addTitle');
+    Route::post('/create', 'AddTitleController@create');
+    Route::get('/{id?}/delete', 'TodoController@delete');
+    Route::get('/editTitle', 'TodoController@editTitle')->name('todo.editTitle');
+    Route::post('/editTitle', 'EditTitleController@edit');
+    Route::get('/content', 'ContentController@delete');
+    Route::post('/content', 'ContentController@edit');
+    Route::get('/addContent/{id?}', 'TodoController@addContent')->name('todo.addContent');
     Route::post('/addContent/{id?}', 'AddContentController@create');
 });
 

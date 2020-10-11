@@ -17,6 +17,6 @@ class AddTitleController extends Controller
         $title->user_id = Auth::id();
         $title->fill($form)->save();
         
-        return redirect('/admin/task');
+        return redirect('/todo');
     }
 }
