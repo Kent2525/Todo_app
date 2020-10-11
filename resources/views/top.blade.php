@@ -2,7 +2,9 @@
 @section('title','Todo一覧')
 
 @section('content')
-  <div class="text-center my-3">
+  <div class="text-center mt-3">
+    <p>採用ご担当者様はこちらの簡易新規ログインページをご利用下さい。</p>
+    <a class="btn btn-primary" href="">簡易新規登録＆ログイン</a>
     <a class="btn btn-primary" href="/admin/task">管理画面</a>
   </div>
   <h1 class="topTitle mt-5 text-center text-info">Welcome Todo</h1>
@@ -36,6 +38,7 @@
           <button type="submit" class="btn btn-success" >リストを出力する</button>
         </div>
       </div>  
+      <p style="margin-left: 580px;">リストを出力するには登録が必要です。</p>
     </form>  
   </div>
   <div class="tagContainer" style="margin: 80px 270px;">
