@@ -18,7 +18,8 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
       <!-- Fonts -->
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link href="https://fonts.gstatic.com" rel="dns-prefetch">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:700"rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
       <!-- bootstrapのcss -->
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

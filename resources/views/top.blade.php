@@ -2,12 +2,13 @@
 @section('title','Todo一覧')
 
 @section('content')
-  <h3 class="mt-5 text-center">仮トップページ</h3>
   <div class="text-center my-3">
     <a class="btn btn-primary" href="/admin/task">管理画面</a>
   </div>
+  <h1 class="topTitle mt-5 text-center text-info">Welcome Todo</h1>
+  <!-- <h3 class="topTitle text-center">- 帰国Todo -</h3> -->
   <div class="text-center" style="margin : 0 auto">
-    <img src="{{ asset('image/welcomeTop5.jpg') }}" style="width: 85%;" alt="welcome Top">
+    <img src="{{ asset('image/topWelcome.jpg') }}" style="width: 75%;" alt="top image">
   </div>
   <div style="margin: 0 300px;">
     <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>

@@ -41,8 +41,12 @@ ul {
   text-align: center;
 }
 
-/* Top入力フォームのスタイル */
+/* 以下TOPページのCSS */
+.topTitle {
+  font-family: 'Oswald', sans-serif;
+}
 
+/* Top入力フォームのスタイル */
 .cp_iptxt {
   position: relative;
   width: 75%;
