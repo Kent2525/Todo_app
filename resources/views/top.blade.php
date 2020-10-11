@@ -5,7 +5,7 @@
   <div class="text-center mt-3">
     <p>採用ご担当者様はこちらの簡易新規ログインページをご利用下さい。</p>
     <a class="btn btn-primary" href="">簡易新規登録＆ログイン</a>
-    <a class="btn btn-primary" href="/todo">管理画面</a>
+    <a class="btn btn-primary" href="/todo">Todo一覧</a>
   </div>
   <h1 class="topTitle mt-5 text-center text-info">Welcome Todo</h1>
   <!-- <h3 class="topTitle text-center">- 帰国Todo -</h3> -->
@@ -75,18 +75,11 @@
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#住民票手続き</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;">#大使館へ行く</button>
     </div>
-    <div id="testbutton" class="btn btn-danger mt-4" >テストボタン</div>
-      <form action="" method="post" name="form2">
-        <div id="a2" class="w-75" name="text2" style="border: 1px solid #dbdbdb; height: 100px;">
-          <p></p>
-          <input id="testinput" type="hidden" name="" value=""></input>
-        </div>
-      </form>
-    </div>  
-    <div id="parent">
-    <button>要素を追加</button><br>
   </div>
-
+  <footer>
+    <div class=text-center>
+      <p>Copyright ©Welcome Todo All rights reserved.</p>
+  </footer>
 <script src="{{ asset('/js/clickTag.js') }}"></script>
 <script src="{{ asset('/js/generalTop.js') }}"></script>
 
