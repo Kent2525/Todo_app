@@ -14,16 +14,16 @@
 // Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('/task', 'TaskController@index')->name('admin.task.index');
-    Route::get('/task/show/{id}', 'TaskController@show')->name('admin.task');
-    Route::get('/task/addTitle', 'TaskController@addTitle')->name('admin.task.addTitle');
+    Route::get('/task', 'TodoController@index')->name('admin.task.index');
+    Route::get('/task/show/{id}', 'TodoController@show')->name('admin.task');
+    Route::get('/task/addTitle', 'TodoController@addTitle')->name('admin.task.addTitle');
     Route::post('/task/create', 'AddTitleController@create');
-    Route::get('/task/{id?}/delete', 'TaskController@delete');
-    Route::get('/task/editTitle', 'TaskController@editTitle')->name('admin.task.editTitle');
+    Route::get('/task/{id?}/delete', 'TodoController@delete');
+    Route::get('/task/editTitle', 'TodoController@editTitle')->name('admin.task.editTitle');
     Route::post('/task/editTitle', 'EditTitleController@edit');
     Route::get('/task/content', 'ContentController@delete');
     Route::post('/task/content', 'ContentController@edit');
-    Route::get('/task/addContent/{id?}', 'TaskController@addContent')->name('admin.task.addContent');
+    Route::get('/task/addContent/{id?}', 'TodoController@addContent')->name('admin.task.addContent');
     Route::post('/addContent/{id?}', 'AddContentController@create');
 });
 

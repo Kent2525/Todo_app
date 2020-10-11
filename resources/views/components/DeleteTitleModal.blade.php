@@ -10,7 +10,7 @@
         <h4 class="text-center">{{$title->title}}</h4>
         <p class="text-center my-4" style="font-size: 15px;">このTodoを削除しますか？</p>
         <div class="text-center">
-          <a href="{{ action('TaskController@delete', ['id' => $title->id]) }}"  class="btn btn-danger">削除</a>
+          <a href="{{ action('TodoController@delete', ['id' => $title->id]) }}"  class="btn btn-danger">削除</a>
         </div>
         </form>
       </div>
