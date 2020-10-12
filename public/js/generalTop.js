@@ -1,7 +1,12 @@
+
 function clickTextTotal() {
-  clickOutputText1();
-  clickHiddenText1();
-  // clickFocus();
+  var inputTodoText = document.getElementById("inputTodoText");
+  if (!inputTodoText.value.trim()) {
+  ;
+  } else {
+    clickOutputText1();
+    clickHiddenText1();
+    }
 }
 
 function clickOutputText1() {
@@ -26,16 +31,17 @@ function clickHiddenText1() {
   testarea.appendChild(test);
 }
 
-// function clickFocus() {
-//   document.getElementById("inputTodoText").focus();
-//   console.log("test2");
-// }
-
 function clickClear() {
   const testarea = document.getElementById("testarea");
   testarea.innerHTML ='';
 }
 
+// フォームのバリデーションアラート
+$(document).ready(function () {
+  if ($('.top-form-alert').length) {
+   alert('Todoタグを選択するか入力フォームでTodo追加をしてください');
+  } 
+}); 
 
 // function clickClear () {
 //   cosole.log("test1");

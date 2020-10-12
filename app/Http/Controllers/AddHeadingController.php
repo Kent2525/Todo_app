@@ -26,7 +26,7 @@ class AddHeadingController extends Controller
         // unset($form['_token']);
         // $content->fill($form)->save();
         
-        return redirect()->route('admin.task', ['id' => $current_title->id]);
+        return redirect()->route('todo.show', ['id' => $current_title->id]);
     }
 }
 

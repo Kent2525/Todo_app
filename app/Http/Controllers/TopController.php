@@ -17,18 +17,18 @@ class TopController extends Controller
 
     public function create(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'heading' => 'required',
-        ],
-        [
-            'heading' =>'テスト',
-        ]);
+        // $validator = Validator::make($request->all(), [
+        //     'heading' => 'required',
+        // ],
+        // [
+        //     'heading' =>'テスト',
+        // ]);
 
-        if($validator->fails()){
-            return redirect('/#testarea');
-        }
-        // $validator = $this ->validate($request, ['heading' =>'required']);
-        //     if($validator->fails()){
+        // if($validator->fails()){
+        //     return redirect('/#testarea');
+        // }
+        $this ->validate($request, ['heading' =>'required']);
+        //     if ( $validator->fails() ){
         //     return redirect('/#testarea');
         // }
         
@@ -49,6 +49,6 @@ class TopController extends Controller
             $content->save();
         }
              
-        return redirect('/todo');
+        return redirect()->route('todo.show', ['id' => $title->id,]);
     }   
 }

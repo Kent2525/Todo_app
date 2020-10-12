@@ -65,13 +65,13 @@ ul {
 
 /* headerのCSS */
 .top-todo-title {
-  font-family: 'Oswald', 'Roboto Condensed', 'Lato', 'Anton', 'Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
+  font-family: 'Lato', 'Anton', 'Oswald','Roboto Condensed','Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
   font-size: 1.3rem;
 }
 
 /* 以下TOPページのCSS */
 .topTitle {
-  font-family: 'Oswald','Roboto Condensed', 'Lato', 'Anton', 'Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
+  font-family: 'Lato', 'Anton', 'Oswald','Roboto Condensed','Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
 }
 
 /* Top入力フォームのスタイル */
@@ -125,5 +125,6 @@ ul {
 
 .top-form-alert {
   color:red;
+  text-align:right
 }
 

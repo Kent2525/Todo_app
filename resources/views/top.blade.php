@@ -7,7 +7,7 @@
     <a class="btn btn-primary" href="">簡易新規登録＆ログイン</a>
     <a class="btn btn-primary" href="/todo">Todo一覧</a>
   </div>
-  <h1 class="topTitle mt-5 text-center text-info">Welcome Todo</h1>
+  <h1 class="topTitle mt-5 text-center text-info">おかえりTodo</h1>
   <!-- <h3 class="topTitle text-center">- 帰国Todo -</h3> -->
   <div class="text-center" style="margin : 0 auto">
     <img src="{{ asset('image/topWelcome.jpg') }}" style="width: 75%;" alt="top image">
@@ -33,7 +33,7 @@
       </div>
       @csrf
       @if (count($errors) > 0)
-          <p class="addContentAlert">{{$errors->first('heading')}}</p>
+          <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
         @endif
       <div class="flex-box">
         <div class="text-center" style="margin-left: 610px;">
