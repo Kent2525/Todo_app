@@ -12,13 +12,8 @@ function clickOutputText1() {
   var outputText = document.getElementById("testarea");
   outputText.appendChild(inputTodoText);
   document.getElementById("inputTodoText").focus();
-  // document.getElementById("inputTodoText").value();
-  // inputTodoText = '';
-  // console.log("test1");
-  // console.log("test2");
-  // inputValue.focus();
-  // textPlus.value ='';
-  // console.log("test3");
+  var inputTodoText = document.getElementById("inputTodoText");
+  inputTodoText.value = '';
 }
 
 function clickHiddenText1() {
