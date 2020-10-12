@@ -21,6 +21,11 @@
       <link href="https://fonts.gstatic.com" rel="dns-prefetch">
       <link href="https://fonts.googleapis.com/css?family=Oswald:700"rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+      	
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
       <!-- bootstrapのcss -->
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
       
