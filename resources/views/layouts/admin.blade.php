@@ -32,32 +32,34 @@
       <!-- <link rel="stylesheet" href="/css/admin.css">        -->
 </head>
 <body class="bg-white">
-  <nav class="navbar navbar-default bg-primary navbar-light">
-    <div class="container-fluid">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-        <a class="navbar-brand text-white" href="/">Todo</a>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item navbar-light">
-          @if(Auth::check())
-            <a class="btn btn-primary text-white" href="/todo">{{ Auth::user()-> name }}さんのTodo一覧</span>
-            <a class="btn btn-primary" href="{{ route('logout') }}"
-              onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-              ログアウト
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-            </form>
-          @else
-            <a class="btn btn-primary" href="/login">ログイン</a>
-            <a class="btn btn-primary" href="/register">新規登録</a>
-          @endif
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar navbar-default bg-primary navbar-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          <a class="navbar-brand text-white" href="/" title="Topへ戻る">Todo</a>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item navbar-light">
+            @if(Auth::check())
+              <a class="btn btn-primary text-white" href="/todo">{{ Auth::user()-> name }}さんのTodo一覧</span>
+              <a class="btn btn-primary" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                ログアウト
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            @else
+              <a class="btn btn-primary" href="/login">ログイン</a>
+              <a class="btn btn-primary" href="/register">新規登録</a>
+            @endif
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   @yield('content')
 </body>
 </html>
