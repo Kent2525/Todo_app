@@ -1,6 +1,7 @@
 function clickTextTotal() {
   clickOutputText1();
   clickHiddenText1();
+  // clickFocus();
 }
 
 function clickOutputText1() {
@@ -10,6 +11,14 @@ function clickOutputText1() {
   inputTodoText.innerText = textPlus;
   var outputText = document.getElementById("testarea");
   outputText.appendChild(inputTodoText);
+  document.getElementById("inputTodoText").focus();
+  // document.getElementById("inputTodoText").value();
+  // inputTodoText = '';
+  // console.log("test1");
+  // console.log("test2");
+  // inputValue.focus();
+  // textPlus.value ='';
+  // console.log("test3");
 }
 
 function clickHiddenText1() {
@@ -21,6 +30,11 @@ function clickHiddenText1() {
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
+
+// function clickFocus() {
+//   document.getElementById("inputTodoText").focus();
+//   console.log("test2");
+// }
 
 function clickClear() {
   const testarea = document.getElementById("testarea");
