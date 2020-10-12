@@ -42,7 +42,7 @@
       <div class="container-fluid">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-          <a class="navbar-brand text-white" href="/" title="Topへ戻る">Todo</a>
+          <a class="navbar-brand text-white top-todo-title" href="/" title="Topへ戻る">Todo</a>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item navbar-light">
