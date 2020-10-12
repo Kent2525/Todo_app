@@ -32,10 +32,13 @@
         <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
       </div>
       @csrf
+      @if (count($errors) > 0)
+          <p class="addContentAlert">{{$errors->first('heading')}}</p>
+        @endif
       <div class="flex-box">
         <div class="text-center" style="margin-left: 610px;">
           <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
-          <button type="submit" class="btn btn-success" >リストを出力する</button>
+          <button id="output-for-listtodo" type="submit" class="btn btn-success" >リストを出力する</button>
         </div>
       </div>  
       <p style="margin-left: 580px;">リストを出力するには登録が必要です。</p>

@@ -123,3 +123,7 @@ ul {
   justify-content: flex-end;
 }
 
+.top-form-alert {
+  color:red;
+}
+
