@@ -59,7 +59,7 @@
       <div class="forTagSpace" style="margin: 10px;"></div>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#恩人に会う</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#に会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#r</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#</button>
     </div>
     
