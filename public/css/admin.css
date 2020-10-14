@@ -128,6 +128,7 @@ ul {
   text-align:right;
 }
 
+/* PC画面のタブCSS */
 .top-main-tag {
   display: flex;
   justify-content: center;
@@ -151,6 +152,7 @@ ul {
   }
 }
 
+/* PC画面のタブCSS */
 .tag-line {
   display: flex;
   justify-content: center;
@@ -161,16 +163,12 @@ ul {
   .tag-line {
     flex-wrap: wrap;
   }
-  .hello {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
 }
 
 /* スマホ画面 */
 @media (max-width: 576px) {
-  .hello { 
-    display: block;
+  .tap-line { 
+    display: inline-block;
     text-align: center;
   }
   .sub-tag {

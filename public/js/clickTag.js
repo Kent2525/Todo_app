@@ -404,7 +404,7 @@ function clickTag20() {
 
 function clickSpan20() {
   var span = document.createElement("span");
-  span.innerText = "#スーパーに行く"
+  span.innerText = "#薬を買う"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -413,7 +413,7 @@ function clickHidden20() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "スーパーに行く");
+  test.setAttribute("value", "薬を買う");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -488,7 +488,7 @@ function clickTag24() {
 
 function clickSpan24() {
   var span = document.createElement("span");
-  span.innerText = "#薬を買う"
+  span.innerText = "#お酒を買う"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -497,7 +497,7 @@ function clickHidden24() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "薬を買う");
+  test.setAttribute("value", "お酒を買う");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -572,7 +572,7 @@ function clickTag28() {
 
 function clickSpan28() {
   var span = document.createElement("span");
-  span.innerText = "#お酒を買う"
+  span.innerText = "#スマホを買う"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -581,7 +581,7 @@ function clickHidden28() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "お酒を買う");
+  test.setAttribute("value", "スマホを買う");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -635,7 +635,7 @@ function clickTag31() {
 
 function clickSpan31() {
   var span = document.createElement("span");
-  span.innerText = "#スマホを買う"
+  span.innerText = "#スーパーに行く"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -644,7 +644,7 @@ function clickHidden31() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "スマホを買う");
+  test.setAttribute("value", "スーパーに行く");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -803,7 +803,7 @@ function clickTag39() {
 
 function clickSpan39() {
   var span = document.createElement("span");
-  span.innerText = "#映画を観に行く"
+  span.innerText = "#映画観賞"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -812,7 +812,7 @@ function clickHidden39() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "映画を観に行く");
+  test.setAttribute("value", "映画観賞");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -1748,7 +1748,7 @@ function clickTag84() {
 
 function clickSpan84() {
   var span = document.createElement("span");
-  span.innerText = "#予防接種を受ける"
+  span.innerText = "#wifi手続き"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -1757,7 +1757,7 @@ function clickHidden84() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "予防接種を受ける");
+  test.setAttribute("value", "wifi手続き");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -1811,7 +1811,7 @@ function clickTag87() {
 
 function clickSpan87() {
   var span = document.createElement("span");
-  span.innerText = "#wifi手続き"
+  span.innerText = "#予防接種を受ける"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -1820,7 +1820,7 @@ function clickHidden87() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "wifi手続き");
+  test.setAttribute("value", "予防接種を受ける");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
@@ -1937,7 +1937,7 @@ function clickTag93() {
 
 function clickSpan93() {
   var span = document.createElement("span");
-  span.innerText = "#航空チケットの購入"
+  span.innerText = "#チケットの購入"
   var testarea = document.getElementById("testarea");
   testarea.appendChild(span);
 }
@@ -1946,7 +1946,7 @@ function clickHidden93() {
   var test = document.createElement("input");
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
-  test.setAttribute("value", "航空チケットの購入");
+  test.setAttribute("value", "チケットの購入");
   var testarea = document.getElementById("testarea");
   testarea.appendChild(test);
 }
