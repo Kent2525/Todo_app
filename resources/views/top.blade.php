@@ -15,10 +15,10 @@
   <div style="margin: 0 300px;">
     <h3 class="text-center" style="margin-bottom: 80px;">帰国時の予定を建てましょう</h3>
     <div class="text-center">
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTotal1()" type="button">#家族と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTotal2()" type="button">#買い物に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTotal3()">#お土産を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTotal4()">#日本食を食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag1()" type="button">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag2()" type="button">#買い物に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag3()">#お土産を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTag4()">#日本食を食べる</button>
     </div>
     <div class="flex-box my-3">
       <div class="cp_iptxt mr-1">
@@ -47,95 +47,96 @@
   <div class="tagContainer" style="margin: 80px 270px;">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>
-      <button class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;">#家族と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#友達と会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#恋人に会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#親戚に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag1()">#家族と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag5()">#友達と会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag6()">#恋人に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag7()">#親戚に会う</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#兄弟に会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#同僚に会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#本社へあいさつ</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#交流会に参加</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag8()">#兄弟に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag9()">#同僚に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag10()">#本社へあいさつ</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag11()">#交流会に参加</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#恩人に会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#に会う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#r</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag12()">#恩人に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag13()">#上司に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag14()">#部下に会う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag15()">#顧客に会う</button>
     </div>
     
     <div class="shoppingContainer">
       <h4 style="margin: 20px 0;">買い物</h4>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#ショッピングに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#服を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#化粧を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#メガネを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag16()">#ショッピングに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag17()">#服を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag18()">#化粧を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag19()">#本を買う</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#スーツを買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#お土産を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#お菓子を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#仕事着を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag20()">#スーパーに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag3()">#お土産を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag21()">#お菓子を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag22()">#仕事着を買う</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#本を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#薬を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#文房具を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#家電を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag23()">#メガネを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag24()">#薬を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag25()">#文房具を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag26()">#100円SHOPに行く</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#ゲームを買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#お酒を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#調味料を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#PCを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag27()">#ゲームを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag28()">#お酒を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag29()">#調味料を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag30()">#PCを買う</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#スマホを買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#冠婚葬祭用品を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#スーツケースを買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#100円SHOPに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag31()">#スマホを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag32()">#冠婚葬祭用品を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag33()">#スーツケースを買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag34()">#家電を買う</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#子供の服を買う</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag35()">#子供の服を買う</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag36()">#ドラッグストアに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag37()">#ユニクロに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag38()">#スーツを買う</button>
 
     <div class="entertainContainer">
-      <h4 style="margin: 20px 0;">娯楽</h4>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#映画を観に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#温泉に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#国内旅行</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#野球観戦</button>
+      <h4 style="margin: 20px 0;">娯楽・レジャー</h4>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag39()">#映画を観に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag40()">#温泉に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag41()">#国内旅行</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag42()">#美容室に行く</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#ドライブに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#カラオケに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#遊園地に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#水族館に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag43()">#ドライブに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag44()">#カラオケに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag45()">#遊園地に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag46()">#水族館に行く</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#キャンプをする</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#カフェに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#サッカー観戦</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#公園に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag47()">#キャンプをする</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag48()">#カフェに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag49()">#マッサージに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag50()">#公園に行く</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#家電量販店に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#海に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#スキー場に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#美容室に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag51()">#家電量販店に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag52()">#海に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag53()">#スキー場に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag54()">#野球観戦</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#マッサージに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#スーパー銭湯に行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#飲みに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#エステに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag55()">#サッカー観戦</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag56()">#スーパー銭湯に行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag57()">#飲みに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag58()">#エステに行く</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#ネイルサロンに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">寺社仏閣の見学</button>
-      <button class="btn btn_tag  btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#お祭り行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#子供と遊ぶ</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#ディズニーに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">猫カフェに行く</button>
-      <button class="btn btn_tag  btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#ネットカフェに行く</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#レッスンに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag59()">#ネイルサロンに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag60()">寺社仏閣の見学</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag61()">#お祭り行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag62()">#子供と遊ぶ</button>
+      <div class="forTagSpace" style="margin: 10px;"></div>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag63()">#ディズニーに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag64()">猫カフェに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag65()">#ネットカフェに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag66()">#コンサートに行く</button>
     </div>
 
     </div>
     <div class="mealContainer">
       <h4 style="margin: 20px 0;">食事</h4>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#日本食を食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag4()">#日本食を食べる</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#寿司を食べる</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#ラーメンを食べる</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; ">#カレーを食べる</button>
@@ -146,8 +147,8 @@
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#焼肉を食べる</button>
       <div class="forTagSpace" style="margin: 10px;"></div>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;">#天ぷらを食べる</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#を食べる</button>
-      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#食べる</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#ビュッフェに行く</button>
+      <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#スイーツを食べに行く</button>
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px">#食べる</button>
     </div>
     <div class="procedureContainer">

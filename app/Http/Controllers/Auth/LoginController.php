@@ -39,7 +39,14 @@ class LoginController extends Controller
 
     public function redirectPath()
     {
-        return 'admin/task';
+        return '/home';
         //例）return 'costs/index';
     }
+
+//     protected function redirectTo() {
+//       if(! Auth::user()) {
+//            return '/';
+//       }
+//       return route('users.show', ['user' => Auth::id()]);
+//    }
 }
