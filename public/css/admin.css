@@ -128,3 +128,24 @@ ul {
   text-align:right;
 }
 
+
+.tagTop4 {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .tagTop4 {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .tagChild { 
+    display: inline-block;
+    text-align: center;
+  }
+  /* .middle {
+    text-align: center;
+  } */
+}
