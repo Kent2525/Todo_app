@@ -30,48 +30,49 @@
       <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTag4()">#日本食を食べる</button>
   </div>
   </div> -->
-  <div class="flex-box my-3">
-    <div class="cp_iptxt mr-1">
-      <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
-      <i class="fas fa-list-ul" aria-hidden="true"></i>
+  <div class="form-container">
+    <div class="flex-box my-3">
+      <div class="cp_iptxt mr-1">
+        <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
+        <i class="fas fa-list-ul" aria-hidden="true"></i>
+      </div>
+      <button class="btn btn-outline-primary" onclick="clickTextTotal()">Todo追加</button>
     </div>
-    <button class="btn btn-outline-primary mr-5" onclick="clickTextTotal()">Todo追加</button>
-  </div>
-  <form action="{{ action('TopController@create') }}" method="post" name="form1">
-    <div class="form-wrap">
-      <div class="text-center mt-4">
-        <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
-      </div>
-      @csrf
-      @if (count($errors) > 0)
-          <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
-      @endif
-      <!-- <div class="button-group">
-        <div class="btn-group-vertical">
-          <div class="btn btn-secondary form-clear" onclick="clickClear()" >クリア</div>
-          <button class="btn btn-success form-output" id="output-for-listtodo " type="submit">リストを出力する</button>
-        </div>  
-      </div> -->
-      <div class="d-none d-sm-block">
-        <div class="text-right">
-          <div class="btn-group">
-            <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
-            <button class="btn btn-success ml-3" id="output-for-listtodo " type="submit">リストを出力する</button>
-          </div>
+    <form action="{{ action('TopController@create') }}" method="post" name="form1">
+      <div class="form-wrap">
+        <div class="text-center mt-4">
+          <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
         </div>
-      </div>
-      <div class="d-block d-sm-none">
-        <div class="button-group">
+        @csrf
+        @if (count($errors) > 0)
+            <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
+        @endif
+        <!-- <div class="button-group">
           <div class="btn-group-vertical">
-            <div class="btn btn-secondary mt-3" onclick="clickClear()" >クリア</div>
-            <button class="btn btn-success mt-3" id="output-for-listtodo " type="submit">リストを出力する</button>
+            <div class="btn btn-secondary form-clear" onclick="clickClear()" >クリア</div>
+            <button class="btn btn-success form-output" id="output-for-listtodo " type="submit">リストを出力する</button>
+          </div>  
+        </div> -->
+        <div class="d-none d-sm-block">
+          <div class="text-right">
+            <div class="btn-group">
+              <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
+              <button class="btn btn-success ml-3" id="output-for-listtodo " type="submit">リストを出力する</button>
+            </div>
           </div>
         </div>
-      </div>
-
-      <p>リストを出力するには登録が必要です。</p>
-    </div>  
-  </form>  
+        <div class="d-block d-sm-none">
+          <div class="button-group">
+            <div class="btn-group-vertical">
+              <div class="btn btn-secondary mt-3" onclick="clickClear()" >クリア</div>
+              <button class="btn btn-success mt-3" id="output-for-listtodo " type="submit">リストを出力する</button>
+            </div>
+          </div>
+        </div>
+        <p>リストを出力するには登録が必要です。</p>
+      </div>  
+    </form>   
+  </div>
   <div class="tagContainer text-center">
     <div class="meetContainer">
       <h4 style="margin-bottom: 20px;">人と会う</h4>

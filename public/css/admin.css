@@ -77,7 +77,7 @@ ul {
 /* Top入力フォームのスタイル */
 .cp_iptxt {
   position: relative;
-  width: 75%;
+  width: 85%;
 }
 
 .cp_iptxt input[type=text] {
@@ -118,10 +118,25 @@ ul {
   border-color: #da3c41;
 }
 
+@media (max-width: 576px) {
+  .flex-box {
+    width: 90vw;
+  }
+  .form-wrap {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
 .button-group {
   text-align: center;
 }
-
 
 .flex-box {
   display: flex;
