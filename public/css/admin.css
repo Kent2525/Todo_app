@@ -118,6 +118,11 @@ ul {
   border-color: #da3c41;
 }
 
+.button-group {
+  text-align: center;
+}
+
+
 .flex-box {
   display: flex;
   justify-content: flex-end;

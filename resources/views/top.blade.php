@@ -38,20 +38,39 @@
     <button class="btn btn-outline-primary mr-5" onclick="clickTextTotal()">Todo追加</button>
   </div>
   <form action="{{ action('TopController@create') }}" method="post" name="form1">
-    <div class="text-center mt-4">
-      <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
-    </div>
-    @csrf
-    @if (count($errors) > 0)
-        <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
-      @endif
-    <div class="flex-box">
-      <div class="text-center" style="margin-left: 610px;">
-        <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
-        <button id="output-for-listtodo" type="submit" class="btn btn-success" >リストを出力する</button>
+    <div class="form-wrap">
+      <div class="text-center mt-4">
+        <div id="testarea" class="w-100" name="text2" style="border: 1px solid #dbdbdb; height: 150px;"></div>
       </div>
+      @csrf
+      @if (count($errors) > 0)
+          <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
+      @endif
+      <!-- <div class="button-group">
+        <div class="btn-group-vertical">
+          <div class="btn btn-secondary form-clear" onclick="clickClear()" >クリア</div>
+          <button class="btn btn-success form-output" id="output-for-listtodo " type="submit">リストを出力する</button>
+        </div>  
+      </div> -->
+      <div class="d-none d-sm-block">
+        <div class="text-right">
+          <div class="btn-group">
+            <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
+            <button class="btn btn-success ml-3" id="output-for-listtodo " type="submit">リストを出力する</button>
+          </div>
+        </div>
+      </div>
+      <div class="d-block d-sm-none">
+        <div class="button-group">
+          <div class="btn-group-vertical">
+            <div class="btn btn-secondary mt-3" onclick="clickClear()" >クリア</div>
+            <button class="btn btn-success mt-3" id="output-for-listtodo " type="submit">リストを出力する</button>
+          </div>
+        </div>
+      </div>
+
+      <p>リストを出力するには登録が必要です。</p>
     </div>  
-    <p>リストを出力するには登録が必要です。</p>
   </form>  
   <div class="tagContainer text-center">
     <div class="meetContainer">
