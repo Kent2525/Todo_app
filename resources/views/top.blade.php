@@ -16,14 +16,11 @@
       <div>
         <h3 class="text-center">帰国時の予定を建てましょう</h3>
 
-        <div class="tagTop4">
-  
-            <button class="btn btn_tag btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag1()" type="button">#家族と会う</button>
-
-          <button class="btn btn_tag btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag2()" type="button">#買い物に行く</button>
-          <button class="btn btn_tag btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag3()">#お土産を買う</button>
-
-          <button class="btn btn_tag btn-primary btn-lg tagChild m-3" style="border-radius: 20px;"  onclick="clickTag4()">#日本食を食べる</button>
+        <div class="top-main-tag">
+          <button class="btn btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag1()" type="button">#家族と会う</button>
+          <button class="btn btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag2()" type="button">#買い物に行く</button>
+          <button class="btn btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag3()">#お土産を買う</button>
+          <button class="btn btn-primary btn-lg tagChild m-3" style="border-radius: 20px;" onclick="clickTag4()">#日本食を食べる</button>
         </div>
         <!-- <div class="text-center">
         <div class="row justify-content-center">
@@ -33,8 +30,8 @@
             <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag2()" type="button">#買い物に行く</button>
             <button class="btn btn_tag btn-primary btn-lg"  style="border-radius: 20px;" onclick="clickTag3()">#お土産を買う</button>
             <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;"  onclick="clickTag4()">#日本食を食べる</button>
-        </div> -->
         </div>
+        </div> -->
         <div class="flex-box my-3">
           <div class="cp_iptxt mr-1">
             <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
@@ -62,20 +59,26 @@
       <div class="tagContainer text-center">
         <div class="meetContainer">
           <h4 style="margin-bottom: 20px;">人と会う</h4>
-          <button class="btn btn_tag btn-primary btn-lg testbutton" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag1()">#家族と会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag5()">#友達と会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag6()">#恋人に会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag7()">#親戚に会う</button>
+          <div class="tag-line">  
+            <button class="btn btn_tag btn-primary btn-lg m-2" style="border-radius: 20px;" onclick="clickTag1()">#家族と会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2" style="border-radius: 20px;" onclick="clickTag5()">#友達と会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2" style="border-radius: 20px;" onclick="clickTag6()">#恋人に会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2" style="border-radius: 20px;" onclick="clickTag7()">#親戚に会う</button>
+          </div>
           <div class="forTagSpace" style="margin: 10px;"></div>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag8()">#兄弟に会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag9()">#同僚に会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag10()">#本社へあいさつ</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag11()">#交流会に参加</button>
+          <div class="tag-line">  
+            <button class="btn btn_tag btn-primary btn-lg m-2" style="border-radius: 20px;" onclick="clickTag8()">#兄弟に会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2" style="border-radius: 20px;" onclick="clickTag9()">#同僚に会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2 sub-tag" style="border-radius: 20px;" onclick="clickTag10()">#本社へあいさつ</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2 sub-tag" style="border-radius: 20px;" onclick="clickTag11()">#交流会に参加</button>
+          </div>
           <div class="forTagSpace" style="margin: 10px;"></div>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px;" onclick="clickTag12()">#恩人に会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag13()">#上司に会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px; margin-right: 30px" onclick="clickTag14()">#部下に会う</button>
-          <button class="btn btn_tag btn-primary btn-lg" style="border-radius: 20px;" onclick="clickTag15()">#顧客に会う</button>
+          <div class="tag-line">  
+            <button class="btn btn_tag btn-primary btn-lg m-2 sub-tag" style="border-radius: 20px;" onclick="clickTag12()">#恩人に会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2 sub-tag" style="border-radius: 20px;" onclick="clickTag13()">#上司に会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2 sub-tag" style="border-radius: 20px;" onclick="clickTag14()">#部下に会う</button>
+            <button class="btn btn_tag btn-primary btn-lg m-2 sub-tag" style="border-radius: 20px;" onclick="clickTag15()">#顧客に会う</button>
+          </div>
         </div>
         
         <div class="shoppingContainer">

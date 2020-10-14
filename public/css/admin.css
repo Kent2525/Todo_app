@@ -128,24 +128,53 @@ ul {
   text-align:right;
 }
 
-
-.tagTop4 {
+.top-main-tag {
   display: flex;
   justify-content: center;
 }
 
+/* タブレット画面 */
 @media (max-width: 960px) {
-  .tagTop4 {
+  .top-main-tag {
     flex-wrap: wrap;
   }
 }
 
+/* スマホ画面 */
 @media (max-width: 576px) {
-  .tagChild { 
+  .top-main-tag { 
     display: inline-block;
     text-align: center;
   }
-  /* .middle {
-    text-align: center;
-  } */
+  .sub-tag {
+    display: none;
+  }
 }
+
+.tag-line {
+  display: flex;
+  justify-content: center;
+} 
+
+/* タブレット画面 */
+@media (max-width: 960px) {
+  .tag-line {
+    flex-wrap: wrap;
+  }
+  .hello {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/* スマホ画面 */
+@media (max-width: 576px) {
+  .hello { 
+    display: block;
+    text-align: center;
+  }
+  .sub-tag {
+    display: none;
+  }
+}
+
