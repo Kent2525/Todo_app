@@ -41,7 +41,10 @@ ul {
 
 .list-group {
   list-style: none;
-  /* display: flex; */
+}
+
+.title-loop {
+  display: flex;
 }
 
 /* タイトルアイコンのサイズ */

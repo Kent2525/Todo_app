@@ -6,31 +6,30 @@
   <div class="row">
     <div class="col-5 col-md-4">
       <div class="left-title-box my-4">
-        <p><a href="{{ route('admin.task.addTitle') }}">+ タイトル追加</a></p>
-
+        <div class=text-center>
+          <p><a href="{{ route('todo.addTitle') }}" class="addTitleButton"><i class="fas fa-plus-circle plusAwesome"></i> タイトル追加</a></p>
+        </div>
         <ul class="list-group">
           @foreach($titles as $title)
-          <div class="title-loop section">
-            <a href="{{ route('admin.task', ['id' => $title->id]) }}" class="list-group-item border-0 title" style="display: inline-block">
-              {{ $title->title }}</a>
-              
-            <img class="titleIcon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" style="float: right; margin-left: 10px; margin-top: 12px;" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
-              
-              {{-- 左側の削除アイコンモーダル --}}
-              @include('components.DeleteTitleModal')
+            <div class="title-loop">
+              <a href="{{ route('todo.show', ['id' => $title->id]) }}" class="list-group-item border-0">
+                {{ $title->title }}</a>
+              <div class="title-icon-section">  
+                <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
+                
+                  {{-- 左側の削除アイコンモーダル --}}
+                  @include('components.DeleteTitleModal')
 
-            <img class="titleIcon editModal" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" style="float: right; margin-top: 12px;" data-toggle="modal" data-target="#editTitleModal" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"> 
-
-            <!-- {{-- 左側の更新アイコンモーダル --}} -->
-            <!-- {{-- @include('components.UpdateTitleModal') --}} -->
-
+                <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
+              </div>
+            </div>
           @endforeach
         </ul>
       </div>
     </div>
     
     {{-- 右側 --}}
-    <div class="col-9 mx-auto bg-white">
+    <div class="col-7 col-md-8 mx-auto bg-white">
       <div class="right-title-box my-4 mx-5">
         <p class="test">見出し</p>
 

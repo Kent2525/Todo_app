@@ -11,19 +11,18 @@
         </div>
         <ul class="list-group">
           @foreach($titles as $title)
-          <div class="title-loop" style="display: flex;">
-            <a href="{{ route('todo.show', ['id' => $title->id]) }}" class="list-group-item border-0 todo-title">
-              {{ $title->title }}</a>
-            
-            <div class="title-icon-section">
-              <img class="image-sizing delete-icon" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
-                
-                {{-- 左側の削除アイコンモーダル --}}
-                @include('components.DeleteTitleModal')
+            <div class="title-loop">
+              <a href="{{ route('todo.show', ['id' => $title->id]) }}" class="list-group-item border-0">
+                {{ $title->title }}</a>           
+              <div class="title-icon-section">
+                <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
+                  
+                  {{-- 左側の削除アイコンモーダル --}}
+                  @include('components.DeleteTitleModal')
 
-              <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="image-sizing edit-title" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
-            </div>
-          </div>  
+                <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
+              </div>
+            </div>  
           @endforeach
         </ul>
       </div>
