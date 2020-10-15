@@ -4,14 +4,14 @@
 @section('content')
 <div class="main">
   <div class="row">
-    <div class="col-3  mx-aut">
-      <div class="left-title-box my-4 mx-5">
+    <div class="col-5 col-md-4">
+      <div class="left-title-box my-4">
         <div class=text-center>
           <p><a href="{{ route('todo.addTitle') }}" class="addTitleButton"><i class="fas fa-plus-circle plusAwesome"></i> タイトル追加</a></p>
         </div>
         <ul class="list-group">
           @foreach($titles as $title)
-          <div class="titleLoop section">
+          <div class="title-loop section">
             <a href="{{ route('todo.show', ['id' => $title->id]) }}" class="list-group-item border-0 title" style="display: inline-block">
               {{ $title->title }}</a>
               

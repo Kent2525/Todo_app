@@ -39,24 +39,29 @@ ul {
   }
 }
 
-
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(112,144,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
 .list-group {
   list-style: none;
+  /* display: flex; */
 }
 
-.headingIndex {
-  border: none;
-  border-bottom: 1px solid gray;
-  margin-right: 150px;
-}
-
-.titleIcon {
+/* タイトルアイコンのサイズ */
+.image-sizing {
   height: 17px;
   width: 17px;
+}
+
+/* 編集削除アイコンを右に寄せる */
+.title-icon-section {
+  margin-left: auto;
+  margin-top: 7px;
+}
+
+.edit-title {
+  margin-left: 5px;
+}
+
+.delete-icon {
+  margin-left: 5px;
 }
 
 .textAlert {
@@ -86,6 +91,16 @@ ul {
   position: relative;
   top: 1px;
 } */
+    
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(112,144,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.headingIndex {
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-right: 150px;
+}
 
 /* headerのCSS */
 .top-todo-title {
@@ -155,6 +170,12 @@ ul {
   .form-container {
     margin-left: 100px;
     margin-right: 100px;
+  }
+
+/* タイトル一覧の左右余白のレスポンシブ */
+  .left-title-box {
+    margin-left: 60px;
+    margin-right: 60px;
   }
 }
 
