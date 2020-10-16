@@ -6,8 +6,8 @@ function clickTag1() {
 function clickSpan1() {
   var span = document.createElement("span");
   span.innerText = "#家族と会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden1() {
@@ -15,8 +15,8 @@ function clickHidden1() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "家族と会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag2() {
@@ -27,8 +27,8 @@ function clickTag2() {
 function clickSpan2() {
   var span = document.createElement("span");
   span.innerText = "#買い物に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden2() {
@@ -36,8 +36,8 @@ function clickHidden2() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "買い物に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag3() {
@@ -48,8 +48,8 @@ function clickTag3() {
 function clickSpan3() {
   var span = document.createElement("span");
   span.innerText = "#お土産を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden3() {
@@ -57,8 +57,8 @@ function clickHidden3() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "お土産を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag4() {
@@ -69,8 +69,8 @@ function clickTag4() {
 function clickSpan4() {
   var span = document.createElement("span");
   span.innerText = "#日本食を食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden4() {
@@ -78,8 +78,8 @@ function clickHidden4() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "日本食を食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag5() {
@@ -90,8 +90,8 @@ function clickTag5() {
 function clickSpan5() {
   var span = document.createElement("span");
   span.innerText = "#友達と会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden5() {
@@ -99,8 +99,8 @@ function clickHidden5() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "友達と会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag6() {
@@ -111,8 +111,8 @@ function clickTag6() {
 function clickSpan6() {
   var span = document.createElement("span");
   span.innerText = "#恋人に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden6() {
@@ -120,8 +120,8 @@ function clickHidden6() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "恋人に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag7() {
@@ -132,8 +132,8 @@ function clickTag7() {
 function clickSpan7() {
   var span = document.createElement("span");
   span.innerText = "#親戚に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden7() {
@@ -141,8 +141,8 @@ function clickHidden7() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "親戚に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag8() {
@@ -153,8 +153,8 @@ function clickTag8() {
 function clickSpan8() {
   var span = document.createElement("span");
   span.innerText = "#兄弟に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden8() {
@@ -162,8 +162,8 @@ function clickHidden8() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "兄弟に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag9() {
@@ -174,8 +174,8 @@ function clickTag9() {
 function clickSpan9() {
   var span = document.createElement("span");
   span.innerText = "#同僚に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden9() {
@@ -183,8 +183,8 @@ function clickHidden9() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "同僚に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag10() {
@@ -195,8 +195,8 @@ function clickTag10() {
 function clickSpan10() {
   var span = document.createElement("span");
   span.innerText = "#本社にあいさつ"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden10() {
@@ -204,8 +204,8 @@ function clickHidden10() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "本社にあいさつ");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag11() {
@@ -216,8 +216,8 @@ function clickTag11() {
 function clickSpan11() {
   var span = document.createElement("span");
   span.innerText = "#交流会に参加"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden11() {
@@ -225,8 +225,8 @@ function clickHidden11() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "交流会に参加");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag12() {
@@ -237,8 +237,8 @@ function clickTag12() {
 function clickSpan12() {
   var span = document.createElement("span");
   span.innerText = "#恩人に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden12() {
@@ -246,8 +246,8 @@ function clickHidden12() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "恩人に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag13() {
@@ -258,8 +258,8 @@ function clickTag13() {
 function clickSpan13() {
   var span = document.createElement("span");
   span.innerText = "#上司に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden13() {
@@ -267,8 +267,8 @@ function clickHidden13() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "上司に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag14() {
@@ -279,8 +279,8 @@ function clickTag14() {
 function clickSpan14() {
   var span = document.createElement("span");
   span.innerText = "#部下に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden14() {
@@ -288,8 +288,8 @@ function clickHidden14() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "部下に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag15() {
@@ -300,8 +300,8 @@ function clickTag15() {
 function clickSpan15() {
   var span = document.createElement("span");
   span.innerText = "#顧客に会う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden15() {
@@ -309,8 +309,8 @@ function clickHidden15() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "顧客に会う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag16() {
@@ -321,8 +321,8 @@ function clickTag16() {
 function clickSpan16() {
   var span = document.createElement("span");
   span.innerText = "#ショッピングに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden16() {
@@ -330,8 +330,8 @@ function clickHidden16() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ショッピングに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag17() {
@@ -342,8 +342,8 @@ function clickTag17() {
 function clickSpan17() {
   var span = document.createElement("span");
   span.innerText = "#服を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden17() {
@@ -351,8 +351,8 @@ function clickHidden17() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "服を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag18() {
@@ -363,8 +363,8 @@ function clickTag18() {
 function clickSpan18() {
   var span = document.createElement("span");
   span.innerText = "#化粧を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden18() {
@@ -372,8 +372,8 @@ function clickHidden18() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "化粧を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag19() {
@@ -384,8 +384,8 @@ function clickTag19() {
 function clickSpan19() {
   var span = document.createElement("span");
   span.innerText = "#本を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden19() {
@@ -393,8 +393,8 @@ function clickHidden19() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "本を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag20() {
@@ -405,8 +405,8 @@ function clickTag20() {
 function clickSpan20() {
   var span = document.createElement("span");
   span.innerText = "#薬を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden20() {
@@ -414,8 +414,8 @@ function clickHidden20() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "薬を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag21() {
@@ -426,8 +426,8 @@ function clickTag21() {
 function clickSpan21() {
   var span = document.createElement("span");
   span.innerText = "#お菓子を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden21() {
@@ -435,8 +435,8 @@ function clickHidden21() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "お菓子を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag22() {
@@ -447,8 +447,8 @@ function clickTag22() {
 function clickSpan22() {
   var span = document.createElement("span");
   span.innerText = "#仕事着を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden22() {
@@ -456,8 +456,8 @@ function clickHidden22() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "仕事着を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag23() {
@@ -468,8 +468,8 @@ function clickTag23() {
 function clickSpan23() {
   var span = document.createElement("span");
   span.innerText = "#メガネを買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden23() {
@@ -477,8 +477,8 @@ function clickHidden23() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "メガネを買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag24() {
@@ -489,8 +489,8 @@ function clickTag24() {
 function clickSpan24() {
   var span = document.createElement("span");
   span.innerText = "#お酒を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden24() {
@@ -498,8 +498,8 @@ function clickHidden24() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "お酒を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag25() {
@@ -510,8 +510,8 @@ function clickTag25() {
 function clickSpan25() {
   var span = document.createElement("span");
   span.innerText = "#文房具を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden25() {
@@ -519,8 +519,8 @@ function clickHidden25() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "文房具を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag26() {
@@ -531,8 +531,8 @@ function clickTag26() {
 function clickSpan26() {
   var span = document.createElement("span");
   span.innerText = "#100円SHOPに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden26() {
@@ -540,8 +540,8 @@ function clickHidden26() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "100円SHOPに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag27() {
@@ -552,8 +552,8 @@ function clickTag27() {
 function clickSpan27() {
   var span = document.createElement("span");
   span.innerText = "#ゲームを買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden27() {
@@ -561,8 +561,8 @@ function clickHidden27() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ゲームを買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag28() {
@@ -573,8 +573,8 @@ function clickTag28() {
 function clickSpan28() {
   var span = document.createElement("span");
   span.innerText = "#スマホを買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden28() {
@@ -582,8 +582,8 @@ function clickHidden28() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スマホを買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag29() {
@@ -594,8 +594,8 @@ function clickTag29() {
 function clickSpan29() {
   var span = document.createElement("span");
   span.innerText = "#調味料を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden29() {
@@ -603,8 +603,8 @@ function clickHidden29() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "調味料を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag30() {
@@ -615,8 +615,8 @@ function clickTag30() {
 function clickSpan30() {
   var span = document.createElement("span");
   span.innerText = "#PCを買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden30() {
@@ -624,8 +624,8 @@ function clickHidden30() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "PCを買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag31() {
@@ -636,8 +636,8 @@ function clickTag31() {
 function clickSpan31() {
   var span = document.createElement("span");
   span.innerText = "#スーパーに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden31() {
@@ -645,8 +645,8 @@ function clickHidden31() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スーパーに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag32() {
@@ -657,8 +657,8 @@ function clickTag32() {
 function clickSpan32() {
   var span = document.createElement("span");
   span.innerText = "#冠婚葬祭用具を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden32() {
@@ -666,8 +666,8 @@ function clickHidden32() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "冠婚葬祭用具を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag33() {
@@ -678,8 +678,8 @@ function clickTag33() {
 function clickSpan33() {
   var span = document.createElement("span");
   span.innerText = "#スーツケースを買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden33() {
@@ -687,8 +687,8 @@ function clickHidden33() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スーツケースを買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag34() {
@@ -699,8 +699,8 @@ function clickTag34() {
 function clickSpan34() {
   var span = document.createElement("span");
   span.innerText = "#家電を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden34() {
@@ -708,8 +708,8 @@ function clickHidden34() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "家電を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag35() {
@@ -720,8 +720,8 @@ function clickTag35() {
 function clickSpan35() {
   var span = document.createElement("span");
   span.innerText = "#子供の服を買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden35() {
@@ -729,8 +729,8 @@ function clickHidden35() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "子供の服を買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag36() {
@@ -741,8 +741,8 @@ function clickTag36() {
 function clickSpan36() {
   var span = document.createElement("span");
   span.innerText = "#ドラッグストアに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden36() {
@@ -750,8 +750,8 @@ function clickHidden36() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ドラッグストアに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag37() {
@@ -762,8 +762,8 @@ function clickTag37() {
 function clickSpan37() {
   var span = document.createElement("span");
   span.innerText = "#ユニクロに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden37() {
@@ -771,8 +771,8 @@ function clickHidden37() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ユニクロに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag38() {
@@ -783,8 +783,8 @@ function clickTag38() {
 function clickSpan38() {
   var span = document.createElement("span");
   span.innerText = "#スーツを買う"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden38() {
@@ -792,8 +792,8 @@ function clickHidden38() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スーツを買う");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag39() {
@@ -804,8 +804,8 @@ function clickTag39() {
 function clickSpan39() {
   var span = document.createElement("span");
   span.innerText = "#映画観賞"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden39() {
@@ -813,8 +813,8 @@ function clickHidden39() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "映画観賞");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag40() {
@@ -825,8 +825,8 @@ function clickTag40() {
 function clickSpan40() {
   var span = document.createElement("span");
   span.innerText = "#温泉に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden40() {
@@ -834,8 +834,8 @@ function clickHidden40() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "温泉に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag41() {
@@ -846,8 +846,8 @@ function clickTag41() {
 function clickSpan41() {
   var span = document.createElement("span");
   span.innerText = "#国内旅行"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden41() {
@@ -855,8 +855,8 @@ function clickHidden41() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "国内旅行");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag42() {
@@ -867,8 +867,8 @@ function clickTag42() {
 function clickSpan42() {
   var span = document.createElement("span");
   span.innerText = "#美容室に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden42() {
@@ -876,8 +876,8 @@ function clickHidden42() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "美容室に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag43() {
@@ -888,8 +888,8 @@ function clickTag43() {
 function clickSpan43() {
   var span = document.createElement("span");
   span.innerText = "#ドライブに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden43() {
@@ -897,8 +897,8 @@ function clickHidden43() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ドライブに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag44() {
@@ -909,8 +909,8 @@ function clickTag44() {
 function clickSpan44() {
   var span = document.createElement("span");
   span.innerText = "#カラオケに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden44() {
@@ -918,8 +918,8 @@ function clickHidden44() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "カラオケに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag45() {
@@ -930,8 +930,8 @@ function clickTag45() {
 function clickSpan45() {
   var span = document.createElement("span");
   span.innerText = "#遊園地に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden45() {
@@ -939,8 +939,8 @@ function clickHidden45() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "遊園地に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag46() {
@@ -951,8 +951,8 @@ function clickTag46() {
 function clickSpan46() {
   var span = document.createElement("span");
   span.innerText = "#水族館に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden46() {
@@ -960,8 +960,8 @@ function clickHidden46() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "水族館に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag47() {
@@ -972,8 +972,8 @@ function clickTag47() {
 function clickSpan47() {
   var span = document.createElement("span");
   span.innerText = "#キャンプをする"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden47() {
@@ -981,8 +981,8 @@ function clickHidden47() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "キャンプをする");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag48() {
@@ -993,8 +993,8 @@ function clickTag48() {
 function clickSpan48() {
   var span = document.createElement("span");
   span.innerText = "#カフェに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden48() {
@@ -1002,8 +1002,8 @@ function clickHidden48() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "カフェに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag49() {
@@ -1014,8 +1014,8 @@ function clickTag49() {
 function clickSpan49() {
   var span = document.createElement("span");
   span.innerText = "#マッサージに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden49() {
@@ -1023,8 +1023,8 @@ function clickHidden49() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "マッサージに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag50() {
@@ -1035,8 +1035,8 @@ function clickTag50() {
 function clickSpan50() {
   var span = document.createElement("span");
   span.innerText = "#公園に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden50() {
@@ -1044,8 +1044,8 @@ function clickHidden50() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "公園に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag51() {
@@ -1056,8 +1056,8 @@ function clickTag51() {
 function clickSpan51() {
   var span = document.createElement("span");
   span.innerText = "#家電量販店に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden51() {
@@ -1065,8 +1065,8 @@ function clickHidden51() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "家電量販店に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag52() {
@@ -1077,8 +1077,8 @@ function clickTag52() {
 function clickSpan52() {
   var span = document.createElement("span");
   span.innerText = "#海に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden52() {
@@ -1086,8 +1086,8 @@ function clickHidden52() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "海に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag53() {
@@ -1098,8 +1098,8 @@ function clickTag53() {
 function clickSpan53() {
   var span = document.createElement("span");
   span.innerText = "#スキー場に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden53() {
@@ -1107,8 +1107,8 @@ function clickHidden53() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スキー場に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag54() {
@@ -1119,8 +1119,8 @@ function clickTag54() {
 function clickSpan54() {
   var span = document.createElement("span");
   span.innerText = "#野球観戦"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden54() {
@@ -1128,8 +1128,8 @@ function clickHidden54() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "野球観戦");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag55() {
@@ -1140,8 +1140,8 @@ function clickTag55() {
 function clickSpan55() {
   var span = document.createElement("span");
   span.innerText = "#サッカー観戦"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden55() {
@@ -1149,8 +1149,8 @@ function clickHidden55() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "サッカー観戦");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag56() {
@@ -1161,8 +1161,8 @@ function clickTag56() {
 function clickSpan56() {
   var span = document.createElement("span");
   span.innerText = "#スーパー銭湯に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden56() {
@@ -1170,8 +1170,8 @@ function clickHidden56() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スーパー銭湯に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag57() {
@@ -1182,8 +1182,8 @@ function clickTag57() {
 function clickSpan57() {
   var span = document.createElement("span");
   span.innerText = "#飲みに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden57() {
@@ -1191,8 +1191,8 @@ function clickHidden57() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "飲みに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag58() {
@@ -1203,8 +1203,8 @@ function clickTag58() {
 function clickSpan58() {
   var span = document.createElement("span");
   span.innerText = "#エステに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden58() {
@@ -1212,8 +1212,8 @@ function clickHidden58() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "エステに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag59() {
@@ -1224,8 +1224,8 @@ function clickTag59() {
 function clickSpan59() {
   var span = document.createElement("span");
   span.innerText = "#ネイルサロンに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden59() {
@@ -1233,8 +1233,8 @@ function clickHidden59() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ネイルサロンに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag60() {
@@ -1245,8 +1245,8 @@ function clickTag60() {
 function clickSpan60() {
   var span = document.createElement("span");
   span.innerText = "#神社仏閣の見学"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden60() {
@@ -1254,8 +1254,8 @@ function clickHidden60() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "神社仏閣の見学");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag61() {
@@ -1266,8 +1266,8 @@ function clickTag61() {
 function clickSpan61() {
   var span = document.createElement("span");
   span.innerText = "#お祭りに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden61() {
@@ -1275,8 +1275,8 @@ function clickHidden61() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "お祭りに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag62() {
@@ -1287,8 +1287,8 @@ function clickTag62() {
 function clickSpan62() {
   var span = document.createElement("span");
   span.innerText = "#子供と遊ぶ"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden62() {
@@ -1296,8 +1296,8 @@ function clickHidden62() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "子供と遊ぶ");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag63() {
@@ -1308,8 +1308,8 @@ function clickTag63() {
 function clickSpan63() {
   var span = document.createElement("span");
   span.innerText = "#ディズニーに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden63() {
@@ -1317,8 +1317,8 @@ function clickHidden63() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ディズニーに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag64() {
@@ -1329,8 +1329,8 @@ function clickTag64() {
 function clickSpan64() {
   var span = document.createElement("span");
   span.innerText = "#猫カフェに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden64() {
@@ -1338,8 +1338,8 @@ function clickHidden64() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "猫カフェに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag65() {
@@ -1350,8 +1350,8 @@ function clickTag65() {
 function clickSpan65() {
   var span = document.createElement("span");
   span.innerText = "#ネットカフェに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden65() {
@@ -1359,8 +1359,8 @@ function clickHidden65() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ネットカフェに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag66() {
@@ -1371,8 +1371,8 @@ function clickTag66() {
 function clickSpan66() {
   var span = document.createElement("span");
   span.innerText = "#コンサートに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden66() {
@@ -1380,8 +1380,8 @@ function clickHidden66() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "コンサートに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag67() {
@@ -1392,8 +1392,8 @@ function clickTag67() {
 function clickSpan67() {
   var span = document.createElement("span");
   span.innerText = "#寿司を食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden67() {
@@ -1401,8 +1401,8 @@ function clickHidden67() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "寿司を食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag68() {
@@ -1413,8 +1413,8 @@ function clickTag68() {
 function clickSpan68() {
   var span = document.createElement("span");
   span.innerText = "#ラーメンを食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden68() {
@@ -1422,8 +1422,8 @@ function clickHidden68() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ラーメンを食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag69() {
@@ -1434,8 +1434,8 @@ function clickTag69() {
 function clickSpan69() {
   var span = document.createElement("span");
   span.innerText = "#カレーを食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden69() {
@@ -1443,8 +1443,8 @@ function clickHidden69() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "カレーを食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag70() {
@@ -1455,8 +1455,8 @@ function clickTag70() {
 function clickSpan70() {
   var span = document.createElement("span");
   span.innerText = "#とんかつを食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden70() {
@@ -1464,8 +1464,8 @@ function clickHidden70() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "とんかつを食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag71() {
@@ -1476,8 +1476,8 @@ function clickTag71() {
 function clickSpan71() {
   var span = document.createElement("span");
   span.innerText = "#うどんを食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden71() {
@@ -1485,8 +1485,8 @@ function clickHidden71() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "うどんを食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag72() {
@@ -1497,8 +1497,8 @@ function clickTag72() {
 function clickSpan72() {
   var span = document.createElement("span");
   span.innerText = "#そばを食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden72() {
@@ -1506,8 +1506,8 @@ function clickHidden72() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "そばを食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag73() {
@@ -1518,8 +1518,8 @@ function clickTag73() {
 function clickSpan73() {
   var span = document.createElement("span");
   span.innerText = "#焼肉を食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden73() {
@@ -1527,8 +1527,8 @@ function clickHidden73() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "焼肉を食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag74() {
@@ -1539,8 +1539,8 @@ function clickTag74() {
 function clickSpan74() {
   var span = document.createElement("span");
   span.innerText = "#天ぷらを食べる"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden74() {
@@ -1548,8 +1548,8 @@ function clickHidden74() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "天ぷらを食べる");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag75() {
@@ -1560,8 +1560,8 @@ function clickTag75() {
 function clickSpan75() {
   var span = document.createElement("span");
   span.innerText = "#ビュッフェに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden75() {
@@ -1569,8 +1569,8 @@ function clickHidden75() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "ビュッフェに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag76() {
@@ -1581,8 +1581,8 @@ function clickTag76() {
 function clickSpan76() {
   var span = document.createElement("span");
   span.innerText = "#スイーツを食べに行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden76() {
@@ -1590,8 +1590,8 @@ function clickHidden76() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "スイールを食べに行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag77() {
@@ -1602,8 +1602,8 @@ function clickTag77() {
 function clickSpan77() {
   var span = document.createElement("span");
   span.innerText = "#役所に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden77() {
@@ -1611,8 +1611,8 @@ function clickHidden77() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "役所に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag78() {
@@ -1623,8 +1623,8 @@ function clickTag78() {
 function clickSpan78() {
   var span = document.createElement("span");
   span.innerText = "#運転免許の更新"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden78() {
@@ -1632,8 +1632,8 @@ function clickHidden78() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "運転免許の更新");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag79() {
@@ -1644,8 +1644,8 @@ function clickTag79() {
 function clickSpan79() {
   var span = document.createElement("span");
   span.innerText = "#住民票手続き"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden79() {
@@ -1653,8 +1653,8 @@ function clickHidden79() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "住民票手続き");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag80() {
@@ -1665,8 +1665,8 @@ function clickTag80() {
 function clickSpan80() {
   var span = document.createElement("span");
   span.innerText = "#大使館に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden80() {
@@ -1674,8 +1674,8 @@ function clickHidden80() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "大使館に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag81() {
@@ -1686,8 +1686,8 @@ function clickTag81() {
 function clickSpan81() {
   var span = document.createElement("span");
   span.innerText = "#両替"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden81() {
@@ -1695,8 +1695,8 @@ function clickHidden81() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "両替");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag82() {
@@ -1707,8 +1707,8 @@ function clickTag82() {
 function clickSpan82() {
   var span = document.createElement("span");
   span.innerText = "#病院に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden82() {
@@ -1716,8 +1716,8 @@ function clickHidden82() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "病院に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag83() {
@@ -1728,8 +1728,8 @@ function clickTag83() {
 function clickSpan83() {
   var span = document.createElement("span");
   span.innerText = "#歯医者に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden83() {
@@ -1737,8 +1737,8 @@ function clickHidden83() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "歯医者に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag84() {
@@ -1749,8 +1749,8 @@ function clickTag84() {
 function clickSpan84() {
   var span = document.createElement("span");
   span.innerText = "#wifi手続き"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden84() {
@@ -1758,8 +1758,8 @@ function clickHidden84() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "wifi手続き");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag85() {
@@ -1770,8 +1770,8 @@ function clickTag85() {
 function clickSpan85() {
   var span = document.createElement("span");
   span.innerText = "#銀行に行く"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden85() {
@@ -1779,8 +1779,8 @@ function clickHidden85() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "銀行に行く");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag86() {
@@ -1791,8 +1791,8 @@ function clickTag86() {
 function clickSpan86() {
   var span = document.createElement("span");
   span.innerText = "#荷物の発送"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden86() {
@@ -1800,8 +1800,8 @@ function clickHidden86() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "荷物の発送");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag87() {
@@ -1812,8 +1812,8 @@ function clickTag87() {
 function clickSpan87() {
   var span = document.createElement("span");
   span.innerText = "#予防接種を受ける"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden87() {
@@ -1821,8 +1821,8 @@ function clickHidden87() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "予防接種を受ける");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag88() {
@@ -1833,8 +1833,8 @@ function clickTag88() {
 function clickSpan88() {
   var span = document.createElement("span");
   span.innerText = "#カード類手続き"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden88() {
@@ -1842,8 +1842,8 @@ function clickHidden88() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "カード類手続き");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag89() {
@@ -1854,8 +1854,8 @@ function clickTag89() {
 function clickSpan89() {
   var span = document.createElement("span");
   span.innerText = "#人間ドッグ"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden89() {
@@ -1863,8 +1863,8 @@ function clickHidden89() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "人間ドッグ");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag90() {
@@ -1875,8 +1875,8 @@ function clickTag90() {
 function clickSpan90() {
   var span = document.createElement("span");
   span.innerText = "#現金引き出し"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden90() {
@@ -1884,8 +1884,8 @@ function clickHidden90() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "現金引き出し");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag91() {
@@ -1896,8 +1896,8 @@ function clickTag91() {
 function clickSpan91() {
   var span = document.createElement("span");
   span.innerText = "#レンタル品の返却"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden91() {
@@ -1905,8 +1905,8 @@ function clickHidden91() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "レンタル品の返却");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag92() {
@@ -1917,8 +1917,8 @@ function clickTag92() {
 function clickSpan92() {
   var span = document.createElement("span");
   span.innerText = "#子供の進路相談"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden92() {
@@ -1926,8 +1926,8 @@ function clickHidden92() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "子供の進路相談");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag93() {
@@ -1938,8 +1938,8 @@ function clickTag93() {
 function clickSpan93() {
   var span = document.createElement("span");
   span.innerText = "#チケットの購入"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden93() {
@@ -1947,8 +1947,8 @@ function clickHidden93() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "チケットの購入");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag94() {
@@ -1959,8 +1959,8 @@ function clickTag94() {
 function clickSpan94() {
   var span = document.createElement("span");
   span.innerText = "#バスの予約"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden94() {
@@ -1968,8 +1968,8 @@ function clickHidden94() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "バスの予約");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag95() {
@@ -1980,8 +1980,8 @@ function clickTag95() {
 function clickSpan95() {
   var span = document.createElement("span");
   span.innerText = "#新幹線の予約"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden95() {
@@ -1989,8 +1989,8 @@ function clickHidden95() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "新幹線の予約");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickTag96() {
@@ -2001,8 +2001,8 @@ function clickTag96() {
 function clickSpan96() {
   var span = document.createElement("span");
   span.innerText = "#保険の加入"
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(span);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(span);
 }
 
 function clickHidden96() {
@@ -2010,6 +2010,6 @@ function clickHidden96() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", "保険の加入");
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }

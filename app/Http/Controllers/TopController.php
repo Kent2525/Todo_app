@@ -25,11 +25,11 @@ class TopController extends Controller
         // ]);
 
         // if($validator->fails()){
-        //     return redirect('/#testarea');
+        //     return redirect('/#formArea');
         // }
         $this ->validate($request, ['heading' =>'required']);
         //     if ( $validator->fails() ){
-        //     return redirect('/#testarea');
+        //     return redirect('/#formArea');
         // }
         
         $title = new Title;     

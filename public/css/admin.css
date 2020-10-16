@@ -103,6 +103,34 @@ ul {
   width: 90vw;
 }
 
+.form-area {
+  border: 1px solid #dbdbdb;
+  height: 150px;
+}
+
+.top-form-alert {
+  color:red;
+  text-align:right;
+}
+
+.button-group {
+  text-align: center;
+}
+
+.subject-item {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.tag-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-tag {
+  border-radius: 20px;
+}
 
 /* TOPページタブレット画面のCSS */
 @media (min-width: 576px) { 
@@ -133,6 +161,7 @@ ul {
   .form-wrap {
     width: auto;
   }
+
 }
 
 /* TOPページのPC画面のCSS */
@@ -141,13 +170,24 @@ ul {
     display: flex;
     justify-content: center;
   } 
-
+  
   .form-container {
     margin-left: 100px;
     margin-right: 100px;
   }
+
+  .tag-line {
+    flex-wrap: nowrap;
+  }
 }
 
+
+/* スマホ画面 */
+@media (max-width: 576px) {
+  .sub-tag {
+    display: none;
+  }
+}
 
 /* スマホのCSS */
 @media (max-width: 576px) { 
@@ -229,68 +269,14 @@ ul {
 
 
 @media (min-width: 992px) {
-
-
 /* タイトル一覧の左右余白のレスポンシブ */
   .left-title-box {
     margin-left: 60px;
     margin-right: 60px;
   }
-
-
-
 }
 
-.button-group {
-  text-align: center;
-}
-
-
-
-.top-form-alert {
-  color:red;
-  text-align:right;
-}
-
-/* PC画面のタブCSS */
-
-/* タブレット画面 */
-@media (max-width: 960px) {
-
-}
-
-/* スマホ画面 */
-@media (max-width: 576px) {
-  .sub-tag {
-    display: none;
-  }
-}
-
-/* PC画面のタブCSS */
-.tag-line {
-  display: flex;
-  justify-content: center;
-} 
-
-/* タブレット画面 */
-@media (max-width: 960px) {
-  .tag-line {
-    flex-wrap: wrap;
-  }
-}
-
-/* スマホ画面 */
-@media (max-width: 576px) {
-  .tap-line { 
-    display: inline-block;
-    text-align: center;
-  }
-  .sub-tag {
-    display: none;
-  }
-}
-
-
+/* これよりmypage画面 */
 .main {
   display: flex;
   flex-direction: column;

@@ -14,7 +14,7 @@ function clickOutputText1() {
   var inputValue = document.getElementById("inputTodoText").value;
   const textPlus = '#' + inputValue;
   inputTodoText.innerText = textPlus;
-  var outputText = document.getElementById("testarea");
+  var outputText = document.getElementById("formArea");
   outputText.appendChild(inputTodoText);
   document.getElementById("inputTodoText").focus();
   var inputTodoText = document.getElementById("inputTodoText");
@@ -27,13 +27,13 @@ function clickHiddenText1() {
   test.setAttribute("name", "heading[]");
   test.setAttribute("type", "hidden");
   test.setAttribute("value", inputTodoText);
-  var testarea = document.getElementById("testarea");
-  testarea.appendChild(test);
+  var formArea = document.getElementById("formArea");
+  formArea.appendChild(test);
 }
 
 function clickClear() {
-  const testarea = document.getElementById("testarea");
-  testarea.innerHTML ='';
+  const formArea = document.getElementById("formArea");
+  formArea.innerHTML ='';
 }
 
 // フォームのバリデーションアラート
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
 // function clickClear () {
 //   cosole.log("test1");
-//   var clear = document.getElementById("testarea");
+//   var clear = document.getElementById("formArea");
 //   cosole.log("test1", clear);
 //   clear.innerText ="";
 //   cosole.log("test1");
@@ -73,8 +73,8 @@ $(document).ready(function () {
 // function addElement1() {
 //   var element = document.createElement("span");
 //   element.innerText = "#家族と会う" 
-//   var testarea = document.getElementById("testarea");
-//   testarea.appendChild(element);
+//   var formArea = document.getElementById("formArea");
+//   formArea.appendChild(element);
 // } 
 
 // function clickBtn1() {
@@ -89,8 +89,8 @@ $(document).ready(function () {
 // function addElement2() {
 //   var element = document.createElement("span");
 //   element.innerText = "#買い物に行く" 
-//   var testarea = document.getElementById("testarea");
-//   testarea.appendChild(element);
+//   var formArea = document.getElementById("formArea");
+//   formArea.appendChild(element);
 // } 
 
 // function clickBtn2() {
@@ -105,11 +105,11 @@ $(document).ready(function () {
   // element.innerText = "#家族と会う" 
 
   // 要素を追加する「親要素」を指定する。
-  // var testarea = document.getElementById("testarea");
+  // var formArea = document.getElementById("formArea");
   // 要素を追加する
-  // testarea.appendChild(element);
+  // formArea.appendChild(element);
   // 次の要素を改行して追加するために br 要素を追加する
-  // testarea.appendChild(document.createElement(""));  
+  // formArea.appendChild(document.createElement(""));  
 // } 
 
 // $(function(){
@@ -135,22 +135,22 @@ $(document).ready(function () {
 
 // $(function(){
 //   $(‘#testbutton‘).click(function(){
-//   $(‘#testarea p‘).prepend(‘<span>spansample</span>’);
+//   $(‘#formArea p‘).prepend(‘<span>spansample</span>’);
 //   });
 // });
 
 // $(function(){
 //   $(‘#testbutton‘).on('click', function(){
-//   $(‘#testarea p‘).prepend(‘<span>spansample</span>’);
+//   $(‘#formArea p‘).prepend(‘<span>spansample</span>’);
 //   });
 // });
 
 // $('#testbutton').click(function() {
-//   $('#testarea p').prepend(‘<span>spansample</span>’);
+//   $('#formArea p').prepend(‘<span>spansample</span>’);
 // }
 
 // $('#testbutton').on('click', function() {
-//   $('#testarea p').prepend(‘<span>spansample</span>’);
+//   $('#formArea p').prepend(‘<span>spansample</span>’);
 // }
 
 
