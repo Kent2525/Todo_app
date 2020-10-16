@@ -39,21 +39,19 @@ ul {
   margin-top: 30px;
 }
 
+.main-tag-group { 
+  display: inline-block;
+  text-align: center;
+}
+
 .main-tag {
   margin: 10px 15px;
   border-radius: 20px;
 }
 
-/* スマホのCSS */
-@media (max-width: 576px) { 
-  .fixed-navbar-mobile {
-    position: fixed !important
-  }
-}
-
-/* TOPページタブレット以上のCSS */
+/* TOPページタブレット画面のCSS */
 @media (min-width: 576px) { 
-  .btn-color  {
+  .btn-color {
     background-color: #3490dc !important;
     border-color: #3490dc !important;
     color: white !important;
@@ -68,8 +66,27 @@ ul {
     margin-bottom: 48px; 
     margin-top: 48px; 
   }
+
+  .main-tag-group {
+    flex-wrap: wrap;
+  }
 }
 
+/* TOPページのPC画面のCSS */
+@media (min-width: 992px) {
+  .main-tag-group {
+    display: flex;
+    justify-content: center;
+  } 
+}
+
+
+/* スマホのCSS */
+@media (max-width: 576px) { 
+  .fixed-navbar-mobile {
+    position: fixed !important
+  }
+}
 .list-group {
   list-style: none;
 }
@@ -209,10 +226,7 @@ ul {
     margin-right: 60px;
   }
 
-  .main-tag-group {
-    display: flex;
-    justify-content: center;
-  } 
+
 
 }
 
@@ -234,17 +248,11 @@ ul {
 
 /* タブレット画面 */
 @media (max-width: 960px) {
-  .top-main-tag {
-    flex-wrap: wrap;
-  }
+
 }
 
 /* スマホ画面 */
 @media (max-width: 576px) {
-  .top-main-tag { 
-    display: inline-block;
-    text-align: center;
-  }
   .sub-tag {
     display: none;
   }
