@@ -33,7 +33,7 @@
       <p class="test">見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
-            <li><a class="list-group-item headingIndex heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+            <li><a class="list-group-item heading-index heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
           </a></li>
             {{-- 右側の見出しクリック編集モーダル --}}
             @include('components.UpdateContentModal')
@@ -80,8 +80,6 @@ $(document).ready(function () {
     $('#addHeadingModal').modal('show');
   } 
 }); 
-
-
 </script>
 
 @endsection

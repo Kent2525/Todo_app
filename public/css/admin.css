@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* ↓共通のCSS↓ */
+
 html {
   height: 100%;
 }
@@ -13,6 +15,27 @@ body {
 ul {
   list-style: none;
 }
+
+/* ↓これよりlayoutのCSS↓ */
+
+.top-todo-title {
+  font-family: 'Lato', 'Anton', 'Oswald','Roboto Condensed','Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
+  font-size: 1.3rem;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(112,144,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* スマホのCSS */
+@media (max-width: 576px) { 
+  .fixed-navbar-mobile {
+    position: fixed !important
+  }
+}
+
+
+/* ↓これよりTOPページのCSS↓ */
 
 .easy-login {
   border: 2px solid rgb(172, 169, 169);
@@ -38,8 +61,8 @@ ul {
 }
 
 .main-tag {
-  margin: 10px 15px;
   border-radius: 20px;
+  margin: 10px 15px;
 }
 
 .input-box {
@@ -48,20 +71,19 @@ ul {
   width: 90vw;
 }
 
-/* Top入力フォームのスタイル */
 .input-form-set {
   position: relative;
   width: 85%;
 }
 
 .input-form-set input[type=text] {
-  font: 15px/24px sans-serif;
+  border: 0;
   box-sizing: border-box;
-  width: 100%;
+  font: 15px/24px sans-serif;
+  letter-spacing: 1px;
   padding: 0.3em;
   padding-left: 40px;
-  letter-spacing: 1px;
-  border: 0;
+  width: 100%;
 }
 
 .input-form-set input[type=text]:focus {
@@ -73,23 +95,23 @@ ul {
 }
 
 .input-form-set i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 9px 5px;
-  transition: 0.3s;
   color: #aaaaaa;
+  left: 0;
+  position: absolute;
+  padding: 9px 5px;
+  top: 0;
+  transition: 0.3s;
 }
 
 .input-form-set::after {
+  border-color: #da3c41;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  content: "";
   display: block;
-  width: 100%;
   height: 4px;
   margin-top: -1px;
-  content: "";
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: #da3c41;
+  width: 100%;
 }
 
 .form-wrap {
@@ -182,13 +204,7 @@ ul {
   }
 }
 
-/* スマホのCSS */
-@media (max-width: 576px) { 
-  .fixed-navbar-mobile {
-    position: fixed !important
-  }
-}
-
+/* ↓これよりmypageページのCSS↓ */
 
 .main {
   height: 100%;
@@ -220,7 +236,6 @@ ul {
   display: flex;
 }
 
-/* 編集削除アイコンを右に寄せる */
 .title-icon-section {
   margin-left: auto;
   margin-top: 7px;
@@ -230,7 +245,6 @@ ul {
   margin-left: 5px;
 }
 
-/* タイトルアイコンのサイズ */
 .image-sizing {
   height: 17px;
   width: 17px;
@@ -250,27 +264,15 @@ ul {
   color: gray !important;
 }
 
-    
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(112,144,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.headingIndex {
-  border: none;
-  border-bottom: 1px solid gray;
-}
-
-/* headerのCSS */
-.top-todo-title {
-  font-family: 'Lato', 'Anton', 'Oswald','Roboto Condensed','Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
-  font-size: 1.3rem;
-}
-
-  
 .right-col {
   order: 1;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.heading-index {
+  border: none;
+  border-bottom: 1px solid gray;
 }
 
 /* mypageタブレット画面以上 */
@@ -292,7 +294,7 @@ ul {
     margin-right: 50px;
   }
   
-  .headingIndex {
+  .heading-index {
     margin-right: 50px;
   }
 }
