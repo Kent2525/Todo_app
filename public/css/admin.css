@@ -9,13 +9,6 @@ body {
   font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
-.main {
-  height: 100%;
-}
-
-.row {
-  height: 100%;
-}
 
 ul {
   list-style: none;
@@ -195,18 +188,36 @@ ul {
     position: fixed !important
   }
 }
-.list-group {
+
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-col {
+  order: 2;
+}
+
+.add-title-btn {
+  color: black;
+}
+.add-title-btn:hover {
+  border: 1px solid #f5f0f0f3;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #f5f0f0f3;
+  color: black;
+}
+
+.title-list {
   list-style: none;
 }
 
 .title-loop {
   display: flex;
-}
-
-/* タイトルアイコンのサイズ */
-.image-sizing {
-  height: 17px;
-  width: 17px;
 }
 
 /* 編集削除アイコンを右に寄せる */
@@ -215,11 +226,17 @@ ul {
   margin-top: 7px;
 }
 
-.edit-title {
+.delete-icon {
   margin-left: 5px;
 }
 
-.delete-icon {
+/* タイトルアイコンのサイズ */
+.image-sizing {
+  height: 17px;
+  width: 17px;
+}
+
+.edit-title {
   margin-left: 5px;
 }
 
@@ -233,23 +250,6 @@ ul {
   color: gray !important;
 }
 
-.addTitleButton {
-  color: black;
-}
-.addTitleButton:hover {
-  border: 1px solid #f5f0f0f3;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: #f5f0f0f3;
-  color: black;
-}
-
-/* .addTitleButton:active {
-  box-shadow: none;
-  position: relative;
-  top: 1px;
-} */
     
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(112,144,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -266,25 +266,6 @@ ul {
   font-size: 1.3rem;
 }
 
-
-
-@media (min-width: 992px) {
-/* タイトル一覧の左右余白のレスポンシブ */
-  .left-title-box {
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-}
-
-/* これよりmypage画面 */
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
-.left-col {
-  order: 2;
-}
   
 .right-col {
   order: 1;
@@ -292,26 +273,35 @@ ul {
   margin-right: 30px;
 }
 
+/* mypageタブレット画面以上 */
 @media screen and (min-width: 576px) {
   .main {
     display: flex;
     flex-direction: row;
   }
-
+  
   .left-col {
-    flex: 1;
+    flex: 3;
     order: 1;
   }
-
+  
   .right-col {
-    flex: 2;
+    flex: 5;
     order: 2;
     margin-left: 50px;
     margin-right: 50px;
   }
-
+  
   .headingIndex {
     margin-right: 50px;
   }
-
 }
+
+/* mypagePC画面以上 */
+@media (min-width: 992px) {
+  /* タイトル一覧の左右余白のレスポンシブ */
+    .left-title-box {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+  }

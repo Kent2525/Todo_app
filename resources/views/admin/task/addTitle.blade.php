@@ -7,7 +7,7 @@
     <div class="col-5 col-md-4">
       <div class="left-title-box my-4">
         <div class=text-center>
-          <p><a href="{{ route('todo.addTitle') }}" class="addTitleButton"><i class="fas fa-plus-circle plusAwesome"></i> タイトル追加</a></p>
+          <p><a href="{{ route('todo.addTitle') }}" class="add-title-btn"><i class="fas fa-plus-circle plusAwesome"></i> タイトル追加</a></p>
         </div>
         <ul class="list-group">
           @foreach($titles as $title)
