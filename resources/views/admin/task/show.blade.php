@@ -16,7 +16,6 @@
             <div class="title-icon-section">  
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
               
-                {{-- 左側の削除アイコンモーダル --}}
                 @include('components.DeleteTitleModal')
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
@@ -35,7 +34,7 @@
           @foreach($currentTitle->contents as $content)
             <li><a class="list-group-item heading-index heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
           </a></li>
-            {{-- 右側の見出しクリック編集モーダル --}}
+
             @include('components.UpdateContentModal')
 
           @endforeach

@@ -16,7 +16,6 @@
             <div class="title-icon-section">
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
                 
-                {{-- 左側の削除アイコンモーダル --}}
                 @include('components.DeleteTitleModal')
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
@@ -30,7 +29,7 @@
   {{-- 右側 --}}
   <div class="right-col bg-white">
     <div class="right-title-box my-4 mx-5">
-        <p>Todoタイトルを選択してください。</p>
+        <h5>Todoタイトルを選択してください。</h5>
     </div>
   </div>
 </div>
