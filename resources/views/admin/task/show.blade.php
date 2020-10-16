@@ -31,21 +31,18 @@
   <div class="right-col bg-white">
     <div class="right-title-box my-4">
       <p class="test">見出し</p>
-
         <ul class="list-group">
-            @foreach($currentTitle->contents as $content)
-              <li><a class="list-group-item headingIndex heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
-            </a></li>
-              {{-- 右側の見出しクリック編集モーダル --}}
-              @include('components.UpdateContentModal')
+          @foreach($currentTitle->contents as $content)
+            <li><a class="list-group-item headingIndex heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+          </a></li>
+            {{-- 右側の見出しクリック編集モーダル --}}
+            @include('components.UpdateContentModal')
 
-            @endforeach
+          @endforeach
         </ul>
       <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
-
     </div>
   </div>
-
 </div>
 
 {{-- モータルへデータを送るjavascript --}}
