@@ -21,6 +21,29 @@ ul {
   list-style: none;
 }
 
+.easy-login {
+  border: 2px solid rgb(172, 169, 169);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.top-title {
+  font-family: 'Lato', 'Anton', 'Oswald','Roboto Condensed','Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px; 
+  margin-top: 20px; 
+}
+
+.suggest-msg {
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.main-tag {
+  margin: 10px 15px;
+  border-radius: 20px;
+}
+
 /* スマホのCSS */
 @media (max-width: 576px) { 
   .fixed-navbar-mobile {
@@ -28,14 +51,22 @@ ul {
   }
 }
 
-/* タブレット以上のCSS */
+/* TOPページタブレット以上のCSS */
 @media (min-width: 576px) { 
-  .fixed-navbar-mobile {
-    background-color: #3490dc;
-  }
   .btn-color  {
     background-color: #3490dc !important;
     border-color: #3490dc !important;
+    color: white !important;
+  }
+  
+  .fixed-navbar-mobile {
+    background-color: #3490dc;
+  }
+  
+  .top-title {
+    font-size: 40px;
+    margin-bottom: 48px; 
+    margin-top: 48px; 
   }
 }
 
@@ -110,10 +141,8 @@ ul {
   font-size: 1.3rem;
 }
 
-/* 以下TOPページのCSS */
-.topTitle {
-  font-family: 'Lato', 'Anton', 'Oswald','Roboto Condensed','Segoe UI Black', 'arial', 'MS Gothic', sans-serif;
-}
+
+
 
 /* Top入力フォームのスタイル */
 .cp_iptxt {
@@ -179,6 +208,12 @@ ul {
     margin-left: 60px;
     margin-right: 60px;
   }
+
+  .main-tag-group {
+    display: flex;
+    justify-content: center;
+  } 
+
 }
 
 .button-group {
@@ -196,10 +231,6 @@ ul {
 }
 
 /* PC画面のタブCSS */
-.top-main-tag {
-  display: flex;
-  justify-content: center;
-}
 
 /* タブレット画面 */
 @media (max-width: 960px) {
