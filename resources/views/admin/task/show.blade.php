@@ -29,10 +29,10 @@
   {{-- 右側 --}}
   <div class="right-col bg-white">
     <div class="right-title-box my-4">
-      <p class="test">見出し</p>
+      <p>見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
-            <li><a class="list-group-item heading-index heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
+            <li><a class="list-group-item heading-index heading_modal" data-toggle="modal" data-target="#myModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
           </a></li>
 
             @include('components.UpdateContentModal')

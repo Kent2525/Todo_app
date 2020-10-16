@@ -16,7 +16,6 @@
             <div class="title-icon-section">
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
               
-                {{-- 左側の削除アイコンモーダル --}}
                 @include('components.DeleteTitleModal', ['title' => $title])
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
@@ -27,7 +26,7 @@
     </div>
   </div>
   <!-- Modal -->
-  <div class="modal in" id="editTitleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+  <div class="modal modal-container" id="editTitleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -36,11 +35,9 @@
         </div>
         <div class="modal-body">
           <h4 class="text-center">タイトル変更</h4>
-        
           @if (count($errors) > 0)
-            <p class="editTitleAlert textAlert">{{$errors->first('title')}}</p>
+            <p class="text-alert">{{$errors->first('title')}}</p>
           @endif
-        
           <form action="{{ action('EditTitleController@edit') }}" method="post">
             <div class="form-group">
               <input id="inputModal" type="text" name="title" class="form-control" value="{{ $currentTitle->title}}">
@@ -61,7 +58,7 @@
   {{-- 右側 --}}
   <div class="right-col bg-white">
     <div class="right-title-box my-4 mx-5">
-        <p>Todoタイトルを選択してください。</p>
+        <h5>Todoタイトルを選択してください。</h5>
     </div>
   </div>
 </div>
@@ -95,9 +92,5 @@ $(document).on('click', function(e) {
 
   }
 });
-
 </script>
-
-
-
 @endsection

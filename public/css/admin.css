@@ -254,7 +254,7 @@ ul {
   margin-left: 5px;
 }
 
-.textAlert {
+.text-alert {
   padding: 0px;
   color: red;
   text-align: center;
@@ -302,8 +302,26 @@ ul {
 /* mypagePC画面以上 */
 @media (min-width: 992px) {
   /* タイトル一覧の左右余白のレスポンシブ */
-    .left-title-box {
-      margin-left: 60px;
-      margin-right: 60px;
-    }
+  .left-title-box {
+    margin-left: 60px;
+    margin-right: 60px;
   }
+} 
+
+/* ↓これよりモーダルのCSS↓ */
+
+.modal-container {
+  display: block;
+  padding-left: 0px;
+}
+
+.btn-content-delete {
+  float: right;
+}
+
+.title-content-modal {
+  display: inline-block;
+}
+
+
+

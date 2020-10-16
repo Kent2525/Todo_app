@@ -25,7 +25,6 @@
       </ul>
     </div>
   </div>
-    
   {{-- 右側 --}}
   <div class="right-col bg-white">
     <div class="right-title-box my-4 mx-5">

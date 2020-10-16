@@ -1,27 +1,17 @@
 {{-- 右側の見出しクリックModal --}}
 <div id="myModal{{$content->id}}" class="modal fade" role="dialog">
-  <div class="modal-dialog"> 
+  <div class="modal-dialog">
     {{-- Modal content--}}
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button class="close" type="button" data-dismiss="modal">&times;</button>
         <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
-        <div class="contentTitleBox text-center">
-          <h4 class="text-center" style="display: inline-block;">{{$currentTitle->title}}</h4>
-          <a href="{{ action('ContentController@delete', ['id' => $content->id]) }}"  class="btn btn-danger text-right" style="float: right";>削除</a>
+        <div class="text-center">
+          <h4 class="title-content-modal">{{$currentTitle->title}}</h4>
+          <a class="btn btn-danger btn-content-delete text-right" href="{{ action('ContentController@delete', ['id' => $content->id]) }}">削除</a>
         </div>
-
-        @if (count($errors) > 0)
-          <script>
-            // $(function(){
-            //   $('#myModal{{$content->id}}').modal('show');
-            // })
-          </script>
-          <p class="validateAlert updateContentAlert">{{$errors->first('heading')}}</p>
-        @endif
-        
         <form action="{{ action('ContentController@edit') }}" method="post">
           <div class="form-group">
             <label for="inputHeading_modal">見出し</label>
@@ -34,7 +24,7 @@
           @csrf
           <input type="hidden" id="modal_id" name="id" value="{{$content->id}}">
           <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-block mt-4">更  新</button>
+            <button type="submit" class="btn btn-primary btn-block mt-4">更新</button>
           </div>
         </form>
       </div>

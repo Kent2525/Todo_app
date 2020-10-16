@@ -16,7 +16,6 @@
             <div class="title-icon-section">  
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
               
-                {{-- 左側の削除アイコンモーダル --}}
                 @include('components.DeleteTitleModal')
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
@@ -28,27 +27,23 @@
   </div>
     
     {{-- 右側 --}}
-  <div class="col-7 col-md-8 mx-auto bg-white">
+  <div class="right-col bg-white">
     <div class="right-title-box my-4 mx-5">
-      <p class="test">見出し</p>
-
+      <p>見出し</p>
         <ul class="list-group">
-            @foreach($currentTitle->contents as $content)
-              <li><a class="list-group-item headingIndex heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}" >{{$content->heading}}
-            </a></li>
-              {{-- 右側の見出しクリックモーダル --}}
-              @include('components.UpdateContentModal')
+          @foreach($currentTitle->contents as $content)
+            <li><a class="list-group-item heading-index heading_modal ml-2" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
+          </a></li>
 
-            @endforeach
+            @include('components.UpdateContentModal')
+
+          @endforeach
         </ul>
-
-
-      <a href="{{ route('admin.task.addheading', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
-      
+      <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
     </div>
   </div>
-    <!-- Modal -->
-  <div class="modal in" id="addHeadingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block; padding-left: 0px;">
+  <!-- Modal -->
+  <div class="modal modal-container" id="addHeadingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -58,21 +53,21 @@
     <div class="modal-body">
       <h4 class="text-center">見出し追加</h4>
       @if (count($errors) > 0)
-        <p class="addContentAlert">{{$errors->first('heading')}}</p>
+        <p class="text-alert">{{$errors->first('heading')}}</p>
       @endif
       <form action="{{ action('AddHeadingController@create') }}"  method="post">
-      <input type="hidden" name="id" value="{{$currentTitle->id}}">
-        <div class="form-group">
-          <input id="title" type="text" name="heading" class="form-control">
-        </div>
-        @csrf
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">追加</button>
-        </div>
+        <input type="hidden" name="id" value="{{$currentTitle->id}}">
+          <div class="form-group">
+            <input id="title" type="text" name="heading" class="form-control">
+          </div>
+          @csrf
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">追加</button>
+          </div>
       </form>
     </div>
     <div class="modal-footer">
-      <a href="{{ route('admin.task', [$currentTitle->id]) }}" type="button" class="btn btn-default">閉じる</a>
+      <a href="{{ route('todo.show', [$currentTitle->id]) }}" type="button" class="btn btn-default">閉じる</a>
     </div>
   </div>         
 </div>
