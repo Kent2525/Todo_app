@@ -49,6 +49,61 @@ ul {
   border-radius: 20px;
 }
 
+.input-box {
+  display: flex;
+  justify-content: flex-end;
+  width: 90vw;
+}
+
+/* Top入力フォームのスタイル */
+.input-form-set {
+  position: relative;
+  width: 85%;
+}
+
+.input-form-set input[type=text] {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  padding-left: 40px;
+  letter-spacing: 1px;
+  border: 0;
+}
+
+.input-form-set input[type=text]:focus {
+  outline: none;
+}
+
+.input-form-set input[type=text]:focus::after {
+  outline: none;
+}
+
+.input-form-set i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 9px 5px;
+  transition: 0.3s;
+  color: #aaaaaa;
+}
+
+.input-form-set::after {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: -1px;
+  content: "";
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #da3c41;
+}
+
+.form-wrap {
+  width: 90vw;
+}
+
+
 /* TOPページタブレット画面のCSS */
 @media (min-width: 576px) { 
   .btn-color {
@@ -70,6 +125,14 @@ ul {
   .main-tag-group {
     flex-wrap: wrap;
   }
+
+  .input-box {
+    width: auto;
+  }
+
+  .form-wrap {
+    width: auto;
+  }
 }
 
 /* TOPページのPC画面のCSS */
@@ -78,6 +141,11 @@ ul {
     display: flex;
     justify-content: center;
   } 
+
+  .form-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
 
 
@@ -160,65 +228,8 @@ ul {
 
 
 
-
-/* Top入力フォームのスタイル */
-.cp_iptxt {
-  position: relative;
-  width: 85%;
-}
-
-.cp_iptxt input[type=text] {
-  font: 15px/24px sans-serif;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.3em;
-  padding-left: 40px;
-  letter-spacing: 1px;
-  border: 0;
-}
-
-.cp_iptxt input[type=text]:focus {
-  outline: none;
-}
-
-.cp_iptxt input[type=text]:focus::after {
-  outline: none;
-}
-
-.cp_iptxt i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 9px 5px;
-  transition: 0.3s;
-  color: #aaaaaa;
-}
-
-.cp_iptxt::after {
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin-top: -1px;
-  content: "";
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: #da3c41;
-}
-
-@media (max-width: 576px) {
-  .flex-box {
-    width: 90vw;
-  }
-  .form-wrap {
-    width: 90vw;
-  }
-}
-
 @media (min-width: 992px) {
-  .form-container {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
+
 
 /* タイトル一覧の左右余白のレスポンシブ */
   .left-title-box {
@@ -234,10 +245,7 @@ ul {
   text-align: center;
 }
 
-.flex-box {
-  display: flex;
-  justify-content: flex-end;
-}
+
 
 .top-form-alert {
   color:red;

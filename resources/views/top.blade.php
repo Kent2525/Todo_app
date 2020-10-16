@@ -19,8 +19,8 @@
     <button class="btn main-tag btn-primary btn-lg" onclick="clickTag4()">#日本食を食べる</button>
   </div>
   <div class="form-container">
-    <div class="flex-box my-3">
-      <div class="cp_iptxt mr-1">
+    <div class="input-box my-3">
+      <div class="input-form-set mr-1">
         <input type="text" id="inputTodoText" placeholder="Todoを入力しましょう">
         <i class="fas fa-list-ul" aria-hidden="true"></i>
       </div>
