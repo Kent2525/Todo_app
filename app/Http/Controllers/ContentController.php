@@ -10,7 +10,7 @@ class ContentController extends Controller
 {
     public function edit(Request $request)
     {   
-        $this ->validate($request, ['heading' =>'required']);
+        $this ->validate($request, ['heading' =>'required|max:300']);
         $content = Content::find($request->id);
         $form = $request->all();
         unset($form['_token']);

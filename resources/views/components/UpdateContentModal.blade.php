@@ -12,6 +12,9 @@
           <h4 class="title-content-modal">{{$currentTitle->title}}</h4>
           <a class="btn btn-danger btn-content-delete text-right" href="{{ action('ContentController@delete', ['id' => $content->id]) }}">削除</a>
         </div>
+        @if (count($errors) > 0)
+          <p class="text-alert">{{$errors->first('heading')}}</p>
+        @endif
         <form action="{{ action('ContentController@edit') }}" method="post">
           <div class="form-group">
             <label for="inputHeading_modal">見出し</label>
