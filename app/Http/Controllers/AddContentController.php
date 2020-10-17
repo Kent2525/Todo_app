@@ -10,7 +10,7 @@ class AddContentController extends Controller
 {
     public function create(Request $request)
     {   
-        $this ->validate($request, ['heading' =>'required']);
+        $this ->validate($request, ['heading' =>'required|max:300']);
         $current_title = Title::find($request->id);
         $content = new Content();
         $content->heading = $request->heading;

@@ -24,7 +24,7 @@ class CreateContentsTable extends Migration
         Schema::create('contents', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('title_id')->unsigned();
-            $table->string('heading', 200);
+            $table->string('heading', 400);
             $table->string('body')->nullable();
             $table->timestamps();
             $table->foreign('title_id')->references('id')->on('titles')->onDelete('cascade');

@@ -10,7 +10,7 @@ class EditTitleController extends Controller
 {
     public function edit(Request $request)
     {   
-        $this ->validate($request, ['title' =>'required']);
+        $this ->validate($request, ['title' =>'required|max:150']);
         $title = Title::find($request->id);
         $form = $request->all();
         unset($form['_token']);

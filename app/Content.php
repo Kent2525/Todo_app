@@ -9,7 +9,7 @@ class Content extends Model
     protected $guarded = ['id'];
     
     public static $rules = array(
-        'heading' => 'required',
+        'heading' => 'required|max:300',
         'heading1' => 'required',
     );
 }

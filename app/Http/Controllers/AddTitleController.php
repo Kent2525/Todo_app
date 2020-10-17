@@ -10,7 +10,7 @@ class AddTitleController extends Controller
 { 
     public function create(Request $request)
     {   
-        $this ->validate($request, ['title' =>'required']);
+        $this ->validate($request, ['title' =>'required|max:150']);
         $title = new Title;     
         $form = $request->all();
         unset($form['_token']);
