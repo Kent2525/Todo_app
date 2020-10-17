@@ -131,6 +131,11 @@ ul {
   text-align:right;
 }
 
+.recommend-login {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .button-group {
   text-align: center;
 }
@@ -174,6 +179,11 @@ ul {
 
   .form-wrap {
     width: auto;
+  }
+
+  .recommend-login {
+    font-size: 16px;
+    text-align: right;
   }
 }
 

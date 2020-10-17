@@ -35,23 +35,28 @@
         @if (count($errors) > 0)
             <p class="top-form-alert">Todoタグを選択するか入力フォームでTodo追加をしてください</p>
         @endif
-        <div class="d-none d-sm-block">
-          <div class="text-right">
-            <div class="btn-group">
-              <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
-              <button class="btn btn-success ml-2" id="output-for-listtodo " type="submit">リストを出力する</button>
+        @if(Auth::check())
+          <div class="d-none d-sm-block">
+            <div class="text-right">
+              <div class="btn-group">
+                <div class="btn btn-secondary" onclick="clickClear()" >クリア</div>
+                <button class="btn btn-success ml-2" id="output-for-listtodo " type="submit">リストを出力する</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="d-block d-sm-none">
-          <div class="button-group">
-            <div class="btn-group-vertical">
-              <div class="btn btn-secondary mt-2" onclick="clickClear()" >クリア</div>
-              <button class="btn btn-success mt-2" id="output-for-listtodo " type="submit">リストを出力する</button>
+          <div class="d-block d-sm-none">
+            <div class="button-group">
+              <div class="btn-group-vertical">
+                <div class="btn btn-secondary mt-2" onclick="clickClear()" >クリア</div>
+                <button class="btn btn-success mt-2" id="output-for-listtodo " type="submit">リストを出力する</button>
+              </div>
             </div>
           </div>
-        </div>
-        <p class="text-right mt-2">リストを出力するには<a href="/login">ログイン</a>が必要です。</p>
+        @else
+          <p class="recommend-login mt-2">Myページでリスト化するには<a href="/login">ログイン</a>が必要です。</p>
+          <p class="recommend-login">採用ご担当者用<a href="/easyLogin">簡易テストログイン</a>はこちらです。</p>
+
+        @endif
       </div>  
     </form>   
   </div>
