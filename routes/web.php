@@ -30,8 +30,10 @@ Route::group(['prefix' => 'todo', 'middleware' => 'auth'], function() {
 Route::get('/', 'TopController@index');
 Route::post('/create', 'TopController@create')->middleware('auth');
 
-
 Auth::routes();
+Route::get('/easyLogin', function() {
+    return view('easyLogin');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/', function () {

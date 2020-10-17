@@ -5,7 +5,7 @@
 <div class="container">
   <div class="easy-login text-center mt-3 w-100">
     <p>採用ご担当者様はこちらの簡易テストログインをご利用下さい。</p>
-    <a class="btn btn-primary" href="">簡易テストログイン</a>
+    <a class="btn btn-primary" href="/easyLogin">簡易テストログイン</a>
   </div>
   <h2 class="top-title text-center text-info">おかえりTodo</h2>
   <div class="text-center">
