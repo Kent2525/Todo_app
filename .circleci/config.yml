@@ -18,6 +18,13 @@ jobs:
       #
       # - image: redis:2.8.19
 
+    environment:
+      - APP_DEBUG: true
+      - APP_ENV: local
+      - APP_KEY: base64:MVka/TFN0zq0FWljDSBUKLArCpX2SmTILOzYyxKNSVQ=
+      - DB_CONNECTION: todos
+      - MYSQL_ALLOW_EMPTY_PASSWORD: true
+
     steps:
       - checkout
 
@@ -49,8 +56,8 @@ jobs:
             - node_modules
 
       # prepare the database
-      - run: touch storage/testing.sqlite
-      - run: php artisan migrate --env=testing --database=sqlite_testing --force
+      - run: php artisan migrate
+      - run: php artisan db:seed
 
       # run tests with phpunit or codecept
       #- run: ./vendor/bin/phpunit
