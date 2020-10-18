@@ -18,51 +18,16 @@ jobs:
       # - image: circleci/mysql:5.7-ram
       #
       # - image: redis:2.8.19
+      machine:
+        php:
+          version: 7.1.0
+        environment:
+          DB_CONNECTION: circle_test
+          APP_ENV: testing
+        services:
+          - mysql
 
-    environment:
-      - APP_DEBUG: true
-      - APP_ENV: local
-      - APP_KEY: base64:MVka/TFN0zq0FWljDSBUKLArCpX2SmTILOzYyxKNSVQ=
-      - DB_CONNECTION: circle_test
-      - MYSQL_ALLOW_EMPTY_PASSWORD: true
-
-    working_directory: ~/todo
-
-    steps:
-      # working_directoryにソースコードを配置する
-      # working_directoryはデフォルトでは~/projectに設定されている
-      - checkout
-
-      - run: sudo docker-php-ext-install zip
-
-      # vendor配下のpackageをキャッシュから呼び出す
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "composer.json" }}
-            - v1-dependencies-
-
-      - run: composer install -n --prefer-dist
-
-      # vendor配下をキャッシュする。
-      # 二回目以降のcomposer installでは
-      # 新しく追加されたpackageのみダウンロードするため、
-      # CIの実行時間が短縮される
-      - save_cache:
-          key: v1-dependencies-{{ checksum "composer.json" }}
-          paths:
-            - ./vendor
-      - restore_cache:
-          keys:
-            - node-v1-{{ checksum "package.json" }}
-            - node-v1-
-      - run: yarn install
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-
-      # テスト用データベースにsqliteを利用する
-      - run: touch storage/testing.sqlite
-      - run: php artisan migrate --env=testing --database=sqlite_testing --force
-
-
+      database:
+        override:
+          - "php artisan migrate"
+          - "php artisan db:seed"
