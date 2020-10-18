@@ -8,6 +8,8 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.1-node-browsers
+      - image: circleci/mysql:5.7
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -21,7 +23,7 @@ jobs:
       - APP_DEBUG: true
       - APP_ENV: local
       - APP_KEY: base64:MVka/TFN0zq0FWljDSBUKLArCpX2SmTILOzYyxKNSVQ=
-      - DB_CONNECTION: todos
+      - DB_CONNECTION: circle_test
       - MYSQL_ALLOW_EMPTY_PASSWORD: true
 
     working_directory: ~/todo
