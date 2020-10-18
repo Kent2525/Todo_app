@@ -24,7 +24,7 @@ jobs:
       - DB_CONNECTION: todos
       - MYSQL_ALLOW_EMPTY_PASSWORD: true
 
-    working_directory: ~/repo
+    working_directory: ~/todo
 
     steps:
       - checkout
