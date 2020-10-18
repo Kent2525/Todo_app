@@ -13,8 +13,9 @@ class TopTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testSample()
     {
-        $this->assertTrue(true);
+        $arr =[];
+        $this->assertEmpty($arr); 
     }
 }
