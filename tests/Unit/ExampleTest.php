@@ -4,6 +4,8 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Http\Controllers\CreateController;
+use App\Title;
 
 class ExampleTest extends TestCase
 {
@@ -15,5 +17,11 @@ class ExampleTest extends TestCase
     public function testBasicTest()
     {
         $this->assertTrue(true);
+
+        $title = new Title;
+        $title->title = 'sample';
+        $this->assertTrue();
+
+
     }
 }

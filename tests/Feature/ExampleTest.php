@@ -4,6 +4,9 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\User;
+use App\Title;
+use App\Content;
 
 class ExampleTest extends TestCase
 {
@@ -46,10 +49,76 @@ class ExampleTest extends TestCase
         $data = [
             'id' => 1,
             'user_id' => 1,
-            'title' => 'Sample Title11'
+            'title' => 'Sample Title1'
         ];
 
         $this->assertDatabaseHas('titles', $data);
 
+        $data = [
+            'id' => 1,
+            'user_id' => 1,
+            'title' => 'notitle'
+        ];
+
+        $this->assertDatabaseMissing('titles', $data);
+
+        $data = [
+            // 自動連番のidは含めない
+            'user_id' => 1,
+            'title' => 'dummy',
+        ];
+
+        $title = new Title();
+        $title->fill($data)->save();
+        $this->assertDatabaseHas('titles', $data);
+        $title->delete();
+        $this->assertDatabaseMissing('titles', $data);
+
+        $data = [
+            'user_id' => 1,
+            'title' => 'dummy1',
+        ];
+
+        $title->title = 'No match';
+        $title->save();
+        $this->assertDatabaseMissing('titles', $data);
+
+        $user = factory(User::class)->create();
+        // ログインできるUserでログインをする事ができる処理
+        $respose = $this->actingAs($user)->get('/todo');
+        $respose->assertStatus(200);
+
+        // 更に追記
+
+
+        for($i = 0;$i < 100;$i++)
+        {
+          factory(Title::class)->create();
+        }
+        $count = Title::get()->count();
+        $title = Title::find(rand(1, $count));
+        $data = $title->toArray();
+        print_r($data);
+
+        $this->assertDatabaseHas('titles', $data);
+        
+        // factory(User::class)->create([
+        //     'name' =>'AAA BBB',
+        //     'email' => 'dummy@gmail.com',
+        //     'password' =>'passpass',
+        //     ]);
+        // // 上記のデータの他に5つダミーデータを生成する処理
+        // factory(User::class, 5)->create();
+        
+        // $this->assertDatabaseHas('users', [
+        //     'name' =>'AAA BBB',
+        //     'email' => 'dummy@gmail.com',
+        //     'password' =>'passpass',
+        //     ]);
+                
+                
+                
     }
+    // use RefreshDatabase;
+
 }
