@@ -26,7 +26,10 @@ class ExampleTest extends TestCase
         $this->get('/register')->assertStatus(200);
         $this->get('/easyLogin')->assertStatus(200);
         $this->get('/home')->assertStatus(200);
-        
+        $this->get('/noroute')->assertStatus(404);
+
+        $this->get('/')->assertSeeInOrder(['<html','<head','<body','<header>']);
+
         $this->get('/')->assertSeeText('おかえりTodo');
         $this->get('/')->assertSeeText('TOPページ');
         // JS onclickの文章
@@ -39,10 +42,14 @@ class ExampleTest extends TestCase
         $response->assertStatus(302);
         $response = $this->post('/todo/editTitle', ['title' => 'sample']);
         $response->assertStatus(302);
+        
+        $data = [
+            'id' => 1,
+            'user_id' => 1,
+            'title' => 'Sample Title11'
+        ];
 
-        // $response = $this->get('/todo');
-        // $response->assertStatus(302);
-
+        $this->assertDatabaseHas('titles', $data);
 
     }
 }
