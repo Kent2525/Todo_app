@@ -14,11 +14,10 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
-        $response->assertStatus(200);
+        $this->get('/')->assertStatus(200);
 
-        $response = $this->get('/todo');
-        $response->assertStatus(302);
+        // $response = $this->get('/todo');
+        // $response->assertStatus(302);
 
 
     }
