@@ -81,12 +81,12 @@ $(window).on('load',function(){
 });
 
 $('.editModal').on('click', function() {
-  var title = $(this).data('title');
-  $('#inputModal').val(title);
+//   var title = $(this).data('title');
+//   $('#inputModal').val(title);
 
-  var id_title = $(this).data('id_title');
-  $('#inputIdTitle').val(id_title);
-});
+//   var id_title = $(this).data('id_title');
+//   $('#inputIdTitle').val(id_title);
+// });
 
 $('.heading_modal').on('click', function() {
   var heading = $(this).data('heading');
@@ -111,6 +111,8 @@ $(document).on('click', function(e) {
 
   }
 });
+
+
 
 </script>
 

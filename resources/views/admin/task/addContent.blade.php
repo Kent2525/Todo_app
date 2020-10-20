@@ -16,6 +16,7 @@
             <div class="title-icon-section">
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
               
+                <!-- {{-- タイトル削除のモーダル --}} -->
                 @include('components.DeleteTitleModal')
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" 
@@ -27,13 +28,13 @@
     </div>
   </div>
     
-    {{-- 右側 --}}
+  <!-- {{-- 右側の見出しエリア --}} -->
   <div class="right-col bg-white">
     <div class="right-title-box my-4">
       <p>見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
-            <li><a class="list-group-item heading-index heading_modal" data-toggle="modal" data-target="#myModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
+            <li><a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
           </a></li>
 
             @include('components.UpdateContentModal')
@@ -43,8 +44,9 @@
       <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
     </div>
   </div>
+
   <!-- Modal -->
-  <div class="modal modal-container" id="addHeadingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal modal-container" id="addHeadingModal" tabindex="-1" role="dialog" aria-labelledby="contentModalLabel">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -81,14 +83,6 @@ $(window).on('load',function(){
   $('#addHeadingModal').modal('show');
 });
 
-$('.editModal').on('click', function() {
-  var title = $(this).data('title');
-  $('#inputModal').val(title);
-
-  var id_title = $(this).data('id_title');
-  $('#inputIdTitle').val(id_title);
-});
-
 $('.heading_modal').on('click', function() {
   var heading = $(this).data('heading');
   var body = $(this).data('body');
@@ -104,14 +98,21 @@ function clickBg1() {
 }
 
 $(document).on('click', function(e) {
-  // e.preventDefault();
-  // e.stopPropagation();
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
     location.href = "/todo/show/{{$currentTitle->id}}" 
 
   }
 });
+
+// {{-- 旧式のデータinputへ送るjQuery --}}
+// {{-- $('.editModal').on('click', function() {
+//   var title = $(this).data('title');
+//   $('#inputModal').val(title);
+
+//   var id_title = $(this).data('id_title');
+//   $('#inputIdTitle').val(id_title);
+// }); --}}
 
 </script>
 

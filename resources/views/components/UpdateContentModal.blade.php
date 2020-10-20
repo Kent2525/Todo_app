@@ -1,5 +1,5 @@
 {{-- 右側の見出しクリックModal --}}
-<div id="myModal{{$content->id}}" class="modal fade" role="dialog">
+<div id="contentModal{{$content->id}}" class="modal fade" role="dialog">
   <div class="modal-dialog">
     {{-- Modal content--}}
     <div class="modal-content">

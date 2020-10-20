@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="main">
+<!-- {{-- 左側のタイトルエリア --}} -->
   <div class="left-col">
     <div class="left-title-box my-4">
       <div class=text-center>
@@ -15,7 +16,8 @@
               {{ $title->title }}</a>           
             <div class="title-icon-section">
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
-                
+              
+                <!-- {{-- タイトル削除のモーダル --}} -->
                 @include('components.DeleteTitleModal')
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
@@ -25,7 +27,7 @@
       </ul>
     </div>
   </div>
-  {{-- 右側 --}}
+  <!-- {{-- 右側の見出しエリア --}} -->
   <div class="right-col bg-white">
     <div class="right-title-box my-4 mx-5">
         <h5>Todoタイトルを選択してください。</h5>
@@ -33,13 +35,12 @@
   </div>
 </div>
 
-{{-- モータルへデータを送るjavascript --}}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
-// heading-modal（ループしているデータ）をクリックした時に
+// {{-- heading-modal（ループしているデータ）をクリックした時に --}}
 $('.heading_modal').on('click', function() {
-      // このdata('heading')（data-title="ドルcontent->heading"）をheadingに代入
+      // {{-- このdata('heading')（data-title="ドルcontent->heading"）をheadingに代入 --}}
       var heading = $(this).data('heading');
       // このdata('body')（data-body="ドルcontent->body"）をtitleに代入
       var body = $(this).data('body');
@@ -74,8 +75,6 @@ $(document).ready(function () {
     $('#editTitleModal').modal('show');
   } 
 }); 
-
-
 
 </script>
   
