@@ -97,21 +97,46 @@ class ExampleTest extends TestCase
         $this->assertDatabaseMissing('contents', $data);
     }
     
-    public function testa()
+    // dataを作成して、そのデータがあるかチェック、最後に削除
+    public function testScrapAndBuildDataTest()
     {
         $data = [
             // 自動連番のidは含めない
+            'name' => 'dumy_name',
+            'email' => 'dummy@yahoo.co.jp',
+            'password' => 'testtest'
+        ];
+        
+        $user = new User();
+        $user->fill($data)->save();
+        $this->assertDatabaseHas('users', $data);
+        $user->delete();
+        $this->assertDatabaseMissing('users', $data);
+        
+        $data = [
             'user_id' => 1,
             'title' => 'dummy',
         ];
-
         $title = new Title();
         $title->fill($data)->save();
         $this->assertDatabaseHas('titles', $data);
         $title->delete();
         $this->assertDatabaseMissing('titles', $data);
-
         
+        $data = [
+            'title_id' => 1,
+            'heading' => 'dummy_heading',
+            'body' => 'dummy_body',
+        ];
+        $content = new Content();
+        $content->fill($data)->save();
+        $this->assertDatabaseHas('contents', $data);
+        $content->delete();
+        $this->assertDatabaseMissing('contents', $data);
+    }
+     
+    public function testTest()
+    { 
         $data = [
             'user_id' => 1,
             'title' => 'dummy1',
