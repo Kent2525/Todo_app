@@ -18,7 +18,7 @@ Route::group(['prefix' => 'todo', 'middleware' => 'auth'], function() {
     Route::get('/show/{id}', 'TodoController@show')->name('todo.show');
     Route::get('/addTitle', 'TodoController@addTitle')->name('todo.addTitle');
     Route::post('/create', 'AddTitleController@create');
-    Route::get('/{id?}/delete', 'TodoController@delete');
+    Route::get('/delete/{id?}', 'TodoController@delete');
     Route::get('/editTitle', 'TodoController@editTitle')->name('todo.editTitle');
     Route::post('/editTitle', 'EditTitleController@edit');
     Route::get('/content', 'ContentController@delete');
