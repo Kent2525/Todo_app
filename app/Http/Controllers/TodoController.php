@@ -23,7 +23,6 @@ class TodoController extends Controller
     public function show(int $id)
     {
         $titles = Auth::user()->titles()->get();
-        // $titles = Title::all();
         $currentTitle = Title::find($id);
         $testcontents = Content::all();
         
@@ -45,7 +44,7 @@ class TodoController extends Controller
     
     public function delete(Request $request)
     {   
-        $content = Title::find($request->id);
+        $content = Title::find($request->id); //TodoController@index→D-Modal→id
         $content->delete();
         
         return redirect('/todo');
@@ -54,11 +53,11 @@ class TodoController extends Controller
     public function editTitle(Request $request)
     {
         $titles = Auth::user()->titles()->get();
-        $currentTitle = Title::find($request->id);
+        $currentTitle = Title::find($request->id); //indexからクリックしたidを代入
         return view('admin.task.editTitle', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
-        ]);
+        ]); //editTitle.bladeに遷移
     }
     
     public function addContent(int $id, Request $request)
