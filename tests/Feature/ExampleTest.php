@@ -15,6 +15,12 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
+    public function setup(): void
+    {
+        parent::setUp();
+        $this->seed('DatabaseSeeder');
+    }
+
     public function testBasicRouteTest()
     {
         $this->get('/')->assertStatus(200);
@@ -98,7 +104,7 @@ class ExampleTest extends TestCase
     }
     
     // dataを作成して、そのデータがあるかチェック、最後に削除
-    public function testScrapAndBuildDataTest()
+    public function testScrapAndBuildData()
     {
         $data = [
             // 自動連番のidは含めない
@@ -106,13 +112,13 @@ class ExampleTest extends TestCase
             'email' => 'dummy@yahoo.co.jp',
             'password' => 'testtest'
         ];
-        
+    
         $user = new User();
         $user->fill($data)->save();
         $this->assertDatabaseHas('users', $data);
         $user->delete();
         $this->assertDatabaseMissing('users', $data);
-        
+
         $data = [
             'user_id' => 1,
             'title' => 'dummy',
@@ -133,10 +139,9 @@ class ExampleTest extends TestCase
         $this->assertDatabaseHas('contents', $data);
         $content->delete();
         $this->assertDatabaseMissing('contents', $data);
-    }
-     
-    public function testTest()
-    { 
+
+
+    
         $data = [
             'user_id' => 1,
             'title' => 'dummy1',
@@ -187,8 +192,6 @@ class ExampleTest extends TestCase
         //     'email' => 'dummy@gmail.com',
         //     'password' =>'passpass',
         //     ]);
-                
-                
                 
     }
     // use RefreshDatabase;
