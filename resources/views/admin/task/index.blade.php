@@ -29,39 +29,38 @@
   </div>
   <!-- {{-- 右側の見出しエリア --}} -->
   <div class="right-col bg-white">
-    <div class="right-title-box my-4 mx-5">
+    <div class="right-content-box my-4">
         <h5>Todoタイトルを選択してください。</h5>
     </div>
   </div>
 </div>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
-// {{-- heading-modal（ループしているデータ）をクリックした時に --}}
-$('.heading_modal').on('click', function() {
-      // {{-- このdata('heading')（data-title="ドルcontent->heading"）をheadingに代入 --}}
-      var heading = $(this).data('heading');
+// 学習して結局実装する必要のなかったjQuery. コメントアウトは通常のコメントアウトを使用。
+// heading-modal（ループしているデータ）をクリックした時に
+// $('.heading_modal').on('click', function() {
+      // このdata('heading')（data-title="ドルcontent->heading"）をheadingに代入
+      // var heading = $(this).data('heading');
       // このdata('body')（data-body="ドルcontent->body"）をtitleに代入
-      var body = $(this).data('body');
+      // var body = $(this).data('body');
 
       // '#inputHeading_modal'に対してtitleを埋める
-      $('#inputHeading_modal').val(heading);
+      // $('#inputHeading_modal').val(heading);
       // '#inputBody_modal'のvalueにbodyを設定する。
-      $('#inputBody_modal').val(body);
+      // $('#inputBody_modal').val(body);
+      // hidden用
+    //   var id = $(this).data('id');
+    //   $('#modal_id').val(id);
+    // });
 
-      var id = $(this).data('id');
-      $('#modal_id').val(id);
-    });
+// $('.edit-title').on('click', function() {
+//       var title = $(this).data('title');
+//       $('#inputModal').val(title);
 
-$('.edit-title').on('click', function() {
-      var title = $(this).data('title');
-      $('#inputModal').val(title);
+//       var id_title = $(this).data('id_title');
+//       $('#inputIdTitle').val(id_title);
+// });
 
-      var id_title = $(this).data('id_title');
-      $('#inputIdTitle').val(id_title);
-});
-
+//  旧式のアラートが出たらもう1度モーダル開くjQuery 
 // $(document).ready(function () {
 //   console.log('edit', $('.editTitleAlert').length);
 //   console.log('add', $('.addTitleAlert').length);
@@ -70,12 +69,10 @@ $('.edit-title').on('click', function() {
 //   } 
 // }); 
 
-$(document).ready(function () {
-  if ($('.editTitleAlert').length) {
-    $('#editTitleModal').modal('show');
-  } 
-}); 
-
+// $(document).ready(function () {
+//   if ($('.editTitleAlert').length) {
+//     $('#editTitleModal').modal('show');
+//   } 
+// }); 
 </script>
-  
 @endsection
