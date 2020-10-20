@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="main">
+<!-- {{-- 左側のタイトルエリア --}} -->
   <div class="left-col">
     <div class="left-title-box my-4">
       <div class=text-center>
@@ -30,13 +31,14 @@
     
   <!-- {{-- 右側の見出しエリア --}} -->
   <div class="right-col bg-white">
-    <div class="right-title-box my-4">
+    <div class="right-content-box my-4">
       <p>見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
             <li><a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
           </a></li>
 
+            <!-- 見出しの編集モーダル -->
             @include('components.UpdateContentModal')
 
           @endforeach
@@ -46,7 +48,7 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal modal-container" id="addHeadingModal" tabindex="-1" role="dialog" aria-labelledby="contentModalLabel">
+  <div class="modal modal-container" id="addContentModal" tabindex="-1" role="dialog" aria-labelledby="contentModalLabel">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -74,46 +76,18 @@
     </div>
   </div>         
 </div>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
+// クリックしてモーダル開く
 $(window).on('load',function(){
-  $('#addHeadingModal').modal('show');
+  $('#addContentModal').modal('show');
 });
 
-$('.heading_modal').on('click', function() {
-  var heading = $(this).data('heading');
-  var body = $(this).data('body');
-  $('#inputHeading_modal').val(heading);
-  $('#inputBody_modal').val(body);
-
-  var id = $(this).data('id');
-  $('#modal_id').val(id);
-});
-
-function clickBg1() {
-  location.href = "/todo";
-}
-
+// モーダル外側クリックでページ遷移
 $(document).on('click', function(e) {
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
     location.href = "/todo/show/{{$currentTitle->id}}" 
-
   }
 });
-
-// {{-- 旧式のデータinputへ送るjQuery --}}
-// {{-- $('.editModal').on('click', function() {
-//   var title = $(this).data('title');
-//   $('#inputModal').val(title);
-
-//   var id_title = $(this).data('id_title');
-//   $('#inputIdTitle').val(id_title);
-// }); --}}
-
 </script>
-
 @endsection

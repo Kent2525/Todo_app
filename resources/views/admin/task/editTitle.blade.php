@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="main">
+  <!-- {{-- 左側のタイトルエリア --}} -->
   <div class="left-col">
     <div class="left-title-box my-4">
       <div class=text-center>
@@ -15,8 +16,9 @@
               {{ $title->title }}</a>
             <div class="title-icon-section">
               <img class="delete-icon image-sizing" src="{{ asset('image/deleteIcon.jpeg') }}" alt="delete" data-toggle="modal" data-target="#deleteModal{{$title->id}}">
-              
-                @include('components.DeleteTitleModal', ['title' => $title])
+                
+                <!-- {{-- タイトル削除のモーダル --}} -->
+                @include('components.DeleteTitleModal')
 
               <a href="{{ route('todo.editTitle', ['id' => $title->id]) }}"><img class="edit-title image-sizing" src="{{ asset('image/editIcon.jpeg') }}" alt="edit" data-title="{{$title->title}}" data-id_title="{{ $title->id }}"></a>
             </div>
@@ -57,39 +59,22 @@
   </div>
   {{-- 右側 --}}
   <div class="right-col bg-white">
-    <div class="right-title-box my-4 mx-5">
+    <div class="right-content-box my-4">
         <h5>Todoタイトルを選択してください。</h5>
     </div>
   </div>
 </div>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
+// クリックしてモーダル開く
 $(window).on('load',function(){
   $('#editTitleModal').modal('show');
 });
-
-$('.editModal').on('click', function() {
-  var title = $(this).data('title');
-  $('#inputModal').val(title);
-
-  var id_title = $(this).data('id_title');
-  $('#inputIdTitle').val(id_title);
-});
-
-function clickBg1() {
-  location.href = "/todo";
-}
-
+ 
+// モーダル外側クリックでページ遷移
 $(document).on('click', function(e) {
-  // e.preventDefault();
-  // e.stopPropagation();
   console.log("test", $(e.target));
   if ($(e.target).hasClass('modal')) {
     location.href = "/todo";
-
   }
 });
 </script>
