@@ -15,7 +15,7 @@ class TodoController extends Controller
         // ログイン中のユーザーのタイトルテーブルを取得
         $titles = Auth::user()->titles()->get();
         // $titles = Title::all();
-        return view('admin.task.index', [
+        return view('mypage.index', [
             'titles' => $titles,
         ]);
     }
@@ -25,7 +25,7 @@ class TodoController extends Controller
         $titles = Auth::user()->titles()->get();
         $currentTitle = Title::find($id); // id流れ:Todo@index→index→TodoC@show→now
         
-        return view('admin.task.show', [
+        return view('mypage.show', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
         ]); // show.bladeに遷移
@@ -34,7 +34,7 @@ class TodoController extends Controller
     public function addTitle()
     {
         $titles = Auth::user()->titles()->get();
-        return view('admin.task.addTitle', [
+        return view('mypage.addTitle', [
             'titles' => $titles,
         ]);
     }
@@ -52,7 +52,7 @@ class TodoController extends Controller
     {
         $titles = Auth::user()->titles()->get();
         $currentTitle = Title::find($request->id); //indexからクリックしたidを代入
-        return view('admin.task.editTitle', [
+        return view('mypage.editTitle', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
         ]); //editTitle.bladeに遷移
@@ -62,7 +62,7 @@ class TodoController extends Controller
     {
         $titles = Auth::user()->titles()->get();
         $currentTitle = Title::find($request->id); //TodoC@show currentTitle→show.blade currentTitle→id→now
-        return view('admin.task.addContent', [
+        return view('mypage.addContent', [
             'titles' => $titles,
             'currentTitle' => $currentTitle,
         ]); //addContent.bladeに遷移

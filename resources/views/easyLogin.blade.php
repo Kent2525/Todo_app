@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <label for="password" class="">{{ __('messages.Password') }}</label>
                                     <div class="">
-                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="okaeritodo" required autocomplete="current-password"/>
+                                      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="testtest" required autocomplete="current-password"/>
                                     </div>
                                 </div>
                                 <div class="custom-control custom-checkbox">
