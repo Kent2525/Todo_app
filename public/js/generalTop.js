@@ -4,31 +4,29 @@ function clickTextTotal() {
   if (!inputTodoText.value.trim()) {
   ;
   } else {
-    clickOutputText1();
-    clickHiddenText1();
+    clickTextForForm();
     }
 }
 
-function clickOutputText1() {
+function clickTextForForm() {
+  // 入力文字のスパンタグ出力
   var inputTodoText = document.createElement("span");
   var inputValue = document.getElementById("inputTodoText").value;
   const textPlus = '#' + inputValue;
   inputTodoText.innerText = textPlus;
   var outputText = document.getElementById("formArea");
   outputText.appendChild(inputTodoText);
+  // 出力後にinputに対してフォーカスとクリア
   document.getElementById("inputTodoText").focus();
   var inputTodoText = document.getElementById("inputTodoText");
   inputTodoText.value = '';
-}
-
-function clickHiddenText1() {
-  var test = document.createElement("input");
-  var inputTodoText = document.getElementById("inputTodoText").value;
-  test.setAttribute("name", "heading[]");
-  test.setAttribute("type", "hidden");
-  test.setAttribute("value", inputTodoText);
+  // hiddenを作成
+  var inputHidden = document.createElement("input");
+  inputHidden.setAttribute("name", "heading[]");
+  inputHidden.setAttribute("type", "hidden");
+  inputHidden.setAttribute("value", inputValue);
   var formArea = document.getElementById("formArea");
-  formArea.appendChild(test);
+  formArea.appendChild(inputHidden);
 }
 
 function clickClear() {
