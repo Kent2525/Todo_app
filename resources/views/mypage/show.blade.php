@@ -31,13 +31,13 @@
   <!-- {{-- 右側の見出しエリア --}} -->
   <div class="right-col bg-white">
     <div class="right-title-box my-4">
-      <p>見出し</p>
+      <p class="heading-top">見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
-            <li class="flexbox">
-              <input type="radio">
-                <a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}</a>
-            </li>
+          <li style="height: 60px;">
+          <input class="checkbox" type="checkbox">
+              <a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
+          </a></li>
             
             <!-- 見出しの編集モーダル -->
             @include('components.UpdateContentModal')
@@ -49,6 +49,14 @@
   </div>
 </div>
 <script>
+$(":checkbox").click(function() {
+if ($(this).is(":checked"))
+{
+  $(this).closest("li").css("text-decoration", "line-through");
+} else {
+  $(this).closest("li").css("text-decoration", "none");
+}
+});
 //  旧式のデータinputへ送るjQuery 
 //  $('.editModal').on('click', function() {
 //   var title = $(this).data('title');

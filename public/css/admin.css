@@ -281,6 +281,7 @@ ul {
 .heading-index {
   border: none;
   border-bottom: 1px solid gray;
+  padding-left: 25px;
 }
 
 /* mypageタブレット画面以上 */
@@ -333,4 +334,14 @@ ul {
 
 .flexbox {
   display: flex;
+}
+
+.checkbox {
+  position: relative;
+  top: 35px;
+  z-index: 100;
+}
+
+.heading-top {
+  margin-bottom: 0px;
 }
