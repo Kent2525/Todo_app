@@ -34,8 +34,10 @@
       <p>見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
-            <li><a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
-          </a></li>
+            <li class="flexbox">
+              <input type="radio">
+                <a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}</a>
+            </li>
             
             <!-- 見出しの編集モーダル -->
             @include('components.UpdateContentModal')

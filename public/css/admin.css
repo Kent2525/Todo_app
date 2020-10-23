@@ -331,5 +331,6 @@ ul {
   display: inline-block;
 }
 
-
-
+.flexbox {
+  display: flex;
+}
