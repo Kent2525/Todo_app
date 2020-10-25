@@ -25,4 +25,4 @@
                @endforeach
             </ul>
 
-            <p>draft kent</p> 
+            <p>draft kent draft draft</p> 
