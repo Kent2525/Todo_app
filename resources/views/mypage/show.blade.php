@@ -34,7 +34,7 @@
       <p class="heading-top">見出し</p>
         <ul class="list-group">
           @foreach($currentTitle->contents as $content)
-          <li style="height: 60px;">
+          <li style="height: 55px;">
           <input class="checkbox" type="checkbox">
               <a class="list-group-item heading-index" data-toggle="modal" data-target="#contentModal{{$content->id}}" data-heading="{{$content->heading}}" data-body="{{$content->body}}" data-id="{{ $content->id }}">{{$content->heading}}
           </a></li>
@@ -44,7 +44,7 @@
 
           @endforeach
         </ul>
-      <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-3 text-white">追加</a>
+      <a href="{{ route('todo.addContent', ['id' => $currentTitle->id]) }}" type="button" class="btn btn-primary mt-4 text-white">追加</a>
     </div>
   </div>
 </div>
