@@ -25,4 +25,5 @@
                @endforeach
             </ul>
 
+
             <p>draft kent新しい変更</p> 
