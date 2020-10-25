@@ -54,7 +54,10 @@ class FeatureTest extends TestCase
         // JS onclickの文章
         $this->get('/')->assertSeeText('家族と会う');
         $this->get('/')->assertSee('</div>');
-        $this->get('/')->assertSee('</a>');
+        $this->get('/todo')->assertSee('</a>');
+        $this->get('/todo/show/1')->assertSee('</a>');
+        
+
     }
     
     // dataがテーブルに存在しているか（していないか）
